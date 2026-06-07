@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Thesis Institute — open forecasts, scored against reality</title>
+  <meta name="description" content="The Thesis Institute builds calibrated, open forecasts of the statistics and policies that shape public life — every prediction published with its reasoning and scored when reality arrives." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='6' fill='%230F1A24'/%3E%3Ccircle cx='21.5' cy='14' r='5.5' fill='%23A94E80' opacity='0.12'/%3E%3Cline x1='2' y1='4.5' x2='17' y2='12' stroke='%239FB6C6' stroke-width='1.2' stroke-linecap='round' opacity='0.55'/%3E%3Cline x1='2' y1='23.5' x2='17' y2='16' stroke='%239FB6C6' stroke-width='1.5' stroke-linecap='round' opacity='0.65'/%3E%3Ccircle cx='21.5' cy='14' r='3.2' fill='%23A94E80'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MaxGhenis/brier-design@v1.0.0/tokens.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MaxGhenis/brier-design@v1.0.0/base.css" />
+  <style>
+    .hero .wrap { max-width: 820px; }
+    .lede { max-width: 660px; }
+    .duality { display:flex; gap:18px; align-items:stretch; margin-top:10px; max-width:680px; }
+    .duality .half { flex:1; border:1px solid var(--border-soft); border-radius:14px; padding:20px 22px; background:var(--paper); }
+    .duality .tag { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:8px; }
+    .duality .det .tag { color: var(--horizon-700); }
+    .duality .pred .tag { color: var(--accent); }
+    .duality h3 { font-family:var(--font-display); font-weight:500; font-size:1.05rem; margin-bottom:5px; letter-spacing:-0.01em; }
+    .duality p { font-size:0.86rem; color:var(--text-secondary); line-height:1.5; }
+    .duality .arrow { align-self:center; color:var(--border-strong); font-family:var(--font-mono); font-size:0.9rem; }
+    @media (max-width:640px){ .duality{ flex-direction:column; } .duality .arrow{ transform:rotate(90deg); } }
+    .fwrap { max-width: 1000px; }
+    .fhead { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .fhead h2 { margin:0; }
+    .fhead a { font-family:var(--font-mono); font-size:0.72rem; color:var(--accent); text-decoration:none; white-space:nowrap; }
+    .fhead a:hover { text-decoration:underline; }
+    .fcards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
+    @media (max-width:760px){ .fcards{ grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px){ .fcards{ grid-template-columns:1fr; } }
+    .fcard { display:block; text-decoration:none; color:inherit; border:1px solid var(--border-soft); border-radius:14px; padding:16px 18px; background:var(--paper); transition:border-color .2s, transform .2s, box-shadow .2s; }
+    .fcard:hover { border-color:var(--border-strong); transform:translateY(-2px); box-shadow:0 10px 28px -16px rgba(20,32,43,.25); }
+    .fcard .meta { display:flex; align-items:center; justify-content:space-between; margin-bottom:11px; }
+    .fcard .ftag { font-family:var(--font-mono); font-size:0.54rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--horizon-700); }
+    .fcard .ftag.pol { color:var(--accent); }
+    .fcard .fres { font-family:var(--font-mono); font-size:0.54rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-tertiary); }
+    .fcard h3 { font-family:var(--font-display); font-size:0.96rem; font-weight:500; line-height:1.3; letter-spacing:-0.01em; color:var(--text-primary); min-height:2.5em; margin:0; }
+    .fcard .frow { display:flex; align-items:baseline; gap:9px; margin-top:12px; }
+    .fcard .fnum { font-family:var(--font-display); font-size:1.55rem; font-weight:600; letter-spacing:-0.02em; color:var(--text-primary); }
+    .fcard .fci { font-family:var(--font-mono); font-size:0.58rem; color:var(--text-tertiary); }
+    .fcard .fbar { position:relative; height:5px; border-radius:4px; background:#E7EEF3; margin-top:12px; overflow:visible; }
+    .fcard .fbar i { position:absolute; inset:0; border-radius:4px; background:linear-gradient(90deg, rgba(94,151,200,.45), rgba(169,78,128,.55)); }
+    .fcard .fbar b { position:absolute; top:50%; width:9px; height:9px; border-radius:50%; transform:translate(-50%,-50%); background:#fff; box-shadow:0 0 0 3px rgba(169,78,128,.4); }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="21.5" cy="14" r="5.5" fill="#A94E80" opacity="0.10"/>
+          <line x1="2" y1="4.5" x2="17" y2="12" stroke="#9FB6C6" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+          <line x1="2" y1="23.5" x2="17" y2="16" stroke="#9FB6C6" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="21.5" cy="14" r="3.2" fill="#A94E80"/>
+        </svg>
+        <span>thesis <small>institute</small></span>
+      </a>
+      <nav>
+        <a href="https://app.thesisinstitute.org/forecasts">Forecasts</a>
+        <a href="https://app.thesisinstitute.org/about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A public-benefit research institute · in formation</p>
+      <h1>Open forecasts of public outcomes, scored against reality.</h1>
+      <p class="lede">
+        The Thesis Institute builds calibrated, open forecasts of the statistics and
+        policies that shape public life — every prediction published with its
+        full chain of reasoning, and scored against the record when the official
+        numbers arrive. The track record is the product.
+      </p>
+      <span class="status"><span class="dot"></span>In formation · building in the open</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap fwrap">
+      <div class="fhead">
+        <h2>A sampling of forecasts</h2>
+        <a href="https://app.thesisinstitute.org/forecasts">Browse all 73 →</a>
+      </div>
+      <p class="body" style="margin-top:10px; max-width:560px">
+        Each is a calibrated interval on a published government statistic or
+        policy parameter — with an audit trail, scored when the official number
+        lands.
+      </p>
+      <div class="fcards">
+        <a class="fcard" href="https://app.thesisinstitute.org/forecasts/spm-child-poverty-2025">
+          <div class="meta"><span class="ftag">Government data</span><span class="fres">resolves Sep 2026</span></div>
+          <h3>SPM child poverty rate, 2025</h3>
+          <div class="frow"><span class="fnum">13.1%</span><span class="fci">80% CI 12.0–14.4</span></div>
+          <div class="fbar"><i></i><b style="left:45.8%"></b></div>
+        </a>
+        <a class="fcard" href="https://app.thesisinstitute.org/forecasts/official-poverty-rate-2025">
+          <div class="meta"><span class="ftag">Government data</span><span class="fres">resolves Sep 2026</span></div>
+          <h3>Official poverty rate, 2025</h3>
+          <div class="frow"><span class="fnum">10.4%</span><span class="fci">80% CI 9.8–11.1</span></div>
+          <div class="fbar"><i></i><b style="left:46.2%"></b></div>
+        </a>
+        <a class="fcard" href="https://app.thesisinstitute.org/forecasts/median-household-income-2025">
+          <div class="meta"><span class="ftag">Government data</span><span class="fres">resolves Sep 2026</span></div>
+          <h3>Median household income, 2025</h3>
+          <div class="frow"><span class="fnum">$80,600</span><span class="fci">80% CI $78.6k–$82.9k</span></div>
+          <div class="fbar"><i></i><b style="left:46.5%"></b></div>
+        </a>
+        <a class="fcard" href="https://app.thesisinstitute.org/forecasts/snap-max-allotment-family-4-fy2027">
+          <div class="meta"><span class="ftag pol">Policy</span><span class="fres">resolves Oct 2026</span></div>
+          <h3>SNAP max allotment, family of 4, FY2027</h3>
+          <div class="frow"><span class="fnum">$1,010</span><span class="fci">80% CI $975–$1,045</span></div>
+          <div class="fbar"><i></i><b style="left:50%"></b></div>
+        </a>
+        <a class="fcard" href="https://app.thesisinstitute.org/forecasts/eitc-max-credit-three-children-ty2027">
+          <div class="meta"><span class="ftag pol">Policy</span><span class="fres">resolves Oct 2026</span></div>
+          <h3>Maximum EITC, 3+ children, TY2027</h3>
+          <div class="frow"><span class="fnum">$8,500</span><span class="fci">80% CI $8,050–$9,100</span></div>
+          <div class="fbar"><i></i><b style="left:42.9%"></b></div>
+        </a>
+        <a class="fcard" href="https://app.thesisinstitute.org/forecasts/federal-minimum-wage-jan-2027">
+          <div class="meta"><span class="ftag pol">Policy</span><span class="fres">resolves Jan 2027</span></div>
+          <h3>Federal minimum wage, Jan 1 2027</h3>
+          <div class="frow"><span class="fnum">$7.25</span><span class="fci">80% CI $7.25–$9.50</span></div>
+          <div class="fbar"><i></i><b style="left:3%"></b></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What we're building</h2>
+      <p class="body">
+        A public observatory of forecasts on government data — each one reasoned
+        in the open, carrying a calibrated interval, and scored against reality
+        once it resolves. The Thesis Institute is the predictive layer: it
+        forecasts. The deterministic rules it builds on are a separate, open
+        project.
+      </p>
+      <div class="duality">
+        <div class="half det">
+          <div class="tag">Axiom · a sister project</div>
+          <h3>The rules</h3>
+          <p>Law encoded as open, executable code, computed exactly — built and governed separately. We build on it; we don't build it.</p>
+        </div>
+        <span class="arrow">→</span>
+        <div class="half pred">
+          <div class="tag">The Thesis Institute</div>
+          <h3>The forecasts</h3>
+          <p>Calibrated predictions of what will actually happen, conditioned on those rules — scored when reality lands. This is what we do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Open all the way down</h2>
+      <p class="body" style="margin-bottom:24px">
+        The whole stack is a public good — nothing about the forecasts, the data,
+        or the models is hidden from the people they describe.
+      </p>
+      <div class="lineage">
+        <span class="step">open source</span>
+        <span class="arrow">→</span>
+        <span class="step">open data</span>
+        <span class="arrow">→</span>
+        <span class="step">open weights</span>
+        <span class="arrow">→</span>
+        <span class="step now">open predictions</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="wrap">
+      <h2>The stack</h2>
+      <p class="body" style="margin-bottom:26px">
+        The Thesis Institute builds and stewards a connected stack of open
+        forecasting infrastructure.
+      </p>
+      <div class="programs">
+        <a class="program flag" href="https://app.thesisinstitute.org">
+          <div class="ptag">Flagship platform</div>
+          <h3>Thesis <span class="ext">↗</span></h3>
+          <p>The open-predictions platform — a live docket of open forecasts and a ledger of resolved actuals, every prediction scored against reality, written by Brier-1.</p>
+        </a>
+        <a class="program" href="https://policyengine.org">
+          <div class="ptag">Microsimulation</div>
+          <h3>PolicyEngine <span class="ext">↗</span></h3>
+          <p>Open-source microsimulation of tax and benefit policy for the US, UK, and Canada — and custom analysis for governments and researchers.</p>
+        </a>
+        <div class="program">
+          <div class="ptag">Population data</div>
+          <h3>Microplex</h3>
+          <p>Calibrated synthetic populations — the substrate that powers policy simulation and grounds population-scale forecasting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div>The Thesis Institute · a public-benefit institute in formation</div>
+      <div class="row">
+        <a href="mailto:max@policyengine.org?subject=Thesis%20Institute">Get in touch</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
