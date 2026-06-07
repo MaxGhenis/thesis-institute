@@ -56,7 +56,13 @@
     .herotext h1 { overflow-wrap:break-word; }
     .herocards .fhead { margin-bottom:14px; }
     .herocards .slabel { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-tertiary); }
-    .hfcards { display:flex; flex-direction:column; gap:13px; }
+    .hfcards { display:flex; flex-direction:column; gap:14px; }
+    /* offset the stacked sampling cards into a gentle diagonal (split layout only) */
+    @media (min-width:1041px){
+      .hfcards .fcard:nth-child(1){ margin-right:3rem; }
+      .hfcards .fcard:nth-child(2){ margin-left:1.5rem; margin-right:1.5rem; }
+      .hfcards .fcard:nth-child(3){ margin-left:3rem; }
+    }
     @media (max-width:1040px){ .herogrid{ grid-template-columns:minmax(0,1fr); gap:40px; } .herotext .lede{ max-width:620px; } .hfcards{ display:grid; grid-template-columns:1fr 1fr; } }
     @media (max-width:600px){ .hfcards{ grid-template-columns:minmax(0,1fr); } }
   </style>
