@@ -19,13 +19,14 @@ Vercel team: `policy-engine`. Both web projects are **CLI-deployed** (not
 git-integrated), so deploys are manual — which is precisely why the deploy
 script below self-verifies.
 
-## Deploy — always use this
+## Deploy — always use these
 
 ```bash
-./deploy.sh         # vercel --prod  +  bare-URL canary verification
+./deploy.sh         # institute landing → vercel --prod + bare-URL canary verify
+./deploy-app.sh     # app (app.thesisinstitute.org, ~/farness/site) → same
 ```
 
-Never run a bare `vercel --prod` and call it done. `deploy.sh` runs `verify.sh`
+Never run a bare `vercel --prod` and call it done. Both scripts run `verify.sh`
 against the **bare** production URLs afterward, so a stale or incorrect serve
 fails the deploy loudly instead of slipping through.
 
@@ -60,6 +61,7 @@ Redeploy the affected project to **production** (a new deployment ID purges the
 edge cache):
 
 - institute → `./deploy.sh`
-- app → `cd ~/farness/site && vercel --prod --yes`
+- app → `./deploy-app.sh`
 
-Then re-run `./verify.sh`. **Always check bare URLs — never `?cb=`.**
+Both re-verify automatically. If checking by hand, **always hit bare URLs — never
+`?cb=`** (a cache-buster hits a fresh edge key and masks the stale copy).
