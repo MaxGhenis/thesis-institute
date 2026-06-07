@@ -27,38 +27,38 @@
     .fhead h2 { margin:0; }
     .fhead a { font-family:var(--font-mono); font-size:0.72rem; color:var(--accent); text-decoration:none; white-space:nowrap; }
     .fhead a:hover { text-decoration:underline; }
-    .fcards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
-    @media (max-width:760px){ .fcards{ grid-template-columns:1fr 1fr; } }
-    @media (max-width:480px){ .fcards{ grid-template-columns:1fr; } }
-    .fcard { display:block; text-decoration:none; color:inherit; border:1px solid var(--border-soft); border-radius:14px; padding:16px 18px; background:var(--paper); transition:border-color .2s, transform .2s, box-shadow .2s; }
+    /* forecast cards — match the app's MarketCard + ForecastViz */
+    .fcard { display:flex; flex-direction:column; gap:13px; text-decoration:none; color:inherit; border:1px solid var(--border-soft); border-radius:14px; padding:18px; background:var(--paper); transition:border-color .2s, transform .2s, box-shadow .2s; }
     .fcard:hover { border-color:var(--border-strong); transform:translateY(-2px); box-shadow:0 10px 28px -16px rgba(20,32,43,.25); }
-    .fcard .meta { display:flex; align-items:center; justify-content:space-between; margin-bottom:11px; }
-    .fcard .ftag { font-family:var(--font-mono); font-size:0.54rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--horizon-700); }
-    .fcard .ftag.pol { color:var(--accent); }
-    .fcard .fres { font-family:var(--font-mono); font-size:0.54rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-tertiary); }
-    .fcard h3 { font-family:var(--font-display); font-size:0.96rem; font-weight:500; line-height:1.3; letter-spacing:-0.01em; color:var(--text-primary); min-height:2.5em; margin:0; }
-    .fcard .frow { display:flex; align-items:baseline; gap:9px; margin-top:12px; }
-    .fcard .fnum { font-family:var(--font-display); font-size:1.55rem; font-weight:600; letter-spacing:-0.02em; color:var(--text-primary); }
-    .fcard .fci { font-family:var(--font-mono); font-size:0.58rem; color:var(--text-tertiary); }
-    .fcard .fbar { position:relative; height:5px; border-radius:4px; background:#E7EEF3; margin-top:12px; overflow:visible; }
-    .fcard .fbar i { position:absolute; inset:0; border-radius:4px; background:linear-gradient(90deg, rgba(94,151,200,.45), rgba(169,78,128,.55)); }
-    .fcard .fbar b { position:absolute; top:50%; width:9px; height:9px; border-radius:50%; transform:translate(-50%,-50%); background:#fff; box-shadow:0 0 0 3px rgba(169,78,128,.4); }
+    .fcard:hover h3 { color:var(--accent); }
+    .fcard .meta { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+    .fcard .chips { display:flex; flex-wrap:wrap; gap:6px; }
+    .fcard .chip { display:inline-block; border:1px solid; border-radius:999px; padding:2px 8px; font-family:var(--font-mono); font-size:0.56rem; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap; }
+    .fcard .chip.data { background:#EAF1F7; border-color:#D7E5F0; color:#356C99; }
+    .fcard .chip.pol { background:#F8E9F1; border-color:#ECCFE0; color:#8E3A68; }
+    .fcard .chip.live { background:#EAF4FB; border-color:#BFDBEF; color:#356C99; }
+    .fcard .chip.static { background:#F2F6F9; border-color:#E2E8EE; color:#8A99A6; }
+    .fcard .fres { flex:none; font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.03em; color:var(--text-tertiary); white-space:nowrap; }
+    .fcard h3 { font-family:var(--font-display); font-size:1.02rem; font-weight:600; line-height:1.3; letter-spacing:-0.01em; color:var(--text-primary); margin:0; transition:color .2s; }
+    .fcard .ffore { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:9px; }
+    .fcard .fforelabel { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-tertiary); }
+    .fcard .fnum { font-family:var(--font-display); font-size:1.18rem; font-weight:600; letter-spacing:-0.01em; color:var(--accent); }
+    .fcard .fbar { position:relative; height:8px; border-radius:999px; background:#EAF1F6; }
+    .fcard .fbar i { position:absolute; top:0; height:8px; border-radius:999px; background:#9FC4E6; }
+    .fcard .fbar b { position:absolute; top:50%; width:2px; height:13px; border-radius:1px; transform:translate(-50%,-50%); background:var(--accent); }
+    .fcard .flabels { display:flex; justify-content:space-between; margin-top:6px; font-family:var(--font-mono); font-size:0.6rem; color:var(--text-tertiary); }
+    .fcard .flabels .pt { color:var(--accent); font-weight:500; }
     /* split hero — text left, sampling cards right */
-    .herogrid { max-width:1180px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,520px); gap:56px; align-items:center; }
+    .herogrid { max-width:1180px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,480px); gap:56px; align-items:start; }
     .herotext, .herocards { min-width:0; }
     html, body { overflow-x:hidden; }
     .herotext .lede { max-width:560px; }
+    .herotext h1 { overflow-wrap:break-word; }
     .herocards .fhead { margin-bottom:14px; }
     .herocards .slabel { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-tertiary); }
-    .hfcards { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
-    .herocards .fcard { padding:14px 15px; }
-    .herocards .fcard h3 { font-size:0.85rem; min-height:2.3em; }
-    .herocards .fcard .fnum { font-size:1.35rem; }
-    .herocards .fcard .frow { margin-top:9px; flex-wrap:wrap; }
-    .herocards .fcard .fbar { margin-top:10px; }
-    .herotext h1 { overflow-wrap:break-word; }
-    @media (max-width:1040px){ .herogrid{ grid-template-columns:minmax(0,1fr); gap:40px; } .herotext .lede{ max-width:620px; } }
-    @media (max-width:520px){ .hfcards{ grid-template-columns:minmax(0,1fr); } }
+    .hfcards { display:flex; flex-direction:column; gap:13px; }
+    @media (max-width:1040px){ .herogrid{ grid-template-columns:minmax(0,1fr); gap:40px; } .herotext .lede{ max-width:620px; } .hfcards{ display:grid; grid-template-columns:1fr 1fr; } }
+    @media (max-width:600px){ .hfcards{ grid-template-columns:minmax(0,1fr); } }
   </style>
 </head>
 <body>
@@ -100,28 +100,40 @@
         </div>
         <div class="hfcards">
           <a class="fcard" href="https://app.thesisinstitute.org/forecasts/spm-child-poverty-2025">
-            <div class="meta"><span class="ftag">Government data</span><span class="fres">resolves Sep 2026</span></div>
+            <div class="meta">
+              <span class="chips"><span class="chip data">Government data</span><span class="chip live">Live API path</span></span>
+              <span class="fres">resolves Sep 2026</span>
+            </div>
             <h3>SPM child poverty rate, 2025</h3>
-            <div class="frow"><span class="fnum">13.1%</span><span class="fci">80% CI 12.0–14.4</span></div>
-            <div class="fbar"><i></i><b style="left:45.8%"></b></div>
+            <div class="fviz">
+              <div class="ffore"><span class="fforelabel">forecast · 80% CI</span><span class="fnum">13.1%</span></div>
+              <div class="fbar"><i style="left:13.2%;width:73.6%"></i><b style="left:46.9%"></b></div>
+              <div class="flabels"><span>12.0%</span><span class="pt">13.1%</span><span>14.4%</span></div>
+            </div>
           </a>
           <a class="fcard" href="https://app.thesisinstitute.org/forecasts/median-household-income-2025">
-            <div class="meta"><span class="ftag">Government data</span><span class="fres">resolves Sep 2026</span></div>
+            <div class="meta">
+              <span class="chips"><span class="chip data">Government data</span><span class="chip static">Static mock trace</span></span>
+              <span class="fres">resolves Sep 2026</span>
+            </div>
             <h3>Median household income, 2025</h3>
-            <div class="frow"><span class="fnum">$80,600</span><span class="fci">80% CI $78.6k–$82.9k</span></div>
-            <div class="fbar"><i></i><b style="left:46.5%"></b></div>
+            <div class="fviz">
+              <div class="ffore"><span class="fforelabel">forecast · 80% CI</span><span class="fnum">$80,600</span></div>
+              <div class="fbar"><i style="left:13.2%;width:73.6%"></i><b style="left:47.4%"></b></div>
+              <div class="flabels"><span>$78,600</span><span class="pt">$80,600</span><span>$82,900</span></div>
+            </div>
           </a>
           <a class="fcard" href="https://app.thesisinstitute.org/forecasts/eitc-max-credit-three-children-ty2027">
-            <div class="meta"><span class="ftag pol">Policy</span><span class="fres">resolves Oct 2026</span></div>
+            <div class="meta">
+              <span class="chips"><span class="chip pol">Policy</span><span class="chip static">Static mock trace</span></span>
+              <span class="fres">resolves Oct 2026</span>
+            </div>
             <h3>Maximum EITC, 3+ children, TY2027</h3>
-            <div class="frow"><span class="fnum">$8,500</span><span class="fci">80% CI $8,050–$9,100</span></div>
-            <div class="fbar"><i></i><b style="left:42.9%"></b></div>
-          </a>
-          <a class="fcard" href="https://app.thesisinstitute.org/forecasts/federal-minimum-wage-jan-2027">
-            <div class="meta"><span class="ftag pol">Policy</span><span class="fres">resolves Jan 2027</span></div>
-            <h3>Federal minimum wage, Jan 1 2027</h3>
-            <div class="frow"><span class="fnum">$7.25</span><span class="fci">80% CI $7.25–$9.50</span></div>
-            <div class="fbar"><i></i><b style="left:3%"></b></div>
+            <div class="fviz">
+              <div class="ffore"><span class="fforelabel">forecast · 80% CI</span><span class="fnum">$8,500</span></div>
+              <div class="fbar"><i style="left:13.2%;width:73.6%"></i><b style="left:44.8%"></b></div>
+              <div class="flabels"><span>$8,050</span><span class="pt">$8,500</span><span>$9,100</span></div>
+            </div>
           </a>
         </div>
       </div>
