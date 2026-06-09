@@ -14,6 +14,15 @@ APP_DIR="${FARNESS_SITE:-$HOME/farness/site}"
 DOMAIN="app.thesisinstitute.org"
 [ -d "$APP_DIR/.vercel" ] || { echo "Not linked to Vercel: $APP_DIR (set FARNESS_SITE?)"; exit 1; }
 
+# Refuse to ship uncommitted site changes. Deploying WIP/stale trees is how the
+# 2026-06-08 alias capture happened. Override deliberately with ALLOW_DIRTY=1.
+if [ -z "${ALLOW_DIRTY:-}" ] && [ -n "$(git -C "$APP_DIR" status --porcelain -- .)" ]; then
+  echo "✗ uncommitted changes under $APP_DIR — commit them first, or rerun with ALLOW_DIRTY=1."
+  git -C "$APP_DIR" status --porcelain -- . | head -10
+  exit 1
+fi
+echo "==> deploying site at: $(git -C "$APP_DIR" log -1 --format='%h %s' 2>/dev/null || echo 'not a git checkout')"
+
 TOK=$(python3 -c "import json,os;print(json.load(open(os.path.expanduser('~/Library/Application Support/com.vercel.cli/auth.json')))['token'])")
 TEAM=team_xsyTmFLMLGbHH7Qxu70R5G4r
 

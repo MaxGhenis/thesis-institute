@@ -37,7 +37,21 @@ fails the deploy loudly instead of slipping through.
 ```
 
 A launchd agent (`org.thesisinstitute.canary`) runs `monitor.sh` daily and
-raises a macOS notification (and logs to `.canary.log`) if any canary fails.
+raises a macOS notification plus an email alert via `gog` (and logs to
+`.canary.log`) if any canary fails.
+
+## Worktrees must never link to production
+
+The 2026-06-08 recurrence: an agent worktree (`~/_worktrees/...`) carried a
+`site/.vercel/` link to the `brier-almanac` project and ran raw `vercel --prod`
+from a stale base — each deploy silently captured the `app.thesisinstitute.org`
+alias, and production served pre-`/about` content for two days. Rules:
+
+- **Never `vercel link` a worktree to a production project.** Delete any
+  `site/.vercel/` directory found in a worktree.
+- `deploy-app.sh` now refuses to deploy when the site tree has uncommitted
+  changes (`ALLOW_DIRTY=1` to override deliberately) and prints the commit it
+  ships.
 
 ## The 2026-06 incident (why all this exists)
 

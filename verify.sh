@@ -73,6 +73,13 @@ run_checks() {
   [ "$code" = 200 ] && pass "app /about                  200" \
                     || fail "app /about                  $code (want 200)"
 
+  # --- app /markets: legacy tree must 308 to /forecasts (consolidated 2026-06) ---
+  code=$(status https://app.thesisinstitute.org/markets)
+  loc=$(location https://app.thesisinstitute.org/markets)
+  { [ "$code" = 308 ] && [[ "$loc" == */forecasts* ]]; } \
+    && pass "app /markets                308 -> /forecasts" \
+    || fail "app /markets                $code -> $loc (want 308 -> /forecasts; old build served a duplicate page)"
+
   # --- app root must SERVE the app, not redirect to the apex ---
   code=$(status https://app.thesisinstitute.org/)
   [ "$code" = 200 ] && pass "app /                       200 (serves app, not redirect)" \

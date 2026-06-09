@@ -20,4 +20,15 @@ fi
 # macOS notification (reliable on Max's Mac; no credentials needed).
 osascript -e 'display notification "thesisinstitute.org is serving stale/incorrect content — run ~/thesis-institute/deploy.sh" with title "Thesis canary FAILED" sound name "Basso"' 2>/dev/null || true
 
+# Email alert as well — the Jun 8 failure notified for two days unnoticed;
+# email is durable. Uses gog (max@maxghenis.com gmail auth); failures log only.
+GOG="$(command -v gog || true)"
+[ -z "$GOG" ] && [ -x "$HOME/bin/gog" ] && GOG="$HOME/bin/gog"
+if [ -n "$GOG" ]; then
+  "$GOG" gmail send --account max@maxghenis.com --to max@maxghenis.com \
+    --subject "Thesis canary FAILED $TS — run ~/thesis-institute/deploy.sh" \
+    --body-html "<p>Canary failure on thesisinstitute.org surfaces. Runbook: <code>~/thesis-institute/README.md</code> → 'If a canary fails'.</p><pre>$(printf '%s' "$out" | sed 's/\x1b\[[0-9;]*m//g; s/&/\&amp;/g; s/</\&lt;/g')</pre>" \
+    >>"$LOG" 2>&1 || echo "[$TS] email alert failed" >>"$LOG"
+fi
+
 exit 1
