@@ -85,6 +85,27 @@ run_checks() {
   [ "$code" = 200 ] && pass "app /                       200 (serves app, not redirect)" \
                     || fail "app /                       $code (want 200; stale build redirected to apex)"
 
+  # --- api health ---
+  code=$(status https://api.thesisinstitute.org/health)
+  [ "$code" = 200 ] && pass "api /health                 200" \
+                    || fail "api /health                 $code (want 200)"
+
+  # --- api stream: must allow the app origin AND emit an event quickly.
+  #     A stream that holds the connection open without sending is exactly the
+  #     failure that pinned the app on 'connecting' (2026-06-09).
+  local hdrs body acao
+  hdrs=$(curl -sS -m 4 -D - -o /dev/null -H "Origin: https://app.thesisinstitute.org" \
+    "https://api.thesisinstitute.org/forecasts/cpi-u-annual-2026/stream" 2>/dev/null)
+  acao=$(awk 'tolower($1)=="access-control-allow-origin:"{print $2}' <<<"$hdrs" | tr -d '\r')
+  [ "$acao" = "https://app.thesisinstitute.org" ] \
+    && pass "api stream CORS             allows app origin" \
+    || fail "api stream CORS             ACAO='$acao' (want https://app.thesisinstitute.org)"
+  body=$(curl -sS -m 8 -H "Origin: https://app.thesisinstitute.org" \
+    "https://api.thesisinstitute.org/forecasts/cpi-u-annual-2026/stream" 2>/dev/null | head -c 400)
+  grep -q "^event:" <<<"$body" \
+    && pass "api stream                  first event within 8s" \
+    || fail "api stream                  NO event within 8s — hung/buffered stream"
+
   return $FAIL
 }
 

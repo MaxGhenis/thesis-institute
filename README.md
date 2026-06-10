@@ -24,6 +24,7 @@ script below self-verifies.
 ```bash
 ./deploy.sh         # institute landing → vercel --prod + bare-URL canary verify
 ./deploy-app.sh     # app (app.thesisinstitute.org, ~/farness/site) → same
+./deploy-api.sh     # forecast API (api.thesisinstitute.org, ~/farness/forecast-api) → same
 ```
 
 Never run a bare `vercel --prod` and call it done. Both scripts run `verify.sh`
