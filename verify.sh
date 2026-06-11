@@ -73,6 +73,11 @@ checks_app() {
     && pass "app /forecasts has ledger nav (/log)" \
     || fail "app /forecasts MISSING /log nav — pre-ledger build?"
 
+  # --- app cell pages stay embeddable (scorecard /plan iframes depend on this) ---
+  framing=$(curl -sSI https://app.thesisinstitute.org/medicaid-call-wait-mar-2027-work-req-deadline-holds | grep -ci 'x-frame-options\|frame-ancestors' || true)
+  [ "$framing" = 0 ] && pass "app cells embeddable (no framing headers)" \
+                     || fail "app cells NOT embeddable — XFO/frame-ancestors present (breaks scorecard /plan embeds)"
+
   # --- app /about: the institute's 'About' link target ---
   code=$(status_follow https://app.thesisinstitute.org/about)
   [ "$code" = 200 ] && pass "app /about                  200" \
