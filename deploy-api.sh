@@ -36,7 +36,7 @@ echo "==> vercel --prod (forecast-api: $API_DIR)…"
 ( cd "$API_DIR" && vercel --prod --yes )
 
 echo "==> verifying production canaries (retrying for propagation)…"
-if "$DIR/verify.sh" 6; then
+if "$DIR/verify.sh" 6 api; then
   echo "✓ api deploy verified"
 else
   echo "✗ CANARY FAILED after deploy."
@@ -44,7 +44,7 @@ else
     echo "   rolling $DOMAIN back to last-good deployment: $PREV"
     vercel alias set "$PREV" "$DOMAIN" --scope policy-engine
     echo "   re-verifying after rollback…"
-    "$DIR/verify.sh" 4 || true
+    "$DIR/verify.sh" 4 api || true
   else
     echo "   no previous deployment captured — fix manually (vercel alias set <good-deploy> $DOMAIN)."
   fi

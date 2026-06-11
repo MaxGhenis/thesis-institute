@@ -7,23 +7,26 @@
 # copy. That masking is exactly what hid the 2026-06 stale-old-app incident, so
 # this script deliberately hits the same doors a browser does.
 #
-# Usage:  ./verify.sh [attempts]    attempts defaults to 1; deploy.sh passes a
-#                                   higher number to ride out alias propagation.
+# Usage:  ./verify.sh [attempts] [scope]   attempts defaults to 1; scope is
+#         all|apex|app|api (default all). Deploy scripts pass their OWN surface
+#         so a coordinated multi-surface release can't deadlock one deploy on
+#         another surface's pending canaries (2026-06-11 rollout lesson).
 # Exit:   0 = every canary passed, 1 = at least one failed.
 
 set -uo pipefail
 
 ATTEMPTS="${1:-1}"
+SCOPE="${2:-all}"
 GREEN=$'\033[32m'; RED=$'\033[31m'; DIM=$'\033[2m'; NC=$'\033[0m'
 
 status() { curl -sS -o /dev/null -w '%{http_code}' "$1"; }
 status_follow() { curl -sSL -o /dev/null -w '%{http_code}' "$1"; }
 location() { curl -sSI "$1" | awk 'tolower($1)=="location:"{print $2}' | tr -d '\r'; }
 
-run_checks() {
-  FAIL=0
-  pass() { printf "  ${GREEN}PASS${NC}  %s\n" "$1"; }
-  fail() { printf "  ${RED}FAIL${NC}  %s\n" "$1"; FAIL=1; }
+pass() { printf "  ${GREEN}PASS${NC}  %s\n" "$1"; }
+fail() { printf "  ${RED}FAIL${NC}  %s\n" "$1"; FAIL=1; }
+
+checks_apex() {
   local code loc html
 
   # --- apex: must serve the fresh static institute landing ---
@@ -55,6 +58,11 @@ run_checks() {
   { [[ "$code" =~ ^30[78]$ ]] && [[ "$loc" == *thesisinstitute.org/* ]]; } \
     && pass "www                         $code -> apex" \
     || fail "www                         $code -> $loc (want 307/308 -> apex)"
+
+}
+
+checks_app() {
+  local code loc html
 
   # --- app /forecasts: the institute's 'Forecasts' link target ---
   code=$(status_follow https://app.thesisinstitute.org/forecasts)
@@ -90,6 +98,11 @@ run_checks() {
   [ "$code" = 200 ] && pass "app /                       200 (serves app, not redirect)" \
                     || fail "app /                       $code (want 200; stale build redirected to apex)"
 
+}
+
+checks_api() {
+  local code
+
   # --- api health ---
   code=$(status https://api.thesisinstitute.org/health)
   [ "$code" = 200 ] && pass "api /health                 200" \
@@ -110,7 +123,17 @@ run_checks() {
   grep -q "^event:" <<<"$body" \
     && pass "api stream                  first event within 8s" \
     || fail "api stream                  NO event within 8s — hung/buffered stream"
+}
 
+run_checks() {
+  FAIL=0
+  case "$SCOPE" in
+    apex) checks_apex ;;
+    app)  checks_app ;;
+    api)  checks_api ;;
+    all)  checks_apex; checks_app; checks_api ;;
+    *) echo "unknown scope: $SCOPE (want all|apex|app|api)"; return 1 ;;
+  esac
   return $FAIL
 }
 

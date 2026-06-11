@@ -13,4 +13,4 @@ echo "==> vercel --prod (thesis-institute)…"
 vercel --prod --yes
 
 echo "==> verifying bare production URLs (retrying for propagation)…"
-"$DIR/verify.sh" 6
+"$DIR/verify.sh" 6 apex
