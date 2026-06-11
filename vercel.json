@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/thesis", "destination": "https://app.thesisinstitute.org/about", "permanent": true }
+    { "source": "/thesis", "destination": "https://app.thesisinstitute.org/thesis", "permanent": true }
   ],
   "headers": [
     {

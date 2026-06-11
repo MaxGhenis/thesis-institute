@@ -37,12 +37,12 @@ run_checks() {
     && fail "apex /  still links /paper — OLD APP nav is being served" \
     || pass "apex /  no /paper link (old-app marker absent)"
 
-  # --- apex /thesis -> 308 -> app/about ---
+  # --- apex /thesis -> 308 -> app/thesis ---
   code=$(status https://thesisinstitute.org/thesis)
   loc=$(location https://thesisinstitute.org/thesis)
-  { [ "$code" = 308 ] && [[ "$loc" == *app.thesisinstitute.org/about* ]]; } \
-    && pass "apex /thesis                308 -> app/about" \
-    || fail "apex /thesis                $code -> $loc (want 308 -> app.thesisinstitute.org/about)"
+  { [ "$code" = 308 ] && [[ "$loc" == *app.thesisinstitute.org/thesis* ]]; } \
+    && pass "apex /thesis                308 -> app/thesis" \
+    || fail "apex /thesis                $code -> $loc (want 308 -> app.thesisinstitute.org/thesis)"
 
   # --- apex /paper -> 404 (old Research route must be gone) ---
   code=$(status https://thesisinstitute.org/paper)
@@ -61,12 +61,9 @@ run_checks() {
   html=$(curl -sSL https://app.thesisinstitute.org/forecasts)
   [ "$code" = 200 ] && pass "app /forecasts              200" \
                     || fail "app /forecasts              $code (want 200; stale build 308'd to apex -> 404)"
-  grep -q '>About<' <<<"$html" \
-    && pass "app /forecasts has new nav (About)" \
-    || fail "app /forecasts MISSING 'About' nav — stale app build?"
-  grep -q 'href="/paper"' <<<"$html" \
-    && fail "app /forecasts still links /paper — OLD APP nav" \
-    || pass "app /forecasts no /paper link"
+  grep -q 'href="/log"' <<<"$html" \
+    && pass "app /forecasts has ledger nav (/log)" \
+    || fail "app /forecasts MISSING /log nav — pre-ledger build?"
 
   # --- app /about: the institute's 'About' link target ---
   code=$(status_follow https://app.thesisinstitute.org/about)
@@ -79,6 +76,14 @@ run_checks() {
   { [ "$code" = 308 ] && [[ "$loc" == */forecasts* ]]; } \
     && pass "app /markets                308 -> /forecasts" \
     || fail "app /markets                $code -> $loc (want 308 -> /forecasts; old build served a duplicate page)"
+
+  # --- app /log + /log.json: the Thesis Log must serve (ledger build marker) ---
+  code=$(status_follow https://app.thesisinstitute.org/log)
+  [ "$code" = 200 ] && pass "app /log                    200" \
+                    || fail "app /log                    $code (want 200)"
+  schema=$(curl -sSL https://app.thesisinstitute.org/log.json | head -c 400 | grep -o 'thesis_log_v1')
+  [ "$schema" = "thesis_log_v1" ] && pass "app /log.json               schema thesis_log_v1" \
+                                  || fail "app /log.json               missing thesis_log_v1 schema"
 
   # --- app root must SERVE the app, not redirect to the apex ---
   code=$(status https://app.thesisinstitute.org/)
