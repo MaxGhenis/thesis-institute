@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "redirects": [
     { "source": "/thesis", "destination": "https://app.thesisinstitute.org/thesis", "permanent": true }
   ],
