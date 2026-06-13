@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The agents and their packs — The Thesis Institute</title>
+  <meta name="description" content="Brier-1 writes the Institute's forecasts. Packs are how expertise enters the system — falsifiable, versioned units of judgment that have to improve predictions to earn their place, and are scored against reality when they do." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='6' fill='%230F1A24'/%3E%3Ccircle cx='21.5' cy='14' r='5.5' fill='%23A94E80' opacity='0.12'/%3E%3Cline x1='2' y1='4.5' x2='17' y2='12' stroke='%239FB6C6' stroke-width='1.2' stroke-linecap='round' opacity='0.55'/%3E%3Cline x1='2' y1='23.5' x2='17' y2='16' stroke='%239FB6C6' stroke-width='1.5' stroke-linecap='round' opacity='0.65'/%3E%3Ccircle cx='21.5' cy='14' r='3.2' fill='%23A94E80'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MaxGhenis/brier-design@v1.0.0/tokens.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MaxGhenis/brier-design@v1.0.0/base.css" />
+  <style>
+    .wrap { max-width: 1180px; }
+    .lede { max-width: 660px; }
+    html, body { overflow-x: hidden; }
+
+    /* hero */
+    .ahero { padding-top: 18px; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .ahero h1 { letter-spacing: -0.02em; max-width: 14ch; }
+    .ahero .lede { margin-top: 16px; }
+
+    /* the loop: pack → Brier-1 → forecast → score → back */
+    .loop { display: flex; align-items: stretch; gap: 12px; flex-wrap: wrap; margin-top: 30px; max-width: 940px; }
+    .loop .node { flex: 1 1 150px; border: 1px solid var(--border-soft); border-radius: 13px; padding: 15px 16px; background: var(--paper); }
+    .loop .node .k { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 6px; }
+    .loop .node .v { font-family: var(--font-display); font-size: 0.98rem; font-weight: 500; color: var(--text-primary); letter-spacing: -0.01em; }
+    .loop .node p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin-top: 5px; }
+    .loop .node.hot { border-color: var(--accent); background: var(--accent-subtle); }
+    .loop .lk { align-self: center; color: var(--border-strong); font-family: var(--font-mono); font-size: 0.85rem; }
+    @media (max-width: 740px) { .loop { flex-direction: column; } .loop .lk { transform: rotate(90deg); align-self: flex-start; margin-left: 22px; } }
+
+    /* section rhythm */
+    section { padding: 46px 0; }
+    section + section { border-top: 1px solid var(--border-soft); }
+    .sec-tag { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 10px; }
+
+    /* manifest card */
+    .manifest { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 30px; align-items: start; margin-top: 22px; }
+    @media (max-width: 820px) { .manifest { grid-template-columns: 1fr; } }
+    .code { border: 1px solid var(--border-strong); border-radius: 14px; background: var(--ink-dark, #14202B); padding: 18px 20px; overflow-x: auto; }
+    .code pre { margin: 0; font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.62; color: #C6D4DF; white-space: pre; }
+    .code .key { color: #9FC4E6; }
+    .code .str { color: #C9A6CB; }
+    .code .num { color: #A8C99A; }
+    .code .cm { color: #5E7385; font-style: italic; }
+    .ingredients { list-style: none; padding: 0; margin: 4px 0 0; }
+    .ingredients li { padding: 13px 0; border-bottom: 1px solid var(--border-soft); }
+    .ingredients li:last-child { border-bottom: 0; }
+    .ingredients .t { font-family: var(--font-display); font-weight: 600; font-size: 0.94rem; color: var(--text-primary); letter-spacing: -0.01em; }
+    .ingredients .d { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-top: 3px; }
+
+    /* two kinds — duality */
+    .kinds { display: flex; gap: 18px; align-items: stretch; margin-top: 22px; }
+    .kinds .k { flex: 1; border: 1px solid var(--border-soft); border-radius: 14px; padding: 22px 24px; background: var(--paper); }
+    .kinds .k .tag { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 9px; }
+    .kinds .judgment .tag { color: var(--horizon-700, #356C99); }
+    .kinds .compute .tag { color: var(--accent); }
+    .kinds .k h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; margin-bottom: 7px; letter-spacing: -0.01em; }
+    .kinds .k p { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.55; }
+    .kinds .k .ex { margin-top: 12px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-tertiary); line-height: 1.5; }
+    @media (max-width: 680px) { .kinds { flex-direction: column; } }
+
+    /* two-tier gate */
+    .gate { display: flex; gap: 18px; margin-top: 22px; }
+    .gate .tier { flex: 1; border: 1px solid var(--border-soft); border-radius: 14px; padding: 20px 22px; background: var(--paper); }
+    .gate .tier .when { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-tertiary); }
+    .gate .tier h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.04rem; margin: 6px 0 10px; letter-spacing: -0.01em; }
+    .gate .tier ul { margin: 0; padding-left: 18px; }
+    .gate .tier li { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 5px; }
+    .gate .tier.slow { border-color: var(--accent); }
+    .gate .tier.slow h3 { color: var(--accent); }
+    @media (max-width: 680px) { .gate { flex-direction: column; } }
+    .holdout { margin-top: 18px; border: 1px dashed var(--border-strong); border-radius: 12px; padding: 14px 18px; background: transparent; max-width: 760px; }
+    .holdout .t { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 5px; }
+    .holdout p { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.55; margin: 0; }
+
+    /* provenance ledger */
+    .ledger { margin-top: 20px; border: 1px solid var(--border-soft); border-radius: 14px; overflow: hidden; max-width: 880px; }
+    .ledger .row2 { display: grid; grid-template-columns: minmax(0, 1.4fr) 96px 110px; gap: 14px; padding: 12px 18px; align-items: center; border-bottom: 1px solid var(--border-soft); }
+    .ledger .row2:last-child { border-bottom: 0; }
+    .ledger .row2.head { background: var(--section, #F2F6F9); }
+    .ledger .row2.head span { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-tertiary); }
+    .ledger .pk { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-primary); }
+    .ledger .pk small { color: var(--text-tertiary); }
+    .ledger .delta { font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; }
+    .ledger .delta.up { color: #3E8E5C; }
+    .ledger .delta.flat { color: var(--text-tertiary); }
+    .ledger .stat { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.04em; }
+    .ledger .stat.kept { color: #3E8E5C; }
+    .ledger .stat.dropped { color: #B0556F; }
+
+    /* elicitation flow */
+    .flow { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; margin-top: 20px; }
+    .flow .s { border: 1px solid var(--border-soft); border-radius: 999px; padding: 7px 14px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); background: var(--paper); }
+    .flow .s.packed { border-color: var(--accent); color: var(--accent); }
+    .flow .ar { color: var(--border-strong); font-family: var(--font-mono); font-size: 0.78rem; }
+    .escapes { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .escapes code { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); background: var(--section, #F2F6F9); border: 1px solid var(--border-soft); border-radius: 6px; padding: 4px 9px; }
+
+    .packcta { margin-top: 8px; }
+    .packcta a.btn { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.04em; color: #fff; background: var(--accent); border-radius: 9px; padding: 11px 18px; text-decoration: none; transition: background .2s; }
+    .packcta a.btn:hover { background: var(--accent-hover, #8E3A68); }
+    .note { font-size: 0.82rem; color: var(--text-tertiary); margin-top: 12px; max-width: 620px; line-height: 1.5; }
+    .pull { font-family: var(--font-editorial, var(--font-display)); font-size: 1.32rem; line-height: 1.42; color: var(--text-primary); max-width: 760px; letter-spacing: -0.01em; font-style: italic; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="21.5" cy="14" r="5.5" fill="#A94E80" opacity="0.10"/>
+          <line x1="2" y1="4.5" x2="17" y2="12" stroke="#9FB6C6" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+          <line x1="2" y1="23.5" x2="17" y2="16" stroke="#9FB6C6" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="21.5" cy="14" r="3.2" fill="#A94E80"/>
+        </svg>
+        <span>thesis <small>institute</small></span>
+      </a>
+      <nav>
+        <a href="https://app.thesisinstitute.org/forecasts">Forecasts</a>
+        <a href="https://app.thesisinstitute.org/log">Log</a>
+        <a href="/agents" aria-current="page">Agents</a>
+        <a href="https://app.thesisinstitute.org/thesis">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="ahero">
+    <div class="wrap">
+      <div class="eyebrow">Agents &amp; packs</div>
+      <h1>The forecaster, and how expertise reaches it</h1>
+      <p class="lede body">
+        <strong>Brier-1</strong> writes the Institute's forecasts — every prediction
+        published with its reasoning and scored when reality arrives. <strong>Packs</strong>
+        are how human expertise enters that loop: small, versioned, falsifiable units of
+        judgment that have to <em>improve</em> the forecasts to earn their place, and are
+        measured against reality once they do.
+      </p>
+
+      <div class="loop" aria-label="The forecasting loop">
+        <div class="node">
+          <div class="k">Contribution</div>
+          <div class="v">Pack</div>
+          <p>An expert's encoded judgment about one class of question.</p>
+        </div>
+        <div class="lk">→</div>
+        <div class="node hot">
+          <div class="k">Agent</div>
+          <div class="v">Brier-1</div>
+          <p>Composes the applicable packs into its reasoning and predicts.</p>
+        </div>
+        <div class="lk">→</div>
+        <div class="node">
+          <div class="k">Output</div>
+          <div class="v">Forecast</div>
+          <p>Published with its reasoning and the packs that shaped it.</p>
+        </div>
+        <div class="lk">→</div>
+        <div class="node">
+          <div class="k">Reality</div>
+          <div class="v">Score</div>
+          <p>Resolved and Brier-scored — credit flows back to the packs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">The idea</div>
+      <h2>A pack is a falsifiable claim</h2>
+      <p class="body" style="max-width:720px; margin-bottom:20px">
+        Most forecasting platforms aggregate <em>predictions</em>. The Institute aggregates
+        <em>judgment</em> — and scores it. A pack is an expert asserting <em>“this way of
+        thinking about this kind of question makes the forecasts better,”</em> in a form the
+        system can test, version, attribute, and retire. It is not a contribution of text.
+        It is a wager that has to win on a scoreboard.
+      </p>
+      <p class="pull">
+        If expertise transfers, it shows up as a lower Brier score. If it doesn't,
+        the pack doesn't get in — and saying so is the whole point.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">Anatomy</div>
+      <h2>What's inside a pack</h2>
+      <div class="manifest">
+        <div class="code" aria-hidden="true"><pre><span class="key">id</span>: snap-policy-grounding
+<span class="key">version</span>: <span class="str">"0.3.0"</span>
+<span class="key">author</span>: <span class="str">"a domain expert"</span>
+<span class="key">scope</span>:            <span class="cm"># which questions this applies to</span>
+  <span class="key">tags</span>: [policy, us-safety-net]
+<span class="key">claim</span>: <span class="str">"grounding eligibility in real
+  computation beats unaided estimates"</span>
+<span class="key">evidence_sources</span>:  <span class="cm"># pinned to a snapshot</span>
+  - <span class="key">ref</span>: usda-snap-fns
+    <span class="key">snapshot</span>: <span class="str">"2026-06-01"</span>
+<span class="key">weighting_protocol</span>: base-rate-first
+<span class="key">mechanism_templates</span>: [benefit-cliff]
+<span class="key">tool_dependencies</span>:
+  - <span class="key">runs</span>: policyengine
+  - <span class="key">runs</span>: axiom-rules-engine
+<span class="key">correlation_directives</span>: [by-state]
+<span class="key">evaluation_record</span>:
+  <span class="key">brier_delta</span>: <span class="num">-0.041</span>   <span class="cm"># admitted</span>
+  <span class="key">holdout</span>: <span class="str">"post-2026-Q1"</span></pre></div>
+        <div>
+          <p class="body" style="margin-bottom:6px">A pack manifest carries five kinds of judgment, plus the record that admitted it:</p>
+          <ul class="ingredients">
+            <li><div class="t">Evidence to consider</div><div class="d">Which sources to pull — each pinned to a snapshot, so “the evidence changed” is detectable, not silent.</div></li>
+            <li><div class="t">How to weigh it</div><div class="d">An explicit protocol: base rates first, likelihood ratios by evidence type, recency discounting.</div></li>
+            <li><div class="t">Mechanism models</div><div class="d">Theoretical templates the agent must instantiate before it reaches for a number.</div></li>
+            <li><div class="t">Computational models</div><div class="d">Tools the agent actually <em>runs</em> — a policy pack invokes PolicyEngine or the Axiom rules engine instead of guessing.</div></li>
+            <li><div class="t">Correlation directives</div><div class="d">How this question covaries with others, so related forecasts are scored on joint calibration, not one at a time.</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">Two kinds</div>
+      <h2>Judgment, and computation</h2>
+      <div class="kinds">
+        <div class="k judgment">
+          <div class="tag">Judgment pack</div>
+          <h3>Encoded reasoning</h3>
+          <p>The transferable habits of a good forecaster — base-rate anchoring, mechanism decomposition, stating an interval before a point estimate, a premortem. Judgment that usually lives in one expert's head, written down where it can be reused and tested.</p>
+          <div class="ex">e.g. “evidence-weighting protocol” — the Institute's own forecasting method, packaged.</div>
+        </div>
+        <div class="k compute">
+          <div class="tag">Computational pack</div>
+          <h3>Grounded in a model</h3>
+          <p>For questions a model can actually compute, the pack hands the agent the model. A policy-outcome pack runs <strong>PolicyEngine</strong> or the open <strong>Axiom rules engine</strong> — deterministic eligibility and benefit math, traceable to the statute — so a “what will this reform cost / who qualifies” forecast rests on computation, not a hunch.</p>
+          <div class="ex">e.g. “SNAP policy grounding” — eligibility computed, not estimated; even client-side, no data leaving the page.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">Admission</div>
+      <h2>How a pack earns its place</h2>
+      <p class="body" style="max-width:720px; margin-bottom:6px">
+        Anyone can propose a pack. Whether it gets used is decided by a two-tier gate —
+        cheap checks on every change, and an expensive verdict against resolved questions.
+      </p>
+      <div class="gate">
+        <div class="tier">
+          <div class="when">Every change · deterministic</div>
+          <h3>Fast tier</h3>
+          <ul>
+            <li>The manifest validates and its scope is well-formed.</li>
+            <li>Required reasoning blocks are present and ordered — interval before point estimate.</li>
+            <li>Anti-sycophancy framings are intact.</li>
+            <li>Every declared tool is actually invocable.</li>
+          </ul>
+        </div>
+        <div class="tier slow">
+          <div class="when">On demand &amp; scheduled · against reality</div>
+          <h3>Slow tier — replay with ablation</h3>
+          <ul>
+            <li>Replay a frozen set of <em>resolved</em> questions through Brier-1, with and without the pack.</li>
+            <li>Compute the Brier-score and calibration delta the pack is responsible for.</li>
+            <li>Admit it only if it improves — or holds — its claimed question class.</li>
+            <li>Ablation gives each pack its <em>marginal</em> credit when several apply at once.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="holdout">
+        <div class="t">Goodhart defense</div>
+        <p>Scoring runs on a time-split holdout — train on questions resolved before a cutoff, score on questions resolved after. A pack tuned to look good on the past can't quietly overfit the test; it has to generalize forward, which is the only thing a forecast cares about.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">Provenance &amp; credit</div>
+      <h2>A citation system where the citation is a score</h2>
+      <p class="body" style="max-width:720px; margin-bottom:6px">
+        Every forecast records the packs and versions that shaped it. Calibration can then be
+        segmented by pack generation, and an expert's contribution becomes a measurable number:
+        the Brier delta their pack moved. Credit isn't a byline — it's an effect on accuracy.
+      </p>
+      <div class="ledger" role="table" aria-label="Pack contributions">
+        <div class="row2 head" role="row"><span>Pack · version</span><span>Brier Δ</span><span>Status</span></div>
+        <div class="row2" role="row"><div class="pk">snap-policy-grounding <small>0.3.0</small></div><div class="delta up">−0.041</div><div class="stat kept">admitted</div></div>
+        <div class="row2" role="row"><div class="pk">base-rate-first <small>1.2.0</small></div><div class="delta up">−0.018</div><div class="stat kept">admitted</div></div>
+        <div class="row2" role="row"><div class="pk">election-mechanism <small>0.1.0</small></div><div class="delta flat">+0.002</div><div class="stat dropped">not retained</div></div>
+      </div>
+      <p class="note">Illustrative figures. A pack that stops helping — because the world moved or its evidence went stale — is retired the same way it was admitted: by the score, in the open.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">Composition</div>
+      <h2>How packs reach the prediction</h2>
+      <p class="body" style="max-width:720px; margin-bottom:4px">
+        Brier-1 reasons through a fixed elicitation flow. Applicable packs compose into the
+        relevant steps — they refine the method, they don't replace it.
+      </p>
+      <div class="flow" aria-label="Elicitation flow">
+        <span class="s">frame the question</span><span class="ar">→</span>
+        <span class="s packed">base rates</span><span class="ar">→</span>
+        <span class="s packed">mechanism</span><span class="ar">→</span>
+        <span class="s packed">weigh evidence</span><span class="ar">→</span>
+        <span class="s">interval before point</span><span class="ar">→</span>
+        <span class="s">premortem</span><span class="ar">→</span>
+        <span class="s packed">correlation</span>
+      </div>
+      <p class="body" style="max-width:720px; margin-top:24px; margin-bottom:6px">
+        And when a question can't be honestly answered, the agent has to say so — with a typed
+        escape, never a confident guess. That refusal is the framework's thesis in miniature.
+      </p>
+      <div class="escapes">
+        <code>KPI unresolvable as stated</code>
+        <code>no defensible base rate</code>
+        <code>question ill-posed</code>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-tag">Contribute</div>
+      <h2>Bring a hypothesis</h2>
+      <p class="body" style="max-width:720px; margin-bottom:18px">
+        If you think a kind of evidence, a model, a mechanism, or a piece of open software
+        would make the forecasts better, that's a pack. Write it down, and let the scoreboard
+        decide. The whole system is open — the agent, the packs, the gate, and the record.
+      </p>
+      <div class="packcta">
+        <a class="btn" href="https://github.com/MaxGhenis/brier" target="_blank" rel="noopener">Propose a pack on GitHub ↗</a>
+      </div>
+      <p class="note">Brier and its pack system are open source, of a piece with the rest of the stack — open source, open data, open weights, open predictions.</p>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div>The Thesis Institute · a public-benefit institute in formation</div>
+      <div class="row">
+        <a href="mailto:max@policyengine.org?subject=Thesis%20Institute%20—%20packs">Get in touch</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
