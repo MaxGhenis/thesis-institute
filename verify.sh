@@ -94,9 +94,23 @@ checks_app() {
   code=$(status_follow https://app.thesisinstitute.org/log)
   [ "$code" = 200 ] && pass "app /log                    200" \
                     || fail "app /log                    $code (want 200)"
-  schema=$(curl -sSL https://app.thesisinstitute.org/log.json | head -c 400 | grep -o 'thesis_log_v1')
+  schema=$(curl -sL https://app.thesisinstitute.org/log.json 2>/dev/null | head -c 400 | grep -o 'thesis_log_v1')
   [ "$schema" = "thesis_log_v1" ] && pass "app /log.json               schema thesis_log_v1" \
                                   || fail "app /log.json               missing thesis_log_v1 schema"
+
+  # --- every surface the daily recorder (MaxGhenis/brier record-forecasts.yml)
+  #     snapshots must serve its schema. /specs.json was retired 2026-06-30 and
+  #     the recorder failed for two days before anyone noticed — this canary is
+  #     what should have caught it. Keep this list in sync with the workflow.
+  local surface url marker got
+  for surface in "ledger.json policyengine_ledger_v1" \
+                 "targets.json thesis_target_architecture_manifest_v1" \
+                 "brier/reward.json brier_reward_export_v1"; do
+    url="${surface%% *}"; marker="${surface##* }"
+    got=$(curl -sL -m 30 "https://app.thesisinstitute.org/$url" 2>/dev/null | head -c 400 | grep -o "$marker")
+    [ "$got" = "$marker" ] && pass "app /$url  schema $marker" \
+                           || fail "app /$url  missing $marker — recorder surface broken/renamed"
+  done
 
   # --- app root must SERVE the app, not redirect to the apex ---
   code=$(status https://app.thesisinstitute.org/)
