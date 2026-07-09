@@ -94,9 +94,9 @@ checks_app() {
   code=$(status_follow https://app.thesisinstitute.org/log)
   [ "$code" = 200 ] && pass "app /log                    200" \
                     || fail "app /log                    $code (want 200)"
-  schema=$(curl -sL https://app.thesisinstitute.org/log.json 2>/dev/null | head -c 400 | grep -o 'thesis_log_v2')
-  [ "$schema" = "thesis_log_v2" ] && pass "app /log.json               schema thesis_log_v2" \
-                                  || fail "app /log.json               missing thesis_log_v2 schema"
+  schema=$(curl -sL https://app.thesisinstitute.org/log.json 2>/dev/null | head -c 400 | grep -o 'thesis_log_v3')
+  [ "$schema" = "thesis_log_v3" ] && pass "app /log.json               schema thesis_log_v3" \
+                                  || fail "app /log.json               missing thesis_log_v3 schema"
 
   # --- every surface the daily recorder (MaxGhenis/brier record-forecasts.yml)
   #     snapshots must serve its schema. /specs.json was retired 2026-06-30 and
