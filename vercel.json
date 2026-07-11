@@ -1,4 +1,6 @@
 {
+  "buildCommand": "rm -rf _site && mkdir _site && cp index.html agents.html _site/",
+  "outputDirectory": "_site",
   "cleanUrls": true,
   "redirects": [
     { "source": "/thesis", "destination": "https://app.thesisinstitute.org/thesis", "permanent": true }
