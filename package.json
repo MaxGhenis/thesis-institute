@@ -1,0 +1,7 @@
+{
+  "name": "thesis-institute-apex",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf _site && mkdir _site && cp index.html agents.html _site/"
+  }
+}
