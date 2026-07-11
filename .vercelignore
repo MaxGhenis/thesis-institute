@@ -1,0 +1,4 @@
+# The thesis-institute Vercel project serves this repo root as a static site.
+# The Ledger app deploys as its own project (thesis-ledger, root ledger/);
+# exclude it here so the apex never serves app source files.
+ledger

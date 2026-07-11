@@ -1,0 +1,2938 @@
+{
+ "packageFiles": {
+  "bea-nipa-pension-contributions": {
+   "bytes": 1668,
+   "facts": 2,
+   "sha256": "a94595c246d9926e250635b0b702dcbbc683cb13af1777cb286afc90c0ffd9f4"
+  },
+  "bea-nipa-personal-income-components": {
+   "bytes": 7088,
+   "facts": 18,
+   "sha256": "4b6f44b09e707450beb29d645d009604e6baeae8d376fc1d40808eb7b05fcc89"
+  },
+  "bea-nipa-personal-income-disposition": {
+   "bytes": 3053,
+   "facts": 6,
+   "sha256": "b182f3d165051db5d68c306168625f449af5fb99f878a1426d3d355a8c0210a0"
+  },
+  "bea-nipa-total-wages-salaries": {
+   "bytes": 1809,
+   "facts": 3,
+   "sha256": "b125e7771cb70618f0ed5ed149dcebbba3b59c7f0960f45c77e23b60637ad204"
+  },
+  "bea-regional-state-personal-income-components-2024": {
+   "bytes": 104559,
+   "facts": 416,
+   "sha256": "fed4021bdd1586354872675890578b97371caaafdcbfb673f5040f21746a3511"
+  },
+  "bfp-economic-outlook-2026-06": {
+   "bytes": 2482,
+   "facts": 5,
+   "sha256": "ff03b602b9227514a074573ba798917da502cce7fdf9701864d3f7716f0e16da"
+  },
+  "cbo-individual-income-tax-receipts-2026-02": {
+   "bytes": 1535,
+   "facts": 1,
+   "sha256": "21b3358f6fb596f56a75c8a3a6431106d24cd048086792d1934b5097a3070609"
+  },
+  "cbo-revenue-projections-income-by-source-2026-02": {
+   "bytes": 3273,
+   "facts": 6,
+   "sha256": "d4f5f8238e0cd8509849c185d9c44869a94257d6c17b68f9a76fb7d78d6f0c07"
+  },
+  "census-b01001-female-age-2023": {
+   "bytes": 94063,
+   "facts": 468,
+   "sha256": "c6f3e02530803b1dd6cea1a1bf8b5809fd0293e6f4100513d0e8e34d42a8a147"
+  },
+  "census-pep-2024-national-age-sex": {
+   "bytes": 9649,
+   "facts": 19,
+   "sha256": "67da34ca3c558976035e2144871d60f893adc2b26b00e4d796fef9f6f5ce5dde"
+  },
+  "census-pep-2024-state-age-sex": {
+   "bytes": 2439638,
+   "facts": 969,
+   "sha256": "4dbe97ad9322a4161de9fd819dd489165692d3cc4778861f30aacefed98ae075"
+  },
+  "census-population-projections-2023": {
+   "bytes": 21277,
+   "facts": 86,
+   "sha256": "01ebc635f2f104f4f3868e3921c8632a55e1d57c74df511df26f3bb7a353a86b"
+  },
+  "census-stc-individual-income-tax": {
+   "bytes": 8167,
+   "facts": 46,
+   "sha256": "17274d0e990d05e68cac7614e53af8ea71345c4fb5ba0e5af1ee25490a92aaa2"
+  },
+  "cms-medicaid-chip-monthly-enrollment-dataset": {
+   "bytes": 36001,
+   "facts": 255,
+   "sha256": "ee4e97d87281e8b90301c6f3bf6f97ce9c2f33d96b060c76fae4598f8e9e97fe"
+  },
+  "cms-medicaid-chip-monthly-enrollment-december-2024": {
+   "bytes": 43215,
+   "facts": 260,
+   "sha256": "5997921848d431842109e787e5ce2431c7e9dc0b381186a9bd9eed6685e23f50"
+  },
+  "cms-medicare-trustees-report-2025-part-b-premium-income": {
+   "bytes": 1491,
+   "facts": 1,
+   "sha256": "813600e10d5b9bbe09c7c2717695d18786b92320ac1adb1909efee677ceed6d8"
+  },
+  "cms-nhe-historical-service-source": {
+   "bytes": 1367,
+   "facts": 1,
+   "sha256": "76bc697d5669103c3d6689910127df8132c2e81261d1bfba7dbe84abc192cd6f"
+  },
+  "federal-reserve-z1-household-net-worth": {
+   "bytes": 1447,
+   "facts": 1,
+   "sha256": "d3c9684329dec7cd8b5805db3aa7a88cab764cd802206b80ce2841391b5b76dc"
+  },
+  "hhs-acf-liheap-fy2023-national-profile": {
+   "bytes": 1477,
+   "facts": 1,
+   "sha256": "4369f059fb84ba9edfbd3ec6c9672a696d648779f2f9918a6ad6b7b39bf6e8af"
+  },
+  "hhs-acf-liheap-fy2024-national-profile": {
+   "bytes": 1472,
+   "facts": 1,
+   "sha256": "6cdb66d81cdb0aa423745725d8c9535bb53eeb980b311e2324832cfad83e1319"
+  },
+  "hhs-acf-tanf-caseload-2024": {
+   "bytes": 9308,
+   "facts": 58,
+   "sha256": "1adfaf1ce98fadf2c316e37f809fb22961a0c1e5175722f3910ed3657c67971b"
+  },
+  "hhs-acf-tanf-financial-2024": {
+   "bytes": 10015,
+   "facts": 52,
+   "sha256": "8988af01ccdfed98c6caecbddd2e62e4631bef525599ed534e722d19ef69a488"
+  },
+  "hmrc-vat-firm-sector-targets-2024-25": {
+   "bytes": 39374,
+   "facts": 176,
+   "sha256": "66aa17ebbb7347a0aa0269cc11cb4a94721b2f880bc1a3eb6730492918b51502"
+  },
+  "hmrc-vat-firm-targets-2024-25": {
+   "bytes": 5619,
+   "facts": 17,
+   "sha256": "e821db1a07c2527700467411995b0c564faee33b2836574fc979d94594adb8ae"
+  },
+  "ici-fact-book-table-30": {
+   "bytes": 3102,
+   "facts": 12,
+   "sha256": "2a54647fe4e976c443e66b115a705cd266fe107df2dbc57a84e927ac7df9d26f"
+  },
+  "jrc-euromod-be-baseline-statistics-2025": {
+   "bytes": 5362,
+   "facts": 18,
+   "sha256": "0e3f6c7bc6a14989c9713da15d970e67afbe2bf5209ce5438441b3c08f342c8b"
+  },
+  "kff-marketplace-effectuated-enrollment": {
+   "bytes": 11478,
+   "facts": 52,
+   "sha256": "26337624d55508f00dcbc4f6cf212e15cf89566fda853a96f2def5fe03f134b1"
+  },
+  "nbb-national-accounts-household-disposable-income-2024": {
+   "bytes": 1506,
+   "facts": 1,
+   "sha256": "7ffdbf8a7275603194ce9a3ccde7154ecbf59e03dd6dfeb68b5980b466d8f411"
+  },
+  "onem-rva-unemployment-2024": {
+   "bytes": 1425,
+   "facts": 1,
+   "sha256": "a3b1e4c91edb9562ea368743489c4a216ff49d0513008f96e59090bd388c8e9b"
+  },
+  "ons-uk-business-firm-sector-targets-2025": {
+   "bytes": 295681,
+   "facts": 1232,
+   "sha256": "c6aa19578bc1cd3715fed2ce4d2805655f46c9507c52c05bc9ae5abd4ce1e256"
+  },
+  "ons-uk-business-firm-targets-2025": {
+   "bytes": 4669,
+   "facts": 14,
+   "sha256": "31f0944b79edc04bb1b669f265cc016ceea4150d884c493dbdb1639b969d45da"
+  },
+  "onss-contributions-2024": {
+   "bytes": 1461,
+   "facts": 1,
+   "sha256": "59015b9b0be343e25393e64291ed757aa6550331f641cd729b285845ae14807c"
+  },
+  "opgroeien-groeipakket-caseload-2025": {
+   "bytes": 3668,
+   "facts": 11,
+   "sha256": "daf595e55eaf618eedf3d7df7afcb4284da4ad4b0cd9edc88d25f879e9bb27b9"
+  },
+  "sfpd-legal-pension-caseload-2025": {
+   "bytes": 2261,
+   "facts": 4,
+   "sha256": "bac6374626e579ca89a84df146b07a3ccb9fc9be16961ba0372a5bb12bde45ac"
+  },
+  "soi-congressional-district-2022": {
+   "bytes": 4843923,
+   "facts": 26880,
+   "sha256": "7f177d79aa980b553a49e947eab10aaa412f69b913de240171400ca6e50fa4ff"
+  },
+  "soi-filing-season-week47-2024-eitc-total": {
+   "bytes": 8149,
+   "facts": 34,
+   "sha256": "3b0af46639c893b682474df4da483d3dde95abc5c4ad0877bb7a652779998710"
+  },
+  "soi-historic-table-2": {
+   "bytes": 107842,
+   "facts": 605,
+   "sha256": "5d304c0036589648973a8d3c97cf139dedebc3f150472146c7c555462a41037d"
+  },
+  "soi-historic-table-2-state-agi-2022": {
+   "bytes": 261842,
+   "facts": 1836,
+   "sha256": "c6bf70e276d71974e5a9c43541780d1c47429c71022c5b31fefa9118d37a4aed"
+  },
+  "soi-historic-table-2-state-broad-2022": {
+   "bytes": 480190,
+   "facts": 2703,
+   "sha256": "38f30419bb72acf1b60fe4b9f9e0958bb9635819f38165041831b154048a00bc"
+  },
+  "soi-historic-table-2-state-eitc-2022": {
+   "bytes": 83637,
+   "facts": 510,
+   "sha256": "65bd90d5523e907d4e16e3e2d42b426772bbc22bbf584ec31d40316a46964061"
+  },
+  "soi-ira-roth-contributions-2022": {
+   "bytes": 1519,
+   "facts": 2,
+   "sha256": "424cf6d18014d3f6948b53bb6ce66fc8020985679bde4cad2a870b537586a071"
+  },
+  "soi-ira-traditional-contributions-2022": {
+   "bytes": 1534,
+   "facts": 2,
+   "sha256": "40efac5d09b4456b3a22ff6b1c525e72adf854bd00c89114c16c0d740b39ea5c"
+  },
+  "soi-state-2022": {
+   "bytes": 2383,
+   "facts": 4,
+   "sha256": "07819cf5c58f3b43ec839e023c403243107613cf52b8e306215bfece876e9112"
+  },
+  "soi-table-1-1": {
+   "bytes": 12170,
+   "facts": 80,
+   "sha256": "2e08e9854ac13f1c0850d7aa629225a8f465fe82d3b3be26c6522d63c2fee329"
+  },
+  "soi-table-1-2": {
+   "bytes": 2709,
+   "facts": 7,
+   "sha256": "94f7207aca7e44210160ccb1c4081b5857487853c13d833ab0bc6bc0a2be1f79"
+  },
+  "soi-table-1-4": {
+   "bytes": 104147,
+   "facts": 540,
+   "sha256": "cb6d2a81105da19197b7694b70d337dfabd16aa586d7d3cee38dd4633fe5ea6f"
+  },
+  "soi-table-2-1": {
+   "bytes": 8207,
+   "facts": 39,
+   "sha256": "99ab5c48c3c35a495fd1a507e517cfd45e6cd701243d54408ba9895576adfd38"
+  },
+  "soi-table-2-5": {
+   "bytes": 2848,
+   "facts": 8,
+   "sha256": "a4cba4633badd7dfca4d3aa420585844946cd53a5d3c5769f28932cfbed894d4"
+  },
+  "soi-table-2-5-eitc-agi-children-2022": {
+   "bytes": 36804,
+   "facts": 232,
+   "sha256": "5994899ba91560d81a85f7b9908399c2b16aee7a9ceab76f5afabec33f1f02fb"
+  },
+  "soi-table-2-5-eitc-agi-children-2023": {
+   "bytes": 36780,
+   "facts": 232,
+   "sha256": "9a194991ec402df3eb20af35ae820442ae475ef7cbac792b409f12dfb2746587"
+  },
+  "soi-table-4-3": {
+   "bytes": 4585,
+   "facts": 18,
+   "sha256": "0af586517c75702df795c41de3cbe364192905df3f114c4824b22e8fcde8c8c5"
+  },
+  "soi-w2-statistics-2020": {
+   "bytes": 2176,
+   "facts": 5,
+   "sha256": "db553641e34d27014fe216b27d06b7bad16b7c52b6511bb5a70c76cefca20585"
+  },
+  "spf-finances-pit-2023": {
+   "bytes": 1414,
+   "facts": 1,
+   "sha256": "d069dfc781c1d89d21f86f713d4852003fcff068d865c04b461d1c9bd70880b7"
+  },
+  "ssa-annual-statistical-supplement-2025": {
+   "bytes": 2759,
+   "facts": 6,
+   "sha256": "63c6889cf5e9df944eaa3670d18fff051d05a6a77bc2d8799694a663f794e255"
+  },
+  "ssa-ssi-table-7b1-2024": {
+   "bytes": 66824,
+   "facts": 416,
+   "sha256": "022385f944fe77f874cbccff57cde6d55ab2408183d74fa3f026d30a5610150d"
+  },
+  "statbel-fiscal-income-2023-nis-2025": {
+   "bytes": 85496,
+   "facts": 565,
+   "sha256": "7716bb265eac392c2d078841b2c0ff692d87e758ed7a6fa073a92b8ef1a45a43"
+  },
+  "statbel-population-structure-2026": {
+   "bytes": 4409,
+   "facts": 18,
+   "sha256": "00dc3553775bc941c1e2a1edcfc383ee3bdc0fdd4a1467526b7747e021f0f825"
+  },
+  "usda-snap-fy69-to-current": {
+   "bytes": 34070,
+   "facts": 216,
+   "sha256": "af066b82a606688a112e7bbc6673c89186f7c2f0cc9c47f8b373750046d3deda"
+  }
+ },
+ "packages": [
+  {
+   "authority": "bea",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 2,
+    "consumer_fact_count": 2,
+    "fact_count": 2,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 9,
+    "source_record_count": 2,
+    "source_region_count": 2,
+    "source_row_count": 559069
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "delimited text full-row parse with selected-cell facts",
+   "facts": 2,
+   "label": "BEA NIPA defined contribution pension contributions",
+   "manifest": {
+    "dataset": "bea_nipa_total_wages_salaries",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T13:59:30+00:00",
+      "filename": "NipaDataA.txt",
+      "sha256": "b4e985b133e21f099eb538c89263b27632751b7041e79d6a5f5bac4aa54fab81",
+      "size_bytes": 12032724,
+      "source_url": "https://apps.bea.gov/national/Release/TXT/NipaDataA.txt",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.bea.gov/open-data",
+    "table": "NIPA Annual Data Flat File"
+   },
+   "package_id": "bea-nipa-pension-contributions",
+   "source_table": "BEA NIPA annual data flat file",
+   "spec_path": "packages/bea/nipa_pension_contributions/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "bea",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 18,
+    "constraint_count": 18,
+    "consumer_fact_count": 18,
+    "fact_count": 18,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 57,
+    "source_record_count": 18,
+    "source_region_count": 18,
+    "source_row_count": 559069
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "delimited text full-row parse with selected-cell facts",
+   "facts": 18,
+   "label": "BEA NIPA personal income components",
+   "manifest": {
+    "dataset": "bea_nipa_total_wages_salaries",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T13:59:30+00:00",
+      "filename": "NipaDataA.txt",
+      "sha256": "b4e985b133e21f099eb538c89263b27632751b7041e79d6a5f5bac4aa54fab81",
+      "size_bytes": 12032724,
+      "source_url": "https://apps.bea.gov/national/Release/TXT/NipaDataA.txt",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.bea.gov/open-data",
+    "table": "NIPA Annual Data Flat File"
+   },
+   "package_id": "bea-nipa-personal-income-components",
+   "source_table": "BEA NIPA annual data flat file",
+   "spec_path": "packages/bea/nipa_personal_income_components/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "bea",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 6,
+    "constraint_count": 6,
+    "consumer_fact_count": 6,
+    "fact_count": 6,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 21,
+    "source_record_count": 6,
+    "source_region_count": 6,
+    "source_row_count": 559069
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "delimited text full-row parse with selected-cell facts",
+   "facts": 6,
+   "label": "BEA NIPA personal income disposition",
+   "manifest": {
+    "dataset": "bea_nipa_total_wages_salaries",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T13:59:30+00:00",
+      "filename": "NipaDataA.txt",
+      "sha256": "b4e985b133e21f099eb538c89263b27632751b7041e79d6a5f5bac4aa54fab81",
+      "size_bytes": 12032724,
+      "source_url": "https://apps.bea.gov/national/Release/TXT/NipaDataA.txt",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.bea.gov/open-data",
+    "table": "NIPA Annual Data Flat File"
+   },
+   "package_id": "bea-nipa-personal-income-disposition",
+   "source_table": "BEA NIPA annual data flat file",
+   "spec_path": "packages/bea/nipa_personal_income_disposition/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "bea",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 3,
+    "consumer_fact_count": 3,
+    "fact_count": 3,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 12,
+    "source_record_count": 3,
+    "source_region_count": 3,
+    "source_row_count": 559069
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "delimited text full-row parse with selected-cell facts",
+   "facts": 3,
+   "label": "BEA NIPA total wages and salaries",
+   "manifest": {
+    "dataset": "bea_nipa_total_wages_salaries",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T13:59:30+00:00",
+      "filename": "NipaDataA.txt",
+      "sha256": "b4e985b133e21f099eb538c89263b27632751b7041e79d6a5f5bac4aa54fab81",
+      "size_bytes": 12032724,
+      "source_url": "https://apps.bea.gov/national/Release/TXT/NipaDataA.txt",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.bea.gov/open-data",
+    "table": "NIPA Annual Data Flat File"
+   },
+   "package_id": "bea-nipa-total-wages-salaries",
+   "source_table": "BEA NIPA annual data flat file",
+   "spec_path": "packages/bea/nipa_total_wages_salaries/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "bea",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 8,
+    "constraint_count": 1248,
+    "consumer_fact_count": 416,
+    "fact_count": 416,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 15012,
+    "source_record_count": 416,
+    "source_region_count": 8,
+    "source_row_count": 7864
+   },
+   "extracted_at": "2026-05-17",
+   "extraction_method": "zip archive CSV member full-row parse with selected-cell facts",
+   "facts": 416,
+   "label": "BEA Regional 2024 state personal income components",
+   "manifest": {
+    "dataset": "bea_regional_state_personal_income",
+    "files": [
+     {
+      "fetched_at": "2026-05-17T15:00:39+00:00",
+      "filename": "SAINC.zip",
+      "sha256": "339a3d3d6a283eea3f5647ea5b33570da73801d4248c5e2209c1e196428d9a9a",
+      "size_bytes": 17478048,
+      "source_url": "https://apps.bea.gov/regional/zip/SAINC.zip",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://apps.bea.gov/regional/downloadzip.htm",
+    "table": "Annual Personal Income by State"
+   },
+   "package_id": "bea-regional-state-personal-income-components-2024",
+   "source_table": "BEA Regional annual state personal income CSV ZIP",
+   "spec_path": "packages/bea/regional_personal_income_state/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "bfp_economic_outlook",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 3,
+    "constraint_count": 0,
+    "consumer_fact_count": 5,
+    "fact_count": 5,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 21,
+    "source_record_count": 5,
+    "source_region_count": 2,
+    "source_row_count": 2
+   },
+   "extracted_at": "2026-07-04",
+   "extraction_method": "curated CSV extract from Federal Planning Bureau June 2026 economic outlook publication page headline figures",
+   "facts": 5,
+   "label": "BFP June 2026 economic outlook headline projections",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "bfp_economic_outlook_2026_06.csv",
+      "sha256": "925eb195ff31de15fbe46b694a78ee8e338a44fd56af52bc57ad72690c816c51",
+      "size_bytes": 377,
+      "source_url": "https://www.plan.be/en/publications/economic-budget-2026-2027-economic-outlook-2028",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://www.plan.be/en/publications/economic-budget-2026-2027-economic-outlook-2028",
+    "table": null
+   },
+   "package_id": "bfp-economic-outlook-2026-06",
+   "source_table": "Economic Budget 2026-2027 - Economic Outlook 2028-2031, June 2026 headline projections",
+   "spec_path": "packages/bfp/economic_outlook_2026_06/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "cbo",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 14,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 1
+   },
+   "extracted_at": "2026-06-16",
+   "extraction_method": "curated CSV extract from CBO February 2026 Historical Budget Data workbook. Values mirror CBO individual income tax receipts used in PolicyEngine-US calibration parameters and are stored here as source-backed Ledger facts for Populace fiscal targeting.",
+   "facts": 1,
+   "label": "CBO federal individual income tax receipts",
+   "manifest": {
+    "dataset": "cbo_individual_income_tax_receipts_2026_02",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "cbo_individual_income_tax_receipts_2026_02.csv",
+      "sha256": "9cd016b7b3ed0c9602b8ad9f75f859c13e2636fb7c2e16a678b388b0fd17aeea",
+      "size_bytes": 251,
+      "source_url": "https://www.cbo.gov/system/files/2026-02/51134-2026-02-Historical-Budget-Data.xlsx",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://www.cbo.gov/data/budget-economic-data",
+    "table": "CBO budget and economic data, individual income tax receipts"
+   },
+   "package_id": "cbo-individual-income-tax-receipts-2026-02",
+   "source_table": "CBO budget and economic data, individual income tax receipts",
+   "spec_path": "packages/cbo/individual_income_tax_receipts_2026_02/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "cbo",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 6,
+    "constraint_count": 0,
+    "consumer_fact_count": 6,
+    "fact_count": 6,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 126,
+    "source_record_count": 6,
+    "source_region_count": 6,
+    "source_row_count": 6
+   },
+   "extracted_at": "2026-05-19",
+   "extraction_method": "curated CSV extract from CBO February 2026 Revenue Projections workbook sheet 3.Individual Income Tax Details; direct publisher workbook URL returned HTTP 403 DataDome from the agent shell on 2026-05-19",
+   "facts": 6,
+   "label": "CBO February 2026 revenue projections income by source",
+   "manifest": {
+    "dataset": "cbo_revenue_projections_income_by_source_2026_02",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "cbo_revenue_projections_income_by_source_2026_02.csv",
+      "sha256": "8cd8edee3e76258aa67153adff9dc0dc9b9738ace426eceebcc8d5b26d319bb8",
+      "size_bytes": 2502,
+      "source_url": "https://www.cbo.gov/system/files/2026-02/51138-2026-02-Revenue-Projections.xlsx",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://www.cbo.gov/data/budget-economic-data",
+    "table": "Revenue Projections, by Category, February 2026, sheet 3.Individual Income Tax Details"
+   },
+   "package_id": "cbo-revenue-projections-income-by-source-2026-02",
+   "source_table": "Revenue Projections, by Category, February 2026, sheet 3.Individual Income Tax Details",
+   "spec_path": "packages/cbo/revenue_projections_income_by_source_2026_02/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "census_acs",
+   "built": false,
+   "label": "Census ACS 2024 S0101 congressional district population by age band",
+   "package_id": "census-acs-s0101-congressional-district-age-2024",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "ACS 2024 1-year subject table S0101 congressional district age bands"
+  },
+  {
+   "authority": "census_acs",
+   "built": false,
+   "label": "Census ACS 2024 S0101 national population by age band",
+   "package_id": "census-acs-s0101-national-age-2024",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "ACS 2024 1-year subject table S0101 national age bands"
+  },
+  {
+   "authority": "census_acs",
+   "built": false,
+   "label": "Census ACS 2024 S0101 state population by age band",
+   "package_id": "census-acs-s0101-state-age-2024",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "ACS 2024 1-year subject table S0101 state age bands"
+  },
+  {
+   "authority": "census_acs",
+   "built": false,
+   "label": "Census ACS 2024 S2201 congressional district SNAP household counts",
+   "package_id": "census-acs-s2201-congressional-district-snap-2024",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "ACS 2024 1-year subject table S2201 congressional district SNAP household counts"
+  },
+  {
+   "authority": "census_acs",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 1404,
+    "consumer_fact_count": 468,
+    "fact_count": 468,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 3752,
+    "source_record_count": 468,
+    "source_region_count": 52,
+    "source_row_count": 468
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "Census API JSON table parsed and unpivoted to state female age-band rows",
+   "facts": 468,
+   "label": "Census ACS 2023 B01001 state female population by age band",
+   "manifest": {
+    "dataset": "census_acs_b01001_female_age_2023",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "census_b01001_female_15_44_2023.json",
+      "sha256": "c10ca541169da92627cc643d01a3436cfdba43a93059dbf1411c99eb71ab5bc9",
+      "size_bytes": 4953,
+      "source_url": "https://api.census.gov/data/2023/acs/acs1?get=B01001_030E,B01001_031E,B01001_032E,B01001_033E,B01001_034E,B01001_035E,B01001_036E,B01001_037E,B01001_038E&for=state:*",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://api.census.gov/data/2023/acs/acs1.html",
+    "table": "B01001 Sex by Age"
+   },
+   "package_id": "census-b01001-female-age-2023",
+   "source_table": "ACS 2023 1-year detailed table B01001 female age bands by state",
+   "spec_path": "packages/census/b01001_female_15_44_2023/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "census_pep",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 35,
+    "consumer_fact_count": 19,
+    "fact_count": 19,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 824,
+    "source_record_count": 19,
+    "source_region_count": 1,
+    "source_row_count": 306
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "delimited text full-row parse with selected source-row cells",
+   "facts": 19,
+   "label": "Census PEP Vintage 2024 national resident population by age",
+   "manifest": {
+    "dataset": "census_pep_2024_national_age_sex",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "nc-est2024-agesex-res.csv",
+      "sha256": "fbb151e8ae8554283dcbf192e6b420658ea444ee7d8849988aa1d5615183edf1",
+      "size_bytes": 16171,
+      "source_url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/national/asrh/nc-est2024-agesex-res.csv",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.census.gov/data/tables/time-series/demo/popest/2020s-national-detail.html",
+    "table": "Annual Estimates of the Resident Population by Single Year of Age and Sex for the United States"
+   },
+   "package_id": "census-pep-2024-national-age-sex",
+   "source_table": "Annual Estimates of the Resident Population by Single Year of Age and Sex for the United States",
+   "spec_path": "packages/census/pep_2024_national_age_sex/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "census_pep",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 1785,
+    "consumer_fact_count": 969,
+    "fact_count": 969,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 394755,
+    "source_record_count": 969,
+    "source_region_count": 51,
+    "source_row_count": 236844
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "delimited text full-row parse with selected state age/race source-row cells",
+   "facts": 969,
+   "label": "Census PEP Vintage 2024 state resident population by age",
+   "manifest": {
+    "dataset": "census_pep_2024_age_sex",
+    "files": [
+     {
+      "fetched_at": "2026-05-08T00:00:00+00:00",
+      "filename": "sc-est2024-alldata6.csv",
+      "sha256": "0e82431e3869554aff9541fcf00c22a8defc2af3c66fb0ec6bae094f23749230",
+      "size_bytes": 12740674,
+      "source_url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/state/asrh/sc-est2024-alldata6.csv",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-detail.html",
+    "table": "Annual State Resident Population Estimates by Single Year of Age, Sex, Race, and Hispanic Origin"
+   },
+   "package_id": "census-pep-2024-state-age-sex",
+   "source_table": "Annual State Resident Population Estimates by Single Year of Age, Sex, Race, and Hispanic Origin",
+   "spec_path": "packages/census/pep_2024_state_age_sex/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "census_population_projections",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 86,
+    "constraint_count": 171,
+    "consumer_fact_count": 86,
+    "fact_count": 86,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 273,
+    "source_record_count": 86,
+    "source_region_count": 86,
+    "source_row_count": 2580
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "official Census CSV full-row parse with selected year, all-race, all-sex native-born and foreign-born rows; age is encoded by POP_0..POP_85 source columns",
+   "facts": 86,
+   "label": "Census 2023 national population projections by single year of age",
+   "manifest": {
+    "dataset": "census_population_projections_2023",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T20:32:11+00:00",
+      "filename": "np2023_d5_mid.csv",
+      "sha256": "07099471f96a2146d65138de6102f77f395c7f9904f5ac069b08b845cdbf8fc3",
+      "size_bytes": 1522877,
+      "source_url": "https://www2.census.gov/programs-surveys/popproj/datasets/2023/2023-popproj/np2023_d5_mid.csv",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.census.gov/data/datasets/2023/demo/popproj/2023-popproj.html",
+    "table": "2023 National Population Projections Main Series, middle series"
+   },
+   "package_id": "census-population-projections-2023",
+   "source_table": "2023 National Population Projections Main Series, middle series",
+   "spec_path": "packages/census/population_projections_2023/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "census_stc",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 46,
+    "fact_count": 46,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 106,
+    "source_record_count": 46,
+    "source_region_count": 46,
+    "source_row_count": 25
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "delimited text full-row parse with selected source-row cells",
+   "facts": 46,
+   "label": "Census State Tax Collections individual income tax collections",
+   "manifest": {
+    "dataset": "census_stc_individual_income_tax",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "FY2023-Flat-File.txt",
+      "sha256": "45b8c87870ad02e6015f89097b48786aa95ef6be1fae9e32a223e5cb62406623",
+      "size_bytes": 7923,
+      "source_url": "https://www2.census.gov/programs-surveys/stc/datasets/2023/FY2023-Flat-File.txt",
+      "year": 2023
+     },
+     {
+      "fetched_at": "",
+      "filename": "FY2024-Flat-File.txt",
+      "sha256": "ffe44ad5bdf003c54d2d283fa15d12ba853b5a7d7fcd7278d320b900ef081b84",
+      "size_bytes": 7966,
+      "source_url": "https://www2.census.gov/programs-surveys/stc/datasets/2024/FY2024-Flat-File.txt",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.census.gov/programs-surveys/stc/data/datasets.html",
+    "table": "Annual Survey of State Government Tax Collections"
+   },
+   "package_id": "census-stc-individual-income-tax",
+   "source_table": "FY{year} STC Flat File item T40 Individual Income Taxes",
+   "spec_path": "packages/census/stc_individual_income_tax/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "cms_aca",
+   "built": false,
+   "label": "CMS Marketplace full-year 2022 effectuated enrollment and financial assistance",
+   "package_id": "cms-aca-effectuated-enrollment-2022",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "Effectuated Enrollment: Early Snapshot 2023 and Full Year 2022 Average"
+  },
+  {
+   "authority": "cms_aca",
+   "built": false,
+   "label": "CMS Marketplace 2024 OEP state-level public use file",
+   "package_id": "cms-aca-oep-state-level",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "2024 OEP State-Level Public Use File"
+  },
+  {
+   "authority": "cms_aca",
+   "built": false,
+   "label": "CMS Marketplace 2022 OEP state-level public use file",
+   "package_id": "cms-aca-oep-state-level-2022",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "2022 OEP State-Level Public Use File"
+  },
+  {
+   "authority": "cms_aca",
+   "built": false,
+   "label": "CMS Marketplace 2025 OEP state-level public use file",
+   "package_id": "cms-aca-oep-state-level-2025",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "2025 OEP State-Level Public Use File"
+  },
+  {
+   "authority": "cms_medicaid",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 5,
+    "constraint_count": 0,
+    "consumer_fact_count": 255,
+    "fact_count": 255,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 2288,
+    "source_record_count": 255,
+    "source_region_count": 1,
+    "source_row_count": 10608
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "CMS CSV full-row parse with selected final monthly source-row cells",
+   "facts": 255,
+   "label": "CMS Medicaid and CHIP December 2025 final monthly state enrollment",
+   "manifest": {
+    "dataset": "cms_medicaid_cms-medicaid-chip-monthly-enrollment-dataset",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:09:16+00:00",
+      "filename": "pi-dataset-april-2026-release.csv",
+      "sha256": "3db82590bf76796811ed10499290cecd85fe634e09a79bc520632194efc5e6d6",
+      "size_bytes": 4112804,
+      "source_url": "https://download.medicaid.gov/data/pi-dataset-april-2026-release.csv",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://data.medicaid.gov/dataset/6165f45b-ca93-5bb5-9d06-db29c692a360",
+    "table": "State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data"
+   },
+   "package_id": "cms-medicaid-chip-monthly-enrollment-dataset",
+   "source_table": "State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data",
+   "spec_path": "packages/cms_medicaid/chip_monthly_enrollment_dataset/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "cms_medicaid",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 5,
+    "constraint_count": 0,
+    "consumer_fact_count": 260,
+    "fact_count": 260,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 2288,
+    "source_record_count": 260,
+    "source_region_count": 1,
+    "source_row_count": 10608
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "CMS CSV full-row parse with selected final monthly source-row cells",
+   "facts": 260,
+   "label": "CMS Medicaid and CHIP December 2024 final monthly state enrollment",
+   "manifest": {
+    "dataset": "cms_medicaid_cms-medicaid-chip-monthly-enrollment-dataset",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:09:16+00:00",
+      "filename": "pi-dataset-april-2026-release.csv",
+      "sha256": "3db82590bf76796811ed10499290cecd85fe634e09a79bc520632194efc5e6d6",
+      "size_bytes": 4112804,
+      "source_url": "https://download.medicaid.gov/data/pi-dataset-april-2026-release.csv",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://data.medicaid.gov/dataset/6165f45b-ca93-5bb5-9d06-db29c692a360",
+    "table": "State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data"
+   },
+   "package_id": "cms-medicaid-chip-monthly-enrollment-december-2024",
+   "source_table": "State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data",
+   "spec_path": "packages/cms_medicaid/chip_monthly_enrollment_december_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "cms_medicare",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 3,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 93486,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "pypdf text-line number extraction from full publisher PDF",
+   "facts": 1,
+   "label": "CMS Medicare Trustees Report 2025 Part B premium income",
+   "manifest": {
+    "dataset": "cms_medicare_trustees_report_2025_part_b_premium_income",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T23:26:00+00:00",
+      "filename": "cms_2025_medicare_trustees_report.pdf",
+      "sha256": "1b3de7a4faeee5ad42059e10740603182b716a5fa7b53b30d360b45b9e474d95",
+      "size_bytes": 2488855,
+      "source_url": "https://www.cms.gov/oact/tr/2025",
+      "year": 2025
+     }
+    ],
+    "source_page": "https://www.cms.gov/oact/tr/2025",
+    "table": "2025 Medicare Trustees Report Table III.C3"
+   },
+   "package_id": "cms-medicare-trustees-report-2025-part-b-premium-income",
+   "source_table": "2025 Medicare Trustees Report Table III.C3",
+   "spec_path": "packages/cms_medicare/medicare_trustees_report_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "cms_nhe",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 35970,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-10",
+   "extraction_method": "ZIP archive XLS member whole-workbook used-range cell parse",
+   "facts": 1,
+   "label": "CMS NHE historical Medicaid source-of-funds expenditures",
+   "manifest": {
+    "dataset": "cms_nhe_historical_service_source",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "national-health-expenditures-type-service-source-funds-cy-1960-2024.zip",
+      "sha256": "b6a9e26774ca36931d42add46204947d6335fc4898011780563196898f964746",
+      "size_bytes": 123721,
+      "source_url": "https://www.cms.gov/files/zip/national-health-expenditures-type-service-source-funds-cy-1960-2024.zip",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/historical",
+    "table": "National Health Expenditures by type of service and source of funds, CY 1960-2024"
+   },
+   "package_id": "cms-nhe-historical-service-source",
+   "source_table": "National Health Expenditures by type of service and source of funds, CY 1960-2024",
+   "spec_path": "packages/cms_nhe/historical_service_source/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "federal_reserve",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 709,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "html table parse from official Federal Reserve Z.1 release",
+   "facts": 1,
+   "label": "Federal Reserve Z.1 household and nonprofit net worth",
+   "manifest": {
+    "dataset": "federal_reserve_federal-reserve-z1-household-net-worth",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T13:16:45+00:00",
+      "filename": "federal_reserve_z1_20260319_b101.html",
+      "sha256": "3bcdb1e0309537de21a427501fe930ae769b6c08fa8f38ec029e3c42a7bb42fa",
+      "size_bytes": 142683,
+      "source_url": "https://www.federalreserve.gov/releases/z1/20260319/html/b101.htm",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://www.federalreserve.gov/releases/z1/20260319/",
+    "table": "Z.1 B.101 Households and nonprofit organizations"
+   },
+   "package_id": "federal-reserve-z1-household-net-worth",
+   "source_table": "Z.1 B.101 Households and nonprofit organizations",
+   "spec_path": "packages/federal_reserve/z1_household_net_worth/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "hhs_acf_liheap",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 2,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 360,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "pypdf text-line number extraction from full publisher PDF",
+   "facts": 1,
+   "label": "HHS ACF LIHEAP FY2023 National Profile",
+   "manifest": {
+    "dataset": "LIHEAP FY2023 National Profile (All States)",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "acf_liheap_fy2023_all_states_national_profile.pdf",
+      "sha256": "91def56c2a2621d6899180e05a82e9d42419b64f535e1bc610145aac9ee3895f",
+      "size_bytes": 125199,
+      "source_url": "https://liheappm.acf.gov/sites/default/files/private/congress/profiles/2023/FY2023AllStates%28National%29Profile-508Compliant.pdf",
+      "year": 2023
+     }
+    ],
+    "source_page": null,
+    "table": null
+   },
+   "package_id": "hhs-acf-liheap-fy2023-national-profile",
+   "source_table": "LIHEAP FY2023 National Profile (All States)",
+   "spec_path": "packages/hhs_acf_liheap/fy2023_national_profile/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "hhs_acf_liheap",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 2,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 348,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "pypdf text-line number extraction from full publisher PDF",
+   "facts": 1,
+   "label": "HHS ACF LIHEAP FY2024 National Profile",
+   "manifest": {
+    "dataset": "LIHEAP FY2024 National Profile (All States)",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "acf_liheap_fy2024_all_states_national_profile.pdf",
+      "sha256": "07aca99e8136edcdbb3025e4dff199c3af42467997f1523c7d3de0e90e27deae",
+      "size_bytes": 173695,
+      "source_url": "https://liheappm.acf.gov/sites/default/files/private/congress/profiles/2024/FY2024_AllStates%28National%29_Profile.pdf",
+      "year": 2024
+     }
+    ],
+    "source_page": null,
+    "table": null
+   },
+   "package_id": "hhs-acf-liheap-fy2024-national-profile",
+   "source_table": "LIHEAP FY2024 National Profile (All States)",
+   "spec_path": "packages/hhs_acf_liheap/fy2024_national_profile/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "hhs_acf_tanf",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 7,
+    "constraint_count": 0,
+    "consumer_fact_count": 58,
+    "fact_count": 58,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 91748,
+    "source_record_count": 58,
+    "source_region_count": 3,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 58,
+   "label": "HHS ACF FY 2024 TANF average monthly caseload",
+   "manifest": {
+    "dataset": "TANF Caseload Data 2024",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "tanf_caseload_2024.xlsx",
+      "sha256": "6a9c86ad056ac256d409b48c23731d158d6e94d6dae6b5bd888c42a6021db27c",
+      "size_bytes": 220896,
+      "source_url": "https://acf.gov/ofa/data/tanf-caseload-data-2024",
+      "year": 2024
+     }
+    ],
+    "source_page": null,
+    "table": null
+   },
+   "package_id": "hhs-acf-tanf-caseload-2024",
+   "source_table": "TANF Caseload Data 2024",
+   "spec_path": "packages/hhs_acf/tanf_caseload_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "hhs_acf_tanf",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 52,
+    "fact_count": 52,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 41390,
+    "source_record_count": 52,
+    "source_region_count": 52,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 52,
+   "label": "HHS ACF FY 2024 TANF financial data cash assistance",
+   "manifest": {
+    "dataset": "FY 2024 Federal TANF and State MOE Financial Data",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "fy-2024-tanf-moe-financial-data.xlsx",
+      "sha256": "e14c29171ac508247fb95119caf9af3c1db1ca04865b3b182556c2b48459e2ba",
+      "size_bytes": 573228,
+      "source_url": "https://acf.gov/ofa/data/tanf-financial-data-fy-2024",
+      "year": 2024
+     }
+    ],
+    "source_page": null,
+    "table": null
+   },
+   "package_id": "hhs-acf-tanf-financial-2024",
+   "source_table": "FY 2024 Federal TANF and State MOE Financial Data",
+   "spec_path": "packages/hhs_acf/tanf_financial_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "hmrc",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 2,
+    "constraint_count": 352,
+    "consumer_fact_count": 176,
+    "fact_count": 176,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 2124,
+    "source_record_count": 176,
+    "source_region_count": 2,
+    "source_row_count": 176
+   },
+   "extracted_at": "2026-06-27",
+   "extraction_method": "curated CSV extract from firm-microsim-paper processed/2024-25 HMRC sector tables",
+   "facts": 176,
+   "label": "HMRC Annual UK VAT Statistics 2024-25 sector VAT firm targets",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "hmrc_vat_firm_sector_targets_2024_25.csv",
+      "sha256": "1ad4ad25fde9eeae3ddb57957921c03c3a3167aa924cbe8d5d99df73a63a95f8",
+      "size_bytes": 17440,
+      "source_url": "https://www.gov.uk/government/statistics/value-added-tax-vat-annual-statistics",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.gov.uk/government/statistics/value-added-tax-vat-annual-statistics",
+    "table": null
+   },
+   "package_id": "hmrc-vat-firm-sector-targets-2024-25",
+   "source_table": "Annual UK VAT Statistics 2024 to 2025 VAT trader population and net VAT liability by trade sector",
+   "spec_path": "packages/hmrc/vat_firm_sector_targets_2024_25/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "hmrc",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 2,
+    "constraint_count": 62,
+    "consumer_fact_count": 17,
+    "fact_count": 17,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 216,
+    "source_record_count": 17,
+    "source_region_count": 2,
+    "source_row_count": 17
+   },
+   "extracted_at": "2026-06-27",
+   "extraction_method": "curated CSV extract from HMRC Annual UK VAT Statistics 2024 to 2025 turnover-band tables; 2024-25 sub-bands between GBP 1 million and GBP 10 million are re-aggregated to the historical GBP 1m to GBP 10m band",
+   "facts": 17,
+   "label": "HMRC Annual UK VAT Statistics 2024-25 national VAT firm targets",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "hmrc_vat_firm_targets_2024_25.csv",
+      "sha256": "c37f8d7980f9c3154ff6fdf39fcb8d4b9f2d0ddd0e9acae492bfe427f5318a52",
+      "size_bytes": 2462,
+      "source_url": "https://www.gov.uk/government/statistics/value-added-tax-vat-annual-statistics",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.gov.uk/government/statistics/value-added-tax-vat-annual-statistics",
+    "table": null
+   },
+   "package_id": "hmrc-vat-firm-targets-2024-25",
+   "source_table": "Annual UK VAT Statistics 2024 to 2025 VAT trader population and net VAT liability by turnover band",
+   "spec_path": "packages/hmrc/vat_firm_targets_2024_25/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "ici",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 12,
+    "fact_count": 12,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 605,
+    "source_record_count": 12,
+    "source_region_count": 6,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 12,
+   "label": "ICI Fact Book Table 30 mutual fund capital gains distributions",
+   "manifest": {
+    "dataset": "ici_fact_book_table_30",
+    "files": [
+     {
+      "fetched_at": "2026-07-02",
+      "filename": "26-fb-table-30.xlsx",
+      "sha256": "bd15d5fc983e55632bbe3f884f9c826f6d4c85693f722e60cf216cff61d9e8b0",
+      "size_bytes": 21755,
+      "source_url": "https://www.icifactbook.org/xls/26-fb-table-30.xlsx",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://www.icifactbook.org/26-fb-data-tables.html",
+    "table": "2026 Investment Company Fact Book Data Table 30, Long-Term Mutual Funds Paid and Reinvested Capital Gains by Type of Fund"
+   },
+   "package_id": "ici-fact-book-table-30",
+   "source_table": "2026 Investment Company Fact Book Data Table 30, Long-Term Mutual Funds Paid and Reinvested Capital Gains by Type of Fund",
+   "spec_path": "packages/ici/fact_book_table_30/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "jct",
+   "built": false,
+   "label": "JCT 2024 individual income tax expenditure estimates",
+   "package_id": "jct-tax-expenditures-2024",
+   "skip_reason": "source package is not available for requested year",
+   "source_table": "Estimates of Federal Tax Expenditures for Fiscal Years 2024-2028"
+  },
+  {
+   "authority": "jrc_euromod_be",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 4,
+    "constraint_count": 36,
+    "consumer_fact_count": 18,
+    "fact_count": 18,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 133,
+    "source_record_count": 18,
+    "source_region_count": 4,
+    "source_row_count": 18
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "curated CSV extract from JRC EUROMOD Country Report Belgium Annex 3 validation tables",
+   "facts": 18,
+   "label": "JRC EUROMOD-BE 2025 baseline validation comparator statistics",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "jrc_euromod_be_baseline_statistics_2025.csv",
+      "sha256": "2ed1f8a677799fefe7cc2f092b4f30221940a2a2fc9deecbf29e7a5f7d71b69f",
+      "size_bytes": 3024,
+      "source_url": "https://euromod-web.jrc.ec.europa.eu/sites/default/files/2025-02/Y15_CR_BE_final.pdf",
+      "year": 2025
+     }
+    ],
+    "source_page": "https://euromod-web.jrc.ec.europa.eu/resources/country-reports",
+    "table": null
+   },
+   "package_id": "jrc-euromod-be-baseline-statistics-2025",
+   "source_table": "EUROMOD Country Report Belgium 2025 validation tables",
+   "spec_path": "packages/jrc/euromod_be_baseline_statistics_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "kff",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 52,
+    "fact_count": 52,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 260,
+    "source_record_count": 52,
+    "source_region_count": 1,
+    "source_row_count": 416
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "HTML State Health Facts embedded gdocsObject parse with source-row cells",
+   "facts": 52,
+   "label": "KFF State Health Facts full-year average marketplace effectuated enrollment",
+   "manifest": {
+    "dataset": "kff_state_health_facts_marketplace_effectuated_enrollment",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T22:17:13+00:00",
+      "filename": "full-year-average-marketplace-effectuated-enrollment.html",
+      "sha256": "26e35115f59ce4dc105d33272784e4b26ec7bd2e5569ebfcecc70f3af08bc748",
+      "size_bytes": 120020,
+      "source_url": "https://www.kff.org/affordable-care-act/state-indicator/full-year-average-marketplace-effectuated-enrollment/",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.kff.org/affordable-care-act/state-indicator/full-year-average-marketplace-effectuated-enrollment/",
+    "table": "Full Year Average Marketplace Effectuated Enrollment, 2017-2024"
+   },
+   "package_id": "kff-marketplace-effectuated-enrollment",
+   "source_table": "Full Year Average Marketplace Effectuated Enrollment, 2017-2024",
+   "spec_path": "packages/kff/marketplace_effectuated_enrollment/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "nbb_national_accounts",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 48,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 3
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "direct CSV extract from NBB SDMX REST API",
+   "facts": 1,
+   "label": "NBB national accounts 2024 household disposable income validation target",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "nbb_household_disposable_income_2024.csv",
+      "sha256": "72067b13a0ae3d85cd10650bfb152aa3228657e12255c32175e11d06eee28bbe",
+      "size_bytes": 292,
+      "source_url": "https://nsidisseminate-stat.nbb.be/rest/data/DF_REGHHINC_B/A.3R_B6G.000.CU?startPeriod=2022&endPeriod=2024",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://dataexplorer.nbb.be/vis?df%5Bag%5D=BE2&df%5Bds%5D=disseminate&df%5Bid%5D=DF_REGHHINC_B&lc=en",
+    "table": null
+   },
+   "package_id": "nbb-national-accounts-household-disposable-income-2024",
+   "source_table": "Household income accounts, gross disposable income, Belgium",
+   "spec_path": "packages/nbb/national_accounts_household_disposable_income_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "onem_rva_unemployment",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 30,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 4
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "curated CSV extract from ONEM/RVA annual report complete unemployment table",
+   "facts": 1,
+   "label": "ONEM/RVA unemployment benefit recipient 2024 national caseload target",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "onem_rva_unemployment_2024.csv",
+      "sha256": "b0b42bc0e0e5d449108290be3b235c4736f5e160a817ea5bf32edbc4779c62f7",
+      "size_bytes": 687,
+      "source_url": "https://rapportannuel.onem.be/accueil/une-evolution-des-allocations/chomage-complet/",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://rapportannuel.onem.be/accueil/une-evolution-des-allocations/chomage-complet/",
+    "table": null
+   },
+   "package_id": "onem-rva-unemployment-2024",
+   "source_table": "Annual report complete unemployment benefit recipients, 2024",
+   "spec_path": "packages/onem_rva/unemployment_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "ons",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 4752,
+    "consumer_fact_count": 1232,
+    "fact_count": 1232,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 16029,
+    "source_record_count": 1232,
+    "source_region_count": 2,
+    "source_row_count": 1232
+   },
+   "extracted_at": "2026-06-27",
+   "extraction_method": "curated CSV extract from firm-microsim-paper processed/2024-25 ONS sector matrices",
+   "facts": 1232,
+   "label": "ONS UK Business 2025 detailed firm calibration targets",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "ons_uk_business_firm_sector_targets_2025.csv",
+      "sha256": "7bd5266da7cbeecf0d23f5b7bc98f14ad588ef399decaa2469a83b1f846b4962",
+      "size_bytes": 188745,
+      "source_url": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/datasets/ukbusinessactivitysizeandlocation",
+      "year": 2025
+     }
+    ],
+    "source_page": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/datasets/ukbusinessactivitysizeandlocation",
+    "table": null
+   },
+   "package_id": "ons-uk-business-firm-sector-targets-2025",
+   "source_table": "UK Business, Activity, Size and Location 2025 enterprise counts by SIC division, turnover band, and employment size band",
+   "spec_path": "packages/ons/uk_business_firm_sector_targets_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "ons",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 40,
+    "consumer_fact_count": 14,
+    "fact_count": 14,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 165,
+    "source_record_count": 14,
+    "source_region_count": 2,
+    "source_row_count": 14
+   },
+   "extracted_at": "2026-06-27",
+   "extraction_method": "curated CSV extract from ONS UK Business, Activity, Size and Location 2025 workbook national enterprise counts by turnover and employment size band",
+   "facts": 14,
+   "label": "ONS UK Business 2025 national firm calibration targets",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "ons_uk_business_firm_targets_2025.csv",
+      "sha256": "717cd268d8e59575b61e0806c9dbf00555944ead82fb5f601b3fbc6d64687d33",
+      "size_bytes": 1378,
+      "source_url": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/datasets/ukbusinessactivitysizeandlocation",
+      "year": 2025
+     }
+    ],
+    "source_page": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/datasets/ukbusinessactivitysizeandlocation",
+    "table": null
+   },
+   "package_id": "ons-uk-business-firm-targets-2025",
+   "source_table": "UK Business, Activity, Size and Location 2025 enterprise turnover and employment size bands",
+   "spec_path": "packages/ons/uk_business_firm_targets_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "onss_contributions",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 12,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 1
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "curated CSV extract from ONSS declared contributions workbook Table 6",
+   "facts": 1,
+   "label": "ONSS declared worker contribution 2024 national target",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "onss_worker_contributions_2024.csv",
+      "sha256": "7fcf5d07c717bcbbd18c2deddc4d7706155f7e4ffcc07161163eae3589ae1958",
+      "size_bytes": 341,
+      "source_url": "https://www.onss.be/stats/cotisations-declarees",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.onss.be/stats/cotisations-declarees",
+    "table": null
+   },
+   "package_id": "onss-contributions-2024",
+   "source_table": "Declared contributions 2024, Table 6 by sector, status and sex",
+   "spec_path": "packages/onss/contributions_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "opgroeien_groeipakket",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 2,
+    "constraint_count": 11,
+    "consumer_fact_count": 11,
+    "fact_count": 11,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 56,
+    "source_record_count": 11,
+    "source_region_count": 2,
+    "source_row_count": 7
+   },
+   "extracted_at": "2026-07-04",
+   "extraction_method": "curated CSV extract from Opgroeien Groeipakket statistics page per-component caseload figures",
+   "facts": 11,
+   "label": "Opgroeien Groeipakket 2025 Flemish child benefit caseload by component",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "opgroeien_groeipakket_caseload_2025.csv",
+      "sha256": "1ad5bda6547d9329bd4eed70096f120bcc83407265a0a760e102c9f55fd31566",
+      "size_bytes": 947,
+      "source_url": "https://www.opgroeien.be/kennis/cijfers-en-onderzoek/groeipakket",
+      "year": 2025
+     }
+    ],
+    "source_page": "https://www.opgroeien.be/kennis/cijfers-en-onderzoek/groeipakket",
+    "table": null
+   },
+   "package_id": "opgroeien-groeipakket-caseload-2025",
+   "source_table": "Groeipakket caseload by benefit component, 2025",
+   "spec_path": "packages/opgroeien/groeipakket_caseload_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "sfpd_pensions",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 4,
+    "consumer_fact_count": 4,
+    "fact_count": 4,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 30,
+    "source_record_count": 4,
+    "source_region_count": 1,
+    "source_row_count": 4
+   },
+   "extracted_at": "2026-07-04",
+   "extraction_method": "curated CSV extract from PensionStat.be published legal pension beneficiary headline figures",
+   "facts": 4,
+   "label": "SFPD legal pension caseload 2025 by scheme",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "sfpd_legal_pension_caseload_2025.csv",
+      "sha256": "5e2a249035f0871d81c21a0f44f88b9680990394a6f252fd5684d22b235a5a81",
+      "size_bytes": 370,
+      "source_url": "https://www.pensionstat.be/fr",
+      "year": 2025
+     }
+    ],
+    "source_page": "https://www.pensionstat.be/fr",
+    "table": null
+   },
+   "package_id": "sfpd-legal-pension-caseload-2025",
+   "source_table": "Legal pension beneficiaries by scheme, January 2025",
+   "spec_path": "packages/sfpd/legal_pension_caseload_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 3840,
+    "consumer_fact_count": 26880,
+    "fact_count": 26880,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 79365,
+    "source_record_count": 26880,
+    "source_region_count": 1,
+    "source_row_count": 4791
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "full CSV row parse with all-return national, state, and congressional district facts",
+   "facts": 26880,
+   "label": "IRS SOI 2022 congressional district return totals",
+   "manifest": {
+    "dataset": "irs_soi_congressional_district_2022",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:41:32+00:00",
+      "filename": "22incd.csv",
+      "sha256": "137522878af78d624cfddc0e17cd36ae76a21b7bed166c7bb96ad3243a18a668",
+      "size_bytes": 7710982,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22incd.csv",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-county-data-2022",
+    "table": "IRS SOI Congressional District Data 2022"
+   },
+   "package_id": "soi-congressional-district-2022",
+   "source_table": "Congressional District Data 2022",
+   "spec_path": "packages/irs_soi/congressional_district_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 60,
+    "consumer_fact_count": 34,
+    "fact_count": 34,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 9324,
+    "source_record_count": 34,
+    "source_region_count": 4,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-06-20",
+   "extraction_method": "openpyxl whole-workbook used-range cell parse",
+   "facts": 34,
+   "label": "IRS SOI filing season week 47 EITC totals and AGI distribution 2024",
+   "manifest": {
+    "dataset": "irs_soi_soi-filing-season-week47-2024-eitc-total",
+    "files": [
+     {
+      "fetched_at": "2026-06-20T14:50:11+00:00",
+      "filename": "25inweek47.xlsx",
+      "sha256": "5b8f05734ec3f4ad68c51ee8add91510ce209492c301786f17f50b22cc00adb3",
+      "size_bytes": 45164,
+      "source_url": "https://www.irs.gov/pub/irs-soi/25inweek47.xlsx",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/filing-season-statistics",
+    "table": "Filing Season Statistics Table 1"
+   },
+   "package_id": "soi-filing-season-week47-2024-eitc-total",
+   "source_table": "Filing Season Statistics Table 1",
+   "spec_path": "packages/irs_soi/filing_season_week47_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 2,
+    "constraint_count": 990,
+    "consumer_fact_count": 605,
+    "fact_count": 605,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 1956,
+    "source_record_count": 605,
+    "source_region_count": 1,
+    "source_row_count": 594
+   },
+   "extracted_at": "2026-05-09",
+   "extraction_method": "full CSV row parse with selected source-record cells",
+   "facts": 605,
+   "label": "IRS SOI Historic Table 2 national AGI and tax-credit records",
+   "manifest": {
+    "dataset": "irs_soi_historic_table_2",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "20in55cmcsv.csv",
+      "sha256": "01da5c0e510685d19fe47fe1c960f217d20208f31f66c7dbd2892feba7d2ace2",
+      "size_bytes": 753468,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in55cmcsv.csv",
+      "year": 2020
+     },
+     {
+      "fetched_at": "",
+      "filename": "21in55cmcsv.csv",
+      "sha256": "eb12920d565b773d895e84cb4188119f13ffd664c04579ed6e7ccc7d298a0a2d",
+      "size_bytes": 761050,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in55cmcsv.csv",
+      "year": 2021
+     },
+     {
+      "fetched_at": "",
+      "filename": "22in55cmcsv.csv",
+      "sha256": "f72f83339c36af889cf0ba98acdfab8e3d18051f88cb181f46db2ddc4ae498bb",
+      "size_bytes": 749827,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in55cmcsv.csv",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-historic-table-2",
+    "table": "Historic Table 2"
+   },
+   "package_id": "soi-historic-table-2",
+   "source_table": "Historic Table 2",
+   "spec_path": "packages/irs_soi/historic_table_2/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 3264,
+    "consumer_fact_count": 1836,
+    "fact_count": 1836,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 83293,
+    "source_record_count": 1836,
+    "source_region_count": 51,
+    "source_row_count": 594
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "full CSV row parse with selected source-record cells",
+   "facts": 1836,
+   "label": "IRS SOI Historic Table 2 state AGI facts for 2022",
+   "manifest": {
+    "dataset": "irs_soi_historic_table_2",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "20in55cmcsv.csv",
+      "sha256": "01da5c0e510685d19fe47fe1c960f217d20208f31f66c7dbd2892feba7d2ace2",
+      "size_bytes": 753468,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in55cmcsv.csv",
+      "year": 2020
+     },
+     {
+      "fetched_at": "",
+      "filename": "21in55cmcsv.csv",
+      "sha256": "eb12920d565b773d895e84cb4188119f13ffd664c04579ed6e7ccc7d298a0a2d",
+      "size_bytes": 761050,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in55cmcsv.csv",
+      "year": 2021
+     },
+     {
+      "fetched_at": "",
+      "filename": "22in55cmcsv.csv",
+      "sha256": "f72f83339c36af889cf0ba98acdfab8e3d18051f88cb181f46db2ddc4ae498bb",
+      "size_bytes": 749827,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in55cmcsv.csv",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-historic-table-2",
+    "table": "Historic Table 2"
+   },
+   "package_id": "soi-historic-table-2-state-agi-2022",
+   "source_table": "Historic Table 2 state AGI facts",
+   "spec_path": "packages/irs_soi/historic_table_2_state_agi_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 2,
+    "constraint_count": 0,
+    "consumer_fact_count": 2703,
+    "fact_count": 2703,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 8476,
+    "source_record_count": 2703,
+    "source_region_count": 51,
+    "source_row_count": 594
+   },
+   "extracted_at": "2026-05-28",
+   "extraction_method": "full CSV row parse with selected state all-return source-record cells",
+   "facts": 2703,
+   "label": "IRS SOI Historic Table 2 state broad totals for 2022",
+   "manifest": {
+    "dataset": "irs_soi_historic_table_2",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "20in55cmcsv.csv",
+      "sha256": "01da5c0e510685d19fe47fe1c960f217d20208f31f66c7dbd2892feba7d2ace2",
+      "size_bytes": 753468,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in55cmcsv.csv",
+      "year": 2020
+     },
+     {
+      "fetched_at": "",
+      "filename": "21in55cmcsv.csv",
+      "sha256": "eb12920d565b773d895e84cb4188119f13ffd664c04579ed6e7ccc7d298a0a2d",
+      "size_bytes": 761050,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in55cmcsv.csv",
+      "year": 2021
+     },
+     {
+      "fetched_at": "",
+      "filename": "22in55cmcsv.csv",
+      "sha256": "f72f83339c36af889cf0ba98acdfab8e3d18051f88cb181f46db2ddc4ae498bb",
+      "size_bytes": 749827,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in55cmcsv.csv",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-historic-table-2",
+    "table": "Historic Table 2"
+   },
+   "package_id": "soi-historic-table-2-state-broad-2022",
+   "source_table": "Historic Table 2 state broad totals",
+   "spec_path": "packages/irs_soi/historic_table_2_state_broad_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 408,
+    "consumer_fact_count": 510,
+    "fact_count": 510,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 8476,
+    "source_record_count": 510,
+    "source_region_count": 51,
+    "source_row_count": 594
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "full CSV row parse with selected source-record cells",
+   "facts": 510,
+   "label": "IRS SOI Historic Table 2 state EITC totals for 2022",
+   "manifest": {
+    "dataset": "irs_soi_historic_table_2",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "20in55cmcsv.csv",
+      "sha256": "01da5c0e510685d19fe47fe1c960f217d20208f31f66c7dbd2892feba7d2ace2",
+      "size_bytes": 753468,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in55cmcsv.csv",
+      "year": 2020
+     },
+     {
+      "fetched_at": "",
+      "filename": "21in55cmcsv.csv",
+      "sha256": "eb12920d565b773d895e84cb4188119f13ffd664c04579ed6e7ccc7d298a0a2d",
+      "size_bytes": 761050,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in55cmcsv.csv",
+      "year": 2021
+     },
+     {
+      "fetched_at": "",
+      "filename": "22in55cmcsv.csv",
+      "sha256": "f72f83339c36af889cf0ba98acdfab8e3d18051f88cb181f46db2ddc4ae498bb",
+      "size_bytes": 749827,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in55cmcsv.csv",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-historic-table-2",
+    "table": "Historic Table 2"
+   },
+   "package_id": "soi-historic-table-2-state-eitc-2022",
+   "source_table": "Historic Table 2 state EITC totals",
+   "spec_path": "packages/irs_soi/historic_table_2_state_eitc_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 2,
+    "fact_count": 2,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 625,
+    "source_record_count": 2,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 2,
+   "label": "IRS SOI 2022 Roth IRA contribution totals",
+   "manifest": {
+    "dataset": "irs_soi_roth_ira_contributions_2022",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "22in06ira.xlsx",
+      "sha256": "c1fb0894cb09d2486be4510b7e6ce0b8597787725b928ab8813f577d9fb13183",
+      "size_bytes": 13617,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in06ira.xlsx",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-accumulation-and-distribution-of-individual-retirement-arrangements",
+    "table": "Table 6. Taxpayers with Roth Individual Retirement Arrangement (IRA) Plan Contributions, by Size of Contribution and Age of Taxpayer"
+   },
+   "package_id": "soi-ira-roth-contributions-2022",
+   "source_table": "Table 6. Taxpayers with Roth Individual Retirement Arrangement (IRA) Plan Contributions, by Size of Contribution and Age of Taxpayer",
+   "spec_path": "packages/irs_soi/ira_roth_contributions_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 2,
+    "fact_count": 2,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 650,
+    "source_record_count": 2,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 2,
+   "label": "IRS SOI 2022 Traditional IRA contribution totals",
+   "manifest": {
+    "dataset": "irs_soi_traditional_ira_contributions_2022",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "22in05ira.xlsx",
+      "sha256": "31ce9dd2fe631b336170af339bd7e9de86901cd20dbfd4cb8fb1c9a1d55cd90f",
+      "size_bytes": 13932,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in05ira.xlsx",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-accumulation-and-distribution-of-individual-retirement-arrangements",
+    "table": "Table 5. Taxpayers with Traditional Individual Retirement Arrangement (IRA) Plan Contributions, by Size of Contribution and Age of Taxpayer"
+   },
+   "package_id": "soi-ira-traditional-contributions-2022",
+   "source_table": "Table 5. Taxpayers with Traditional Individual Retirement Arrangement (IRA) Plan Contributions, by Size of Contribution and Age of Taxpayer",
+   "spec_path": "packages/irs_soi/ira_traditional_contributions_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 2,
+    "consumer_fact_count": 4,
+    "fact_count": 4,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 668304,
+    "source_record_count": 4,
+    "source_region_count": 4,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 4,
+   "label": "IRS SOI 2022 state-data United States totals",
+   "manifest": {
+    "dataset": "irs_soi_state_2022",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:41:32+00:00",
+      "filename": "22in54us.xlsx",
+      "sha256": "5e58050449c07c2e941f280c60d597784047f02ee1fa93dc1aed64fc1ea493f6",
+      "size_bytes": 272664,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in54us.xlsx",
+      "year": 2022
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-historic-table-2",
+    "table": "IRS SOI State Data 2022"
+   },
+   "package_id": "soi-state-2022",
+   "source_table": "Historic Table 2 state data, United States total",
+   "spec_path": "packages/irs_soi/state_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 144,
+    "consumer_fact_count": 80,
+    "fact_count": 80,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 1932,
+    "source_record_count": 80,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-04",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 80,
+   "label": "IRS SOI Publication 1304 Table 1.1",
+   "manifest": {
+    "dataset": "irs_soi_publication_1304_table_1_1",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "20in11si.xls",
+      "sha256": "9ade112c36a0b6b81b539524537d0fbfbf5c34c611d10da700f82b87a2e81cb0",
+      "size_bytes": 61440,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in11si.xls",
+      "year": 2020
+     },
+     {
+      "fetched_at": "",
+      "filename": "21in11si.xls",
+      "sha256": "2c325fb48fe5bc72fdf339aba40da47d4c8285384ba1b7efe26762008a31d2ce",
+      "size_bytes": 54784,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in11si.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "",
+      "filename": "22in11si.xls",
+      "sha256": "31e0203ded16576bad0e3042916a134161a3671405f6be494fbb927acecb8fe5",
+      "size_bytes": 56320,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in11si.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "",
+      "filename": "23in11si.xls",
+      "sha256": "842da11fe09123796c861e919d16011ef161338de1c172d39064bdfa666aca17",
+      "size_bytes": 54272,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in11si.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-1",
+    "table": "Table 1.1"
+   },
+   "package_id": "soi-table-1-1",
+   "source_table": "Publication 1304 Table 1.1",
+   "spec_path": "packages/irs_soi/table_1_1/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 7,
+    "fact_count": 7,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 3087,
+    "source_record_count": 7,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 7,
+   "label": "IRS SOI Publication 1304 Table 1.2 all returns tax items",
+   "manifest": {
+    "dataset": "irs_soi_soi-table-1-2",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:24:07+00:00",
+      "filename": "21in12ms.xls",
+      "sha256": "5f68dae68357e3e1b8669389722c4e4d00030a9d1f4d77a41b4e2bce84b74643",
+      "size_bytes": 61952,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in12ms.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:07+00:00",
+      "filename": "22in12ms.xls",
+      "sha256": "ffc483e16aa05762c5ac6dfdbfa86250cd4db5969b1cf6db2296539601a54503",
+      "size_bytes": 62464,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in12ms.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "2026-05-11T11:40:08+00:00",
+      "filename": "23in12ms.xls",
+      "sha256": "549861a1c7b38256abf9506a6111dcf82110266d0168199dfa465a5d61134490",
+      "size_bytes": 62464,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in12ms.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-1",
+    "table": "Publication 1304 Table 1.2"
+   },
+   "package_id": "soi-table-1-2",
+   "source_table": "Publication 1304 Table 1.2",
+   "spec_path": "packages/irs_soi/table_1_2/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 7,
+    "constraint_count": 972,
+    "consumer_fact_count": 540,
+    "fact_count": 540,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 8109,
+    "source_record_count": 540,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-04",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 540,
+   "label": "IRS SOI Publication 1304 Table 1.4 total wages",
+   "manifest": {
+    "dataset": "irs_soi_publication_1304_table_1_4",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "21in14ar.xls",
+      "sha256": "b2c44704feb0ce4ad7d544e1ac12dc0943a10eefa0a8523f578a0f3fe8552682",
+      "size_bytes": 105984,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in14ar.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "",
+      "filename": "22in14ar.xls",
+      "sha256": "93811f816933d4ac3250c402f7ddae5989a145b60ce47db413d0f19c71af6617",
+      "size_bytes": 115712,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in14ar.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "",
+      "filename": "23in14ar.xls",
+      "sha256": "b6c1f87fbb5533417e195f6938538e5de09b6a0825a6a54346bf9363a18d96af",
+      "size_bytes": 115712,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in14ar.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-1",
+    "table": "Table 1.4"
+   },
+   "package_id": "soi-table-1-4",
+   "source_table": "Publication 1304 Table 1.4",
+   "spec_path": "packages/irs_soi/table_1_4/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 39,
+    "fact_count": 39,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 6486,
+    "source_record_count": 39,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 39,
+   "label": "IRS SOI Publication 1304 Table 2.1 itemized-return all-return totals",
+   "manifest": {
+    "dataset": "irs_soi_soi-table-2-1",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:24:07+00:00",
+      "filename": "21in21id.xls",
+      "sha256": "726318d6f72f11aa9b948a3c33fa99099fe0f856c106dfd2be76b9bcc06ed5f3",
+      "size_bytes": 73216,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in21id.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:07+00:00",
+      "filename": "22in21id.xls",
+      "sha256": "0ebe525448c24c3a8fb99ca57136be27a97dcea24c04230670886c00b1db7ed9",
+      "size_bytes": 77312,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in21id.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "2026-05-11T11:44:21+00:00",
+      "filename": "23in21id.xls",
+      "sha256": "df6cf04ed3b716dd670db055755528916ef02d59967e1af3ead59cc48bd4de80",
+      "size_bytes": 75776,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in21id.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-2",
+    "table": "Publication 1304 Table 2.1"
+   },
+   "package_id": "soi-table-2-1",
+   "source_table": "Publication 1304 Table 2.1",
+   "spec_path": "packages/irs_soi/table_2_1/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 8,
+    "fact_count": 8,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 4293,
+    "source_record_count": 8,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 8,
+   "label": "IRS SOI Publication 1304 Table 2.5 EITC all-return totals",
+   "manifest": {
+    "dataset": "irs_soi_soi-table-2-5",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T21:26:57+00:00",
+      "filename": "20in25ic.xls",
+      "sha256": "28f8823857b345b59575038736011dfb750ba362df38ddb0b4b9b591a1cc7135",
+      "size_bytes": 61440,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in25ic.xls",
+      "year": 2020
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "21in25ic.xls",
+      "sha256": "d4429c04a101b70cf23c6412f3246a3bc6a7244bad99f3561e54c302007f3285",
+      "size_bytes": 54784,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in25ic.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "22in25ic.xls",
+      "sha256": "bd890a09ef3a35c577dcc9d94272a7ee40d836453c686d70599372b48b863884",
+      "size_bytes": 55296,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in25ic.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "2026-05-11T11:50:29+00:00",
+      "filename": "23in25ic.xls",
+      "sha256": "c6a58f637e42e83248b1f6f336fddc5d94ac91e04ccf68b1d089291d2d5fe1a5",
+      "size_bytes": 55296,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in25ic.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-2",
+    "table": "Publication 1304 Table 2.5"
+   },
+   "package_id": "soi-table-2-5",
+   "source_table": "Publication 1304 Table 2.5",
+   "spec_path": "packages/irs_soi/table_2_5/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 664,
+    "consumer_fact_count": 232,
+    "fact_count": 232,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 4293,
+    "source_record_count": 232,
+    "source_region_count": 4,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 232,
+   "label": "IRS SOI Publication 1304 Table 2.5 EITC by AGI and qualifying children 2022",
+   "manifest": {
+    "dataset": "irs_soi_soi-table-2-5",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T21:26:57+00:00",
+      "filename": "20in25ic.xls",
+      "sha256": "28f8823857b345b59575038736011dfb750ba362df38ddb0b4b9b591a1cc7135",
+      "size_bytes": 61440,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in25ic.xls",
+      "year": 2020
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "21in25ic.xls",
+      "sha256": "d4429c04a101b70cf23c6412f3246a3bc6a7244bad99f3561e54c302007f3285",
+      "size_bytes": 54784,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in25ic.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "22in25ic.xls",
+      "sha256": "bd890a09ef3a35c577dcc9d94272a7ee40d836453c686d70599372b48b863884",
+      "size_bytes": 55296,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in25ic.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "2026-05-11T11:50:29+00:00",
+      "filename": "23in25ic.xls",
+      "sha256": "c6a58f637e42e83248b1f6f336fddc5d94ac91e04ccf68b1d089291d2d5fe1a5",
+      "size_bytes": 55296,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in25ic.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-2",
+    "table": "Publication 1304 Table 2.5"
+   },
+   "package_id": "soi-table-2-5-eitc-agi-children-2022",
+   "source_table": "Publication 1304 Table 2.5 EITC by AGI and qualifying children",
+   "spec_path": "packages/irs_soi/table_2_5_eitc_agi_children_2022/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 664,
+    "consumer_fact_count": 232,
+    "fact_count": 232,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 4293,
+    "source_record_count": 232,
+    "source_region_count": 4,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 232,
+   "label": "IRS SOI Publication 1304 Table 2.5 EITC by AGI and qualifying children 2023",
+   "manifest": {
+    "dataset": "irs_soi_soi-table-2-5",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T21:26:57+00:00",
+      "filename": "20in25ic.xls",
+      "sha256": "28f8823857b345b59575038736011dfb750ba362df38ddb0b4b9b591a1cc7135",
+      "size_bytes": 61440,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in25ic.xls",
+      "year": 2020
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "21in25ic.xls",
+      "sha256": "d4429c04a101b70cf23c6412f3246a3bc6a7244bad99f3561e54c302007f3285",
+      "size_bytes": 54784,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in25ic.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "22in25ic.xls",
+      "sha256": "bd890a09ef3a35c577dcc9d94272a7ee40d836453c686d70599372b48b863884",
+      "size_bytes": 55296,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in25ic.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "2026-05-11T11:50:29+00:00",
+      "filename": "23in25ic.xls",
+      "sha256": "c6a58f637e42e83248b1f6f336fddc5d94ac91e04ccf68b1d089291d2d5fe1a5",
+      "size_bytes": 55296,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in25ic.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-2",
+    "table": "Publication 1304 Table 2.5"
+   },
+   "package_id": "soi-table-2-5-eitc-agi-children-2023",
+   "source_table": "Publication 1304 Table 2.5 EITC by AGI and qualifying children",
+   "spec_path": "packages/irs_soi/table_2_5_eitc_agi_children_2023/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 18,
+    "fact_count": 18,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 2145,
+    "source_record_count": 18,
+    "source_region_count": 1,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "xlrd whole-workbook used-range cell parse",
+   "facts": 18,
+   "label": "IRS SOI Publication 1304 Table 4.3 all-return totals",
+   "manifest": {
+    "dataset": "irs_soi_soi-table-4-3",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "21in43ts.xls",
+      "sha256": "c2c4717067e661d62d4615b1147f41d780dc769ad4ee30cc0f03c07270700709",
+      "size_bytes": 58880,
+      "source_url": "https://www.irs.gov/pub/irs-soi/21in43ts.xls",
+      "year": 2021
+     },
+     {
+      "fetched_at": "2026-05-11T12:24:30+00:00",
+      "filename": "22in43ts.xls",
+      "sha256": "cb36e5fbd7862f54067801c4ee7abac45cc94c10ef8aed4c30adca9cdac85e4c",
+      "size_bytes": 58880,
+      "source_url": "https://www.irs.gov/pub/irs-soi/22in43ts.xls",
+      "year": 2022
+     },
+     {
+      "fetched_at": "2026-05-11T11:53:23+00:00",
+      "filename": "23in43ts.xls",
+      "sha256": "4a65447b858f14cb39c6fdc1935c9f4cb8ee0a0c4c245baf263c29d80d1a49c8",
+      "size_bytes": 58880,
+      "source_url": "https://www.irs.gov/pub/irs-soi/23in43ts.xls",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-returns-complete-report-publication-1304-basic-tables-part-4",
+    "table": "Publication 1304 Table 4.3"
+   },
+   "package_id": "soi-table-4-3",
+   "source_table": "Publication 1304 Table 4.3",
+   "spec_path": "packages/irs_soi/table_4_3/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "irs_soi",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 5,
+    "fact_count": 5,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 1650,
+    "source_record_count": 5,
+    "source_region_count": 3,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-08",
+   "extraction_method": "xlsx whole-workbook used-range cell parse",
+   "facts": 5,
+   "label": "IRS SOI 2020 Form W-2 social-security tips totals",
+   "manifest": {
+    "dataset": "irs_soi_w2_statistics_2020",
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "20in04w2all.xlsx",
+      "sha256": "1178d77618cc1d2f873506909eeec660f36e3599854f31337f9dcaec6cfc442f",
+      "size_bytes": 25491,
+      "source_url": "https://www.irs.gov/pub/irs-soi/20in04w2all.xlsx",
+      "year": 2020
+     }
+    ],
+    "source_page": "https://www.irs.gov/statistics/soi-tax-stats-individual-information-return-form-w2-statistics",
+    "table": "Table 4.B. Summary of Items for Taxpayers with Form W-2, by Return and Earner Type, Tax Year 2020"
+   },
+   "package_id": "soi-w2-statistics-2020",
+   "source_table": "Table 4.B. Summary of Items for Taxpayers with Form W-2, by Return and Earner Type, Tax Year 2020",
+   "spec_path": "packages/irs_soi/w2_statistics_2020/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "spf_finances_pit",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 1,
+    "fact_count": 1,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 18,
+    "source_record_count": 1,
+    "source_region_count": 1,
+    "source_row_count": 1
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "curated CSV national total from Statbel personal income tax statistics",
+   "facts": 1,
+   "label": "SPF Finances personal income tax 2023 national tax target",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "spf_finances_pit_country_2023.csv",
+      "sha256": "7651aaf315f51b78d7fdbe162d6e346cc254793df02833d114c0ca5b1acf3957",
+      "size_bytes": 287,
+      "source_url": "https://statbel.fgov.be/en/themes/households/taxable-income",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://statbel.fgov.be/en/themes/households/taxable-income",
+    "table": null
+   },
+   "package_id": "spf-finances-pit-2023",
+   "source_table": "Personal income tax statistics total taxes, income year 2023",
+   "spec_path": "packages/spf_finances/pit_2023/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "ssa",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 6,
+    "consumer_fact_count": 6,
+    "fact_count": 6,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 56,
+    "source_record_count": 6,
+    "source_region_count": 1,
+    "source_row_count": 6
+   },
+   "extracted_at": "2026-05-10",
+   "extraction_method": "delimited text full-row parse from SSA Annual Statistical Supplement tables 4.A5, 4.A6, and 7.B1",
+   "facts": 6,
+   "label": "SSA Annual Statistical Supplement 2025 national OASDI and SSI payments",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "ssa_oasdi_ssi_2024.csv",
+      "sha256": "ebc5a7327f818e3fe21c51d1cffe6f80f585e468802d3948dc2cfbf7a0cc384b",
+      "size_bytes": 1793,
+      "source_url": "https://www.ssa.gov/policy/docs/statcomps/supplement/2025/index.html",
+      "year": 2024
+     },
+     {
+      "fetched_at": "",
+      "filename": "ssa_oasdi_ssi_2024.csv",
+      "sha256": null,
+      "size_bytes": null,
+      "source_url": null,
+      "year": "extracted_targets"
+     }
+    ],
+    "source_page": "https://www.ssa.gov/policy/docs/statcomps/supplement/2025/index.html",
+    "table": null
+   },
+   "package_id": "ssa-annual-statistical-supplement-2025",
+   "source_table": "SSA Annual Statistical Supplement 2025 extracted OASDI and SSI target rows",
+   "spec_path": "packages/ssa/annual_statistical_supplement_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "ssa",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 2,
+    "constraint_count": 312,
+    "consumer_fact_count": 416,
+    "fact_count": 416,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 1672,
+    "source_record_count": 416,
+    "source_region_count": 2,
+    "source_row_count": 208
+   },
+   "extracted_at": "2026-05-29",
+   "extraction_method": "manual table extraction from SSA Annual Statistical Supplement 2025 Table 7.B1 HTML; payment rows retained in source thousands of dollars and scaled in Ledger measures",
+   "facts": 416,
+   "label": "SSA Annual Statistical Supplement 2025 Table 7.B1 SSI recipients and payments",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "ssi_table_7b1_2024.csv",
+      "sha256": "4935f2b90d5abedc869e660f8a68df33b6f935630ebab2b159c09de7e4bf2401",
+      "size_bytes": 13990,
+      "source_url": "https://www.ssa.gov/policy/docs/statcomps/supplement/2025/7b.html",
+      "year": 2024
+     },
+     {
+      "fetched_at": "",
+      "filename": "ssi_table_7b1_2024.csv",
+      "sha256": null,
+      "size_bytes": null,
+      "source_url": null,
+      "year": "extracted_targets"
+     }
+    ],
+    "source_page": "https://www.ssa.gov/policy/docs/statcomps/supplement/2025/7b.html",
+    "table": null
+   },
+   "package_id": "ssa-ssi-table-7b1-2024",
+   "source_table": "SSA Annual Statistical Supplement 2025 Table 7.B1",
+   "spec_path": "packages/ssa/ssi_table_7b1_2024/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "statbel_fiscal_income",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 0,
+    "consumer_fact_count": 565,
+    "fact_count": 565,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 6792,
+    "source_record_count": 565,
+    "source_region_count": 1,
+    "source_row_count": 565
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "curated CSV extract from Statbel fiscal income table aggregated through the 2025 NIS commune crosswalk",
+   "facts": 565,
+   "label": "Statbel fiscal income 2023 commune taxable-income targets on 2025 NIS geography",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "statbel_fiscal_income_commune_2023_nis_2025.csv",
+      "sha256": "732bb3945d080c06bba2609bd55d24af0f12859840d6f6b7c3c85de8f93eed75",
+      "size_bytes": 101316,
+      "source_url": "https://statbel.fgov.be/en/themes/households/taxable-income",
+      "year": 2023
+     }
+    ],
+    "source_page": "https://statbel.fgov.be/en/themes/households/taxable-income",
+    "table": null
+   },
+   "package_id": "statbel-fiscal-income-2023-nis-2025",
+   "source_table": "Personal income tax statistics by municipality, income year 2023, 2025 NIS geography",
+   "spec_path": "packages/statbel/fiscal_income_2023_nis_2025/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "statbel_population_structure",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 1,
+    "constraint_count": 66,
+    "consumer_fact_count": 18,
+    "fact_count": 18,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 209,
+    "source_record_count": 18,
+    "source_region_count": 1,
+    "source_row_count": 18
+   },
+   "extracted_at": "2026-07-02",
+   "extraction_method": "curated CSV extract from Statbel official 2026 population structure text file",
+   "facts": 18,
+   "label": "Statbel population structure 2026 NUTS1 people targets",
+   "manifest": {
+    "dataset": null,
+    "files": [
+     {
+      "fetched_at": "",
+      "filename": "statbel_population_structure_nuts1_2026.csv",
+      "sha256": "b8456b6a7dfd71caf50184ded4f270206f3b36ae188392ade8c4375aad1ecd52",
+      "size_bytes": 5210,
+      "source_url": "https://data.gov.be/en/datasets/nodeid5468",
+      "year": 2026
+     }
+    ],
+    "source_page": "https://data.gov.be/en/datasets/nodeid5468",
+    "table": null
+   },
+   "package_id": "statbel-population-structure-2026",
+   "source_table": "Population by place of residence, nationality, marital status, age and sex, 2026",
+   "spec_path": "packages/statbel/population_structure_2026/source_package.yaml",
+   "valid": true
+  },
+  {
+   "authority": "usda_snap",
+   "built": true,
+   "counts": {
+    "agent_acceptance_error_count": 0,
+    "artifact_count": 1,
+    "concept_alignment_count": 0,
+    "constraint_count": 0,
+    "consumer_fact_count": 216,
+    "fact_count": 216,
+    "lineage_coverage": 1.0,
+    "source_cell_count": 6288,
+    "source_record_count": 216,
+    "source_region_count": 24,
+    "source_row_count": 0
+   },
+   "extracted_at": "2026-05-11",
+   "extraction_method": "ZIP archive XLSX member whole-workbook used-range cell parse",
+   "facts": 216,
+   "label": "USDA FNS SNAP FY69 to current archive FY24 national and state summary",
+   "manifest": {
+    "dataset": "usda_snap_usda-snap-fy69-to-current",
+    "files": [
+     {
+      "fetched_at": "2026-05-11T11:57:29+00:00",
+      "filename": "snap-zip-fy69tocurrent-6.zip",
+      "sha256": "3eee091653335a00a80c6fe76b84904b309dddba0c8b63a256b7e079e4101abe",
+      "size_bytes": 1581035,
+      "source_url": "https://www.fns.usda.gov/sites/default/files/resource-files/snap-zip-fy69tocurrent-6.zip",
+      "year": 2024
+     }
+    ],
+    "source_page": "https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap",
+    "table": "SNAP Monthly State Participation and Benefit Summary FY69 to current"
+   },
+   "package_id": "usda-snap-fy69-to-current",
+   "source_table": "SNAP Monthly State Participation and Benefit Summary FY69 to current",
+   "spec_path": "packages/usda_snap/fy69_to_current/source_package.yaml",
+   "valid": true
+  }
+ ],
+ "schemaVersion": "thesis_ledger_app_registry_v1",
+ "year": 2023
+}

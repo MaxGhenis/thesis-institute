@@ -1,0 +1,198 @@
+@import "tailwindcss";
+@import "thesis-design/theme.css";
+
+/* The Ledger reads as a register, not a dashboard: paper surfaces, hairline
+   rules, mono record identifiers, and one rose accent used sparingly. */
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--color-canvas);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: var(--color-horizon-700);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    text-wrap: balance;
+  }
+
+  code,
+  pre,
+  kbd {
+    font-family: var(--font-mono);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-horizon-700);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Record slip: the citable artifact on every fact page. */
+  .slip {
+    background: var(--color-paper);
+    border: 1px solid var(--color-border-strong);
+    border-top: 3px double var(--color-border-strong);
+    padding: 1rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    overflow-x: auto;
+  }
+
+  /* Status stamp: small uppercase chip whose text is the true enum. */
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid;
+    padding: 0.125rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  .stamp-neutral {
+    color: var(--color-mist-600);
+    border-color: var(--color-border-strong);
+    background: var(--color-mist-100);
+  }
+
+  .stamp-witness {
+    color: var(--color-horizon-700);
+    border-color: var(--color-horizon-300);
+    background: color-mix(in srgb, var(--color-horizon-300) 14%, transparent);
+  }
+
+  .stamp-flag {
+    color: var(--color-rose-700);
+    border-color: var(--color-rose-300);
+    background: var(--color-rose-100);
+  }
+
+  .stamp-open {
+    color: var(--color-text-tertiary);
+    border-style: dashed;
+    border-color: var(--color-border-strong);
+    background: transparent;
+  }
+
+  /* Ruled register tables. */
+  .register {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .register th {
+    text-align: left;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    border-bottom: 1px solid var(--color-border-strong);
+    padding: 0.5rem 0.75rem 0.5rem 0;
+  }
+
+  .register td {
+    border-bottom: 1px solid var(--color-border-soft);
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    vertical-align: top;
+  }
+
+  .register tbody tr:hover {
+    background: color-mix(in srgb, var(--color-mist-100) 55%, transparent);
+  }
+
+  .lineno {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    text-align: right;
+    padding-right: 0.75rem;
+    user-select: none;
+    width: 3rem;
+  }
+
+  .record-id {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    word-break: break-all;
+  }
+
+  /* Definition rows on record pages. */
+  .field-table {
+    display: grid;
+    grid-template-columns: minmax(9rem, 14rem) 1fr;
+    row-gap: 0.375rem;
+    column-gap: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .field-table dt {
+    color: var(--color-text-tertiary);
+    font-size: 0.8125rem;
+  }
+
+  .field-table dd {
+    word-break: break-word;
+  }
+
+  .field-table dd code {
+    font-size: 0.8125rem;
+  }
+
+  @media (max-width: 640px) {
+    .field-table {
+      grid-template-columns: 1fr;
+      row-gap: 0.125rem;
+    }
+
+    .field-table dt {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .prose-block p + p {
+    margin-top: 0.75rem;
+  }
+}
