@@ -104,8 +104,8 @@ checks_app() {
   #     what should have caught it. Keep this list in sync with the workflow.
   local surface url marker got
   for surface in "ledger.json policyengine_ledger_v1" \
-                 "targets.json thesis_target_architecture_manifest_v1" \
-                 "brier/reward.json brier_reward_export_v1"; do
+                 "targets.json thesis_target_architecture_manifest_v2" \
+                 "brier/reward.json brier_reward_export_v2"; do
     url="${surface%% *}"; marker="${surface##* }"
     got=$(curl -sL -m 30 "https://app.thesisinstitute.org/$url" 2>/dev/null | head -c 400 | grep -o "$marker")
     [ "$got" = "$marker" ] && pass "app /$url  schema $marker" \
