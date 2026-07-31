@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How government does forecasting — and how it checks itself · Thesis Institute</title>
+  <meta name="description" content="A cited landscape of forecasting, projection, and retrospective evaluation across government bodies — CBO, JCT, OMB, the Fed, OBR, IMF, SSA, CMS, the scored-forecasting programs, and the operational layer — with an honest comparison to Thesis." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='6' fill='%230F1A24'/%3E%3Ccircle cx='21.5' cy='14' r='5.5' fill='%23A94E80' opacity='0.12'/%3E%3Cline x1='2' y1='4.5' x2='17' y2='12' stroke='%239FB6C6' stroke-width='1.2' stroke-linecap='round' opacity='0.55'/%3E%3Cline x1='2' y1='23.5' x2='17' y2='16' stroke='%239FB6C6' stroke-width='1.5' stroke-linecap='round' opacity='0.65'/%3E%3Ccircle cx='21.5' cy='14' r='3.2' fill='%23A94E80'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MaxGhenis/brier-design@v1.0.0/tokens.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MaxGhenis/brier-design@v1.0.0/base.css" />
+  <style>
+    .wrap { max-width: 1180px; }
+    article.report { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+    article.report > p:first-of-type em { color: var(--text-secondary); }
+    .report h1 { font-family: var(--font-display); font-weight: 500; font-size: 2.1rem; letter-spacing: -0.02em; line-height: 1.15; margin: 18px 0 14px; }
+    .report h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.45rem; letter-spacing: -0.015em; margin: 2.4em 0 0.6em; }
+    .report h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; margin: 1.8em 0 0.5em; }
+    .report p, .report li { font-size: 0.97rem; line-height: 1.62; color: var(--text-primary); }
+    .report p { margin: 0 0 1em; }
+    .report ul, .report ol { margin: 0 0 1.1em 1.3em; }
+    .report li { margin-bottom: 0.45em; }
+    .report blockquote { border-left: 3px solid var(--border-strong); margin: 1.2em 0; padding: 0.1em 0 0.1em 1.1em; color: var(--text-secondary); }
+    .report a { color: var(--accent); text-decoration: none; }
+    .report a:hover { text-decoration: underline; }
+    .report code { font-family: var(--font-mono); font-size: 0.84em; background: #F2F6F9; border-radius: 4px; padding: 1px 5px; }
+    .tablewrap, .report table { font-size: 0.8rem; }
+    .report table { border-collapse: collapse; width: 100%; margin: 1.1em 0; }
+    .report th, .report td { border: 1px solid var(--border-soft); padding: 6px 9px; text-align: left; vertical-align: top; line-height: 1.45; }
+    .report th { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); background: #F7FAFC; }
+    .report .tablewrap { overflow-x: auto; }
+    .kicker { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    header.site nav a { margin-left: 18px; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="21.5" cy="14" r="5.5" fill="#A94E80" opacity="0.10"/>
+          <line x1="2" y1="4.5" x2="17" y2="12" stroke="#9FB6C6" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+          <line x1="2" y1="23.5" x2="17" y2="16" stroke="#9FB6C6" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="21.5" cy="14" r="3.2" fill="#A94E80"/>
+        </svg>
+        <span>thesis <small>institute</small></span>
+      </a>
+      <nav>
+        <a href="https://app.thesisinstitute.org/forecasts">Forecasts</a>
+        <a href="https://app.thesisinstitute.org/log">Log</a>
+        <a href="/agents">Agents</a>
+        <a href="https://app.thesisinstitute.org/thesis">About</a>
+      </nav>
+    </div>
+  </header>
+  <article class="report">
+    <div class="kicker">Research · July 2026</div>
+    <h1>How government does forecasting — and how it checks itself</h1>
+<p><em>A cited landscape of forecasting, projection, and retrospective
+evaluation across government bodies. Thesis Institute, July 2026. Every
+load-bearing claim carries a primary citation checked in this research
+pass; live-site and repository numbers are as of the evening of
+2026-07-30 (US Eastern) and move daily.</em></p>
+<h2 id="summary">Summary</h2>
+<p>Government forecasting is evaluated more than its critics assume and
+less rigorously than its defenders imply, and the gap between those two
+facts is where the case for an external evaluation layer lives.</p>
+<p>The self-evaluation that exists is real. CBO publishes an annual
+accuracy report about three months after the fiscal year closes. The OBR
+is required by statute to assess its own forecast accuracy every
+financial year, and its June 2026 report states that it underestimated
+2024-25 borrowing by £65 billion at the one-year horizon. OMB has
+published a statutory prior-year comparison for decades. IRS, FAA, NCES,
+USDA, CMS, Washington State, and Virginia all print their own error
+statistics. Any argument that begins “government never checks itself” is
+false and will be answered with documents.</p>
+<p>The real finding is narrower and holds only where it applies. Among
+the fiscal and macroeconomic institutions reviewed, and across the
+sampled program-agency workload and caseload products, <strong>no
+standing published evaluation uses a proper scoring rule</strong> —
+every metric found is mean error, absolute error, RMSE, signed
+differential, or narrative attribution, none of which can detect
+overconfidence. Two corners of the same government are the explicit
+exceptions, and any statement of this finding has to name them or it is
+false: NWS verifies precipitation probabilities with the Brier score,
+and CDC’s hubs score quantile submissions with the weighted interval
+score. Both are government program forecasting. Probability
+distributions are published (IMF growth bands with explicit tail
+probabilities, Fed and OBR fan charts) and no standing public evaluation
+of them was found — though delayed Tealbooks show the Fed conducting
+recurring internal interval review; the most self-critical institution
+in the set made isolated outturn-versus-band observations in two located
+editions (2016 and 2024), with no recurring coverage-rate series
+found.</p>
+<p>That claim is bounded by what a forecast <em>is</em>. A CBO or JCT
+cost estimate is a conditional causal estimate against a statutory
+baseline: only one of its two worlds ever occurs, so it cannot be
+resolved against an outcome at all, and demanding that it be scored is a
+category error rather than a critique. The taxonomy below separates the
+products where scoring applies from those where it does not, and every
+finding here is scoped accordingly.</p>
+<p>Weather and outbreak forecasting demonstrate the design for repeated,
+short-horizon, observable targets. Whether it transfers to fiscal
+estimation is unproven, and this report does not claim otherwise. The
+federal experiments that tried adjacent versions produced uneven results
+and then ended: ACE is the clear success, HFC’s published gain over a
+recruited-crowd comparator was modest and never isolated the machine
+contribution, and SCORE’s human methods showed signal while its
+automated objective fell short. INFER, the survivor, is now the RAND
+Forecasting Initiative, with no continuing federal owner or
+appropriation identified.</p>
+<p>Thesis’s contribution is architectural: resolution rules and target
+vintages registered before the run, first-print resolution, externally
+witnessed custody, and CRPS with interval coverage and PIT, across a
+750-target registry concentrated in the operational program layer. That
+architecture does not yet cover its own catalog — 95 targets carry
+prospective registration snapshots against 379 backfilled ledger
+entries, and full artifact traces exist for 351 of 1,188 runs (July 30
+export). Its witnessed scoreboard reads eight scored forecasts, three of
+them inside their stated 80% intervals — 38% coverage against an 80%
+target — and on the two persistence-matched targets the agent is
+currently behind the baseline. Eight observations support no inference
+about accuracy in either direction; what the machinery demonstrates is
+that forecasts resolve and publish themselves, in both directions,
+without an intervening decision about whether to report them. It scores
+its own forecasts, not anyone else’s, so it is not yet an external
+evaluator of the institutions described here.</p>
+<h2 id="how-to-read-this-document">How to read this document</h2>
+<p>Three kinds of statements appear below, and the distinction is the
+method:</p>
+<ol type="1">
+<li><strong>Observed</strong> — read directly from a primary document or
+live surface this pass (agency PDFs, statutes, committee reports,
+app.thesisinstitute.org and the public ThesisInstitute/thesis
+repository). These carry citations.</li>
+<li><strong>Reported</strong> — a secondary source’s characterization
+(GAO on agencies, press on program status). Attributed as such.</li>
+<li><strong>Absence claims</strong> (“no agency does X”) — the searches
+that failed to find a counterexample are documented in the underlying
+research notes and fetch logs, retained and available on request.
+Absence of evidence is labeled as exactly that.</li>
+</ol>
+<p>For each body covered: what it forecasts, at what frequency and
+horizon; whether forecasts are ever resolved against outcomes; whether
+scoring is proper (interval/CRPS-family) or narrative/point-error;
+whether anything is pre-registered or tamper-evident; and cost or
+latency where documented.</p>
+<h2 id="what-can-and-cannot-be-scored">What can and cannot be
+scored</h2>
+<p>Government publishes four different kinds of statements about the
+future, and they are not interchangeable. A criticism that is
+devastating for one is a category error for another, so every claim in
+this report is scoped to a type.</p>
+<p><strong>Type A — probability distributions over later-observed
+quantities.</strong> IMF growth bands, Fed SEP fan charts, CDC hub
+quantile submissions, NWS precipitation probabilities. These can be
+scored properly (CRPS, WIS, Brier) and their interval coverage can be
+tested. <em>Scoring applies fully.</em></p>
+<p><strong>Type B — point forecasts of later-observed
+quantities.</strong> CBO’s economic forecasts and baseline aggregates,
+WASDE commodity projections, IRS filing volumes, FAA enplanements, state
+revenue estimates, SNAP participation, the Trustees’ near-term income
+and cost. These resolve against observable outcomes and their error can
+be measured — but a point forecast cannot be assessed for calibration
+unless a distribution is elicited. <em>Resolution applies; proper
+scoring applies only if the forecaster is asked for a
+distribution.</em></p>
+<p><strong>Type C — conditional causal estimates against a stipulated
+baseline.</strong> A CBO or JCT cost estimate states: budget outcome
+<em>with</em> this bill minus budget outcome under statutory baseline
+conventions. Only one of those worlds occurs. The counterfactual is
+never observed; later laws intervene, provisions interact, behavioral
+responses are endogenous. <strong>A proper score cannot cure a missing
+counterfactual.</strong> Regulatory benefit-cost estimates and
+Treasury’s revenue-proposal estimates share this structure. <em>Direct
+resolution is generally impossible. What can be evaluated is separable
+observable components — a projected participation count, a take-up rate,
+a repatriation volume — and only where the component can be
+isolated.</em></p>
+<p><strong>Type D — scenarios and sensitivity paths.</strong> The
+Trustees’ low-cost and high-cost alternatives, FAA’s optimistic and
+pessimistic cases, CMS’s illustrative alternative. Most carry no
+probabilities and are deliberately not predictions. <em>Without
+probabilities they cannot be proper-scored or read as nominal coverage
+intervals, though agencies can and do compare their paths and
+assumptions against realized history — EIA’s AEO retrospective review
+does exactly that.</em> Washington’s ERFC is the instructive exception:
+it assigns 50% to its baseline, 20% to the optimistic case, and 30% to
+the pessimistic one, which makes those forecasts Type A in form — and no
+CRPS, log score, or calibration series is published for them.</p>
+<p>The findings below bite on Types A and B, where outcomes are
+observable and scoring is available but unused. On Type C the honest
+claim is much narrower: not that CBO and JCT should score bills, but
+that separable observable components are rarely evaluated, and that the
+conditional structure tends to be lost in transmission — an estimate
+gets quoted as a prediction long after its baseline caveats have fallen
+away. Type D appears for completeness, not indictment.</p>
+<h2 id="fiscal-scorekeepers">1. Fiscal scorekeepers</h2>
+<h3 id="congressional-budget-office">Congressional Budget Office</h3>
+<p><strong>What and how much.</strong> Under the Congressional Budget
+Act of 1974, CBO produces the baseline budget projections Congress
+scores against and, in its own words, “between 600 and 800 cost
+estimates for bills ordered reported to the Congress each year,” plus
+“about 350 additional estimates” for House suspension bills — roughly
+950-1,150 published estimates a year, not the “thousands” sometimes
+claimed (<a href="https://www.cbo.gov/cost-estimates/faqs">CBO
+cost-estimates FAQ</a>). Revenue and direct-spending provisions are
+estimated over 10 years; discretionary authorizations over 5. For tax
+legislation, the Budget Act requires CBO to incorporate JCT’s estimates
+for legislation involving the Internal Revenue Code. Some baseline
+conventions are statutory — expiring programs with outlays over $50
+million assumed to continue, entitlement authority assumed fully funded.
+Others are CBO practice: the agency “generally assumes” a 50%
+probability for pending administrative actions, one of the few explicit
+probabilities anywhere in the process, used as a scenario weight and
+never scored.</p>
+<p><strong>The accuracy machinery — real, aggregate, and
+point-error.</strong> CBO is the best self-evaluator among the
+scorekeepers. Each winter it publishes <em>The Accuracy of CBO’s Budget
+Projections</em> — the FY2025 edition arrived January 16, 2026, about
+3.5 months after the fiscal year closed (<a
+href="https://www.cbo.gov/publication/61916">CBO pub. 61916</a>). It
+exists “at the request of the House and Senate Committees on the Budget”
+— not by statute. The FY2025 numbers: revenues underestimated by 6%
+($334 billion on the June 2024 baseline), outlays by 2%, deficit
+overestimated by 0.7% of GDP. Historical benchmarks from the same
+report: average absolute budget-year error of 1.1% of GDP on deficits
+(1985-2024), 6% on revenues, 3% on outlays — and 18% on corporate income
+taxes. FY2025’s customs-duties error was 61%, because the 2025 tariff
+actions were administrative and therefore outside the baseline; CBO’s
+convention counts such surprises “as projection errors because they can
+be difficult to separate from other effects.”</p>
+<p><strong>What is not evaluated at the provision level.</strong> The
+accuracy report adjusts its baselines for subsequently enacted
+legislation using the original cost estimates, with the stated
+consequence that “any errors in the initial cost estimates are reflected
+in the projection errors discussed in this report” — carried into the
+aggregate rather than attributed to any individual bill. The FY2025
+edition breaks out exactly one piece of legislation (a student-loan
+provision of P.L. 119-21 that came in $23 billion under the
+estimate).</p>
+<p>The reason is structural, not evasive, and the report should say so
+plainly: a cost estimate is a Type C conditional causal estimate. Once a
+bill is enacted, the no-bill world it was measured against never
+happens. CBO’s conventions exist so that Congress can compare competing
+texts consistently under deadline, not as predictions about what will
+ultimately occur. Where a component <em>is</em> separable — a
+participation count, a take-up rate — ex-post evaluation is feasible,
+and that is the narrow place where more evaluation is available rather
+than impossible.</p>
+<p><strong>The economic record.</strong> <em>CBO’s Economic Forecasting
+Record: 2025 Update</em> (July 14, 2025, <a
+href="https://www.cbo.gov/publication/61334">pub. 61334</a>) scores two-
+and five-year forecast <em>averages</em> against outcomes using mean
+absolute error and RMSE, and benchmarks them: CBO’s two-year forecasts
+of output, CPI inflation, and the 10-year Treasury rate were “11 percent
+more accurate than the Administration, 4 percent more accurate than the
+Blue Chip consensus, and 7 percent more accurate than the SPF, on
+average.” The metrics are explicitly point-error; no probability
+distribution is elicited or scored anywhere in either report. CBO
+publishes historical-error-based uncertainty ranges for selected
+economic variables and, separately, deterministic rules-of-thumb
+scenarios (<em>How Changes in Economic Conditions Might Affect the
+Federal Budget</em>, <a
+href="https://www.cbo.gov/publication/62373">pub. 62373</a>); no ex-post
+evaluation of interval coverage accompanies either.</p>
+<p><strong>Vintage integrity.</strong> Old projections stay archived,
+and CBO now maintains a public, git-versioned repository of its
+evaluation data (<a
+href="https://github.com/US-CBO/eval-projections">US-CBO/eval-projections</a>)
+— genuine transparency infrastructure, though nothing is timestamped or
+witnessed beyond ordinary publication.</p>
+<h3 id="joint-committee-on-taxation">Joint Committee on Taxation</h3>
+<p>JCT produces the official revenue estimates for tax legislation,
+which the Budget Act requires CBO to incorporate. Its ex-post record is
+the sharpest absence in this report, and JCT states the reason
+itself.</p>
+<p><strong>No systematic public retrospective exists.</strong> JCT’s own
+methodology publication says it plainly: “Although there is no formal
+process for the revisiting of estimates over time” (JCX-46-11, pp. 6-7),
+economists update models annually as new evidence arrives. The document
+attributes the gap to real difficulties — the counterfactual is
+unobserved, later law changes intervene, provisions interact, and
+econometric attribution is costly and contestable. Its 1992 methodology
+discussion (JCS-14-92, p. 21) similarly describes accuracy monitoring
+folded into ordinary model updating, for isolated provisions where data
+permit. That is internal recalibration, not a published scorecard.</p>
+<p><strong>What exists instead is a handful of one-off
+comparisons</strong>, and they are worth knowing precisely because they
+show what a real retrospective would have to overcome:</p>
+<ul>
+<li><em>JGTRRA (JCX-19-06, pp. 15-16)</em>: actual FY2003-2005 receipts
+came in $93 billion below the combined CBO baseline plus JCT estimate —
+with JCT itself warning that intervening 2004 legislation made the
+comparison problematic.</li>
+<li><em>CARES economic impact payments (JCT presentation, January 2025,
+p. 16)</em>: $269 billion expected to be paid by September 30, 2020
+against Treasury’s actual $275 billion. The same slide records that JCT
+adjusted its model using the estimated-versus-actual gap from the 2008
+stimulus payments — direct evidence that internal ex-post calibration
+happens without ever becoming a public score.</li>
+<li><em>The 2004 repatriation holiday</em>: JCT projected roughly $235
+billion in qualifying dividends; IRS data showed $312 billion, about 33%
+higher. The analysis was published in <em>Tax Notes</em> by Edward
+Kleinbard and Patrick Driessen — then JCT’s chief of staff and a senior
+economist — expressly as the authors’ views, not the committee’s.</li>
+</ul>
+<p>JCT publishes no recurring provision-level retrospective series; the
+public material consists of a few bounded comparisons where later data
+permitted one, plus the internal recalibration its own documents
+describe. Its stated reasons are the Type C reasons — unobserved
+counterfactual, interacting provisions, endogenous behavior — and they
+are legitimate. The gap worth naming is not that JCT declines to score
+bills, which often cannot be done, but that no public record exists of
+which separable components it checked, what it found, or how models
+changed as a result.</p>
+<h3 id="office-of-management-and-budget">Office of Management and
+Budget</h3>
+<p>OMB’s economic assumptions (built with CEA and Treasury) underpin the
+President’s Budget on a 10-year horizon, refreshed at mid-session. Two
+standing retrospectives exist, both point-error, both aggregate:</p>
+<ul>
+<li><strong>Analytical Perspectives ch. 1, “Forecast Errors.”</strong>
+The FY2027 edition’s Table 01-4 reports average error, mean absolute
+error, and RMSE against CBO and Blue Chip (Table 01-2 separately
+compares current projections with CBO, the FOMC, and Blue Chip) — and
+states the historical pattern plainly: “For the budget year, however,
+the historical pattern has been for the budget to understate the deficit
+by an average of 0.7 percent of GDP” (Analytical Perspectives, FY2027
+Budget, ch. 1, 2026).</li>
+<li><strong>Analytical Perspectives ch. 14, “Comparison of Actual to
+Estimated Totals”</strong> — the statutory retrospective. 31 U.S.C.
+§1105(a) requires the budget to compare prior-year estimated versus
+actual receipts and outlays; ch. 14 of the FY2027 edition does so for
+FY2025 (initial deficit estimate $1,865 billion; receipts came in $150
+billion higher and outlays $59 billion higher). The comparison appeared
+753 days after the March 11, 2024 budget it evaluates, and about six
+months after FY2025 closed. No intervals, no probabilistic scoring, no
+per-proposal resolution.</li>
+</ul>
+<p><strong>2025-26 status, observed.</strong> A full Analytical
+Perspectives volume shipped with the FY2027 budget (April 2026). The
+FY2026 Mid-Session Review appeared as a “Technical Supplement to the
+2026 Budget,” after the statutory deadline (it cites CBO’s July 21, 2025
+OBBBA estimate; 31 U.S.C. §1106 requires submission “[b]efore July 16”).
+As of July 27, 2026, no FY2027 Mid-Session Review — due before July 16,
+2026 — appears on <a href="https://www.whitehouse.gov/omb/budget/">OMB’s
+budget page</a>.</p>
+<h3 id="treasury-office-of-tax-analysis">Treasury Office of Tax
+Analysis</h3>
+<p>OTA estimates the revenue effects of Administration proposals (the
+“Greenbook”) and the receipts baseline. Two observed facts define its
+accountability posture:</p>
+<ul>
+<li><strong>The Greenbook is optional in practice.</strong> Treasury’s
+Revenue Proposals index lists editions for FY1991-FY2017 and
+FY2022-FY2025 — none for FY2018-FY2021, and none for FY2026 or FY2027 as
+of July 27, 2026. When no Greenbook is published, Administration tax
+proposals carry no published proposal-level Treasury estimates at
+all.</li>
+<li><strong>The last published self-analysis of Treasury’s forecast
+record found in this pass is from 1987</strong> — OTA Paper 58 (George
+A. Plesko, “Government Forecasts and Budget Projections: An Analysis of
+Recent History,” October 1987), a staff paper stamped “do not reflect
+Treasury policy.” Nothing on the OTA working-paper index since then
+evaluates receipts-estimate accuracy.</li>
+</ul>
+<h3 id="state-consensus-revenue-estimating">State consensus revenue
+estimating</h3>
+<p>Twenty-eight states produce their official revenue estimate through a
+<strong>consensus</strong> process — a group formally representing both
+the executive and legislative branches — against 12 using separate
+executive and legislative forecasts and 10 relying on the executive
+alone (NASBO, <em>Budget Processes in the States</em>, Spring 2021,
+Figure 3 and Table 6, pp. 37-38; NASBO updates this survey roughly every
+five years, and searches located no newer state edition as of July
+2026). Most states release estimates two or three times a year; seven
+states plus DC release four or more.</p>
+<p>The mechanics are worth seeing because they are a genuine
+institutional answer to forecast manipulation — one that does not depend
+on scoring. Florida’s Revenue Estimating Conference produces the state’s
+“official information” on anticipated revenues under Fla. Stat.
+§216.136(3), and §216.133(3) defines consensus as the <strong>unanimous
+consent of all principals</strong> — professional staff for the
+governor, the Senate, the House, and the legislature’s Office of
+Economic and Demographic Research. Meetings are public, any principal
+can withhold agreement, the forecast assumes current law under §216.134
+with a statutory minimum ten-year horizon, and §216.137 requires a
+post-session revision and continuous monitoring. Michigan runs January
+and May conferences on a similar model; Washington’s forecast council is
+an independent agency outside both branches.</p>
+<p>Consensus is an <em>ex ante</em> legitimacy device: it makes the
+number hard to push around before it is published. It is not an accuracy
+mechanism, and the distinction matters for this report — unanimity among
+principals says nothing about whether the agreed number turns out to be
+right. What states do about accuracy afterward varies widely and is
+covered in section 8.</p>
+<h3 id="why-the-scorekeepers-are-built-this-way">Why the scorekeepers
+are built this way</h3>
+<p>Three constraints explain most of what looks like missing
+accountability, and a report that ignores them will not be taken
+seriously by the people who work inside these institutions.</p>
+<p><strong>Estimates are enforcement instruments before they are
+predictions.</strong> Budget Committees use CBO and JCT estimates in
+scorekeeping, and the applicable committee’s determination governs
+Budget Act points of order (2 U.S.C. §643); the same estimates decide
+whether a reconciliation bill satisfies its instructions and whether
+statutory PAYGO is triggered. Congress needs one official, comparable
+number produced under consistent conventions, on deadline, for competing
+versions of a text. The statutory baseline conventions — expiring
+programs assumed to continue, entitlement authority assumed fully funded
+— exist to make texts comparable and to keep the scorekeeper neutral,
+not because anyone believes they predict what Congress will do. Judged
+as predictions they will often be wrong by construction; that is the
+design working.</p>
+<p><strong>Being scored is politically live in both directions.</strong>
+Members already engineer sunsets, phase-ins, effective dates, and
+offsets to land a score inside a window, and misses get weaponized. A
+public accuracy leaderboard would discipline some of that gaming, and
+would also hand a ready-made cudgel to whoever wants to discredit an
+independent CBO or JCT in a given week. Any proposal for external
+scoring has to reckon with both effects; this report does not treat the
+political economy as settled.</p>
+<p><strong>Forecasts here are endogenous and sometimes
+self-negating.</strong> Fed projections condition on a policy path that
+responds to the outlook. Fiscal forecasts prompt the legislation that
+supersedes them. The Trustees’ depletion dates are published precisely
+to provoke the reform that would falsify them. A raw outcome score can
+penalize a successful warning, so any serious evaluation must separate
+model error, condition failure, policy response, and implementation —
+which is harder than scoring and is part of why it is rare.</p>
+<h2 id="macroeconomic-forecasters">2. Macroeconomic forecasters</h2>
+<h3 id="federal-reserve-the-sep-and-the-tealbook-lag">Federal Reserve:
+the SEP and the Tealbook lag</h3>
+<p><strong>Correcting the lag claim first.</strong> The Summary of
+Economic Projections is a <em>same-day</em> release, four times a year:
+GDP growth, unemployment, PCE and core PCE inflation, and the federal
+funds rate path, with central tendencies and full ranges, published the
+afternoon the FOMC meeting ends. What carries a roughly five-year lag is
+the <em>staff</em> forecast — the Tealbook — released inside the
+historical FOMC materials package. Participant-level SEP files are also
+delayed five years, with identity keys released at five years for March
+2016 onward and ten years for 2007-2015. The distinction matters: the
+projections themselves are contemporaneous.</p>
+<p><strong>Uncertainty is published; SEP-specific accuracy is not
+scored.</strong> The SEP carries an error-range table and fan charts,
+but their construction matters: they are <em>generic pooled historical
+errors</em> of various forecasters over about twenty years, following
+the methodology of Reifschneider and Tulip (FEDS 2017-020) — not the
+realized errors of past SEP vintages. A one-off check in that 2017 paper
+did compute errors for median SEP projections from 2007-2015, and a 2026
+staff paper (Engstrom, FEDS 2026-026) finds the rate dots beat several
+survey and market comparators, but both are authored research that “does
+not indicate Board concurrence.” No standing Board program resolves each
+SEP vintage against outcomes, publishes an evaluation calendar, or
+scores participants. The defensible formulation is <em>no standing
+program found</em> — the searches supporting that absence are documented
+in the companion notes.</p>
+<p><strong>The reform window opened and closed.</strong> The 2025
+framework review explicitly considered SEP changes — the June 2025
+minutes record discussion of alternative scenarios; at the review’s
+research conference Ben Bernanke proposed a quarterly staff-led
+forecast, in-meeting SEP updates, and de-emphasizing the medians. Asked
+in March 2026 what came of it, Chair Powell said the Committee found no
+idea with sufficiently broad support and “didn’t really make any
+changes” (FOMC press conference transcript, March 18, 2026, pp. 14-15).
+The institution examined its own forecast-communication accountability
+at the highest level and elected to keep it as is.</p>
+<p><strong>Vintage integrity.</strong> Real-time PDFs, dated release
+notices, and the later historical packages make an unusually strong
+public archive — and no cryptographic hash, trusted timestamp, or
+append-only log anywhere in it. “Archived” and “tamper-evident” are
+different claims, and only the first is earned here.</p>
+<h3
+id="uk-office-for-budget-responsibility-the-accountability-high-water-mark">UK
+Office for Budget Responsibility: the accountability high-water
+mark</h3>
+<p>The OBR earns the title, and the precise version is more useful than
+the loose one.</p>
+<p><strong>What the statute actually says.</strong> Section 4(4)(a) of
+the Budget Responsibility and National Audit Act 2011 requires the OBR
+to prepare, on at least one occasion each financial year, “an assessment
+of the accuracy of fiscal and economic forecasts previously prepared by
+it,” and s.4(5) requires that assessment to appear in a report. That is
+the whole duty. The law does not name the Forecast Evaluation Report,
+mandate a standalone publication, or prescribe the error decomposition —
+and s.6(2) actually bars the Charter from prescribing the OBR’s methods.
+The current Charter (Autumn 2025) says only that “[t]he OBR will also
+produce analysis of past forecasting performance.” So the correct
+formulation is: <strong>the annual accuracy assessment is statutory; the
+FER’s format and its four-way decomposition are OBR practice.</strong>
+Anyone citing a “statutory annual FER with statutory error
+decomposition” is overstating it.</p>
+<p><strong>The latest edition and what it evaluates.</strong> The
+<em>Forecast evaluation report — June 2026</em> (published 2 June 2026,
+57pp) assesses forecasts for financial year 2024-25 at three horizons:
+the March 2024 EFO (one year), the March 2023 EFO (two years), and —
+because March 2020 predated the first lockdown and was not a meaningful
+pandemic forecast — the July 2020 Fiscal Sustainability Report central
+scenario stands in at five years, a comparator the OBR expressly says
+was not an official forecast. Coverage runs well beyond headline series:
+real and nominal GDP, the deflator, CPI, employment and earnings, public
+sector net borrowing, receipts, spending, debt, and underlying tax and
+spending lines, with the wider variable set in online annexes.
+Crucially, the “outturn” is a named, revisable vintage — the ONS first
+quarterly estimate of 12 February 2026 for the economy, the Public
+Sector Finances release of 23 April 2026 for the fiscal side.</p>
+<p><strong>The findings, which are not flattering and are published
+anyway.</strong> 2024-25 public sector net borrowing came in at £152
+billion (5.2% of GDP). The two-year-ahead forecast said £85 billion —
+<strong>£66 billion low</strong>; the one-year-ahead forecast said £87
+billion — <strong>£65 billion low</strong>. Real GDP growth was close
+(1.5% actual against 1.2% one year out), but nominal GDP growth of 5.5%
+was undershot by 3.6 percentage points, of which 3.2 points came from
+the GDP deflator. The report decomposes the fiscal misses into economic
+determinants (which raised receipts £68 billion and £20 billion against
+the two forecasts) and post-forecast policy changes (which added £32
+billion and £26 billion to spending). It also compares OBR errors
+against the median of external forecasters in HM Treasury’s
+<em>Forecasts for the UK economy</em> — at two years, PSNB errors of
+2.3% of GDP for the OBR against 2.5% for the external median.</p>
+<p><strong>Where the evaluation stops.</strong> The 2026 FER contains no
+fan-chart coverage test and no proper score: a full-document search
+finds no “coverage,” “Brier,” or “CRPS.” The quantitative content is
+signed point error plus narrative attribution — including a residual
+category defined as “any remaining differences that cannot be explained
+by the other categories.” Fan-chart bands are compared with outturns
+occasionally rather than systematically: the 2024 FER noted that “CPI
+inflation in 2023 was 7.3 per cent, which fell outside the fan chart’s
+80 per cent probability bands,” and the 2016 FER located a borrowing
+outturn in the June 2010 fan chart’s tail. Individual hindsight
+observations, not a coverage series.</p>
+<p><strong>Cost and latency, documented.</strong> The OBR runs on a
+£6.372 million delegated budget with 55 staff in post at 31 March 2026
+(£5.990 million actual net expenditure in 2025-26) — the whole office,
+not the FER alone; no per- evaluation cost is published. The June 2026
+FER assessed financial year 2024-25 <strong>428 days after that year
+ended</strong>, and 818 days after the March 2024 EFO it evaluates. That
+lag is deliberate: the 2025 redesign traded speed for final or
+near-final rather than provisional outturn data.</p>
+<p><strong>Cadence, corrected.</strong> The IMF recommended one fiscal
+<em>event</em> per year, not one forecast, and the UK landed somewhere
+more interesting than either telling. As of July 2026 the normal pattern
+is <strong>two five-year EFO forecasts per financial year</strong> — a
+Budget forecast carrying the annual fiscal-rule assessment, and a spring
+interim forecast without it — but <strong>one major fiscal-policy
+event</strong>. Finance Act 2026 s.254 (Royal Assent 18 March 2026)
+moved the rule assessment to once yearly; notably, the Chancellor
+commissioned the 3 March 2026 Spring Forecast fifteen days
+<em>before</em> that provision became law, and the OBR proceeded on the
+“reasonable assumption” that the bill would pass, undertaking to comply
+with then-current law if it did not.</p>
+<h3 id="imf-world-economic-outlook">IMF World Economic Outlook</h3>
+<p>The WEO covers a far wider surface than the scan credited — many
+macro, fiscal, and external series across 197 economies, with four
+outlook releases a year but only two full database vintages (January and
+July are partial).</p>
+<p><strong>The WEO publishes genuine probability bands.</strong> April
+2026’s Chapter 1 carries “Forecast Uncertainty around Global Growth and
+Inflation Projections” (Figure 1.3.1 and Box 1.3, pp. 25-26):
+distributions through 2031 in which each shaded band holds five
+percentage points of probability mass, generated from the IMF’s G20
+model with the downside tilted to match the Global Financial Stability
+Report’s growth-at-risk assessment. It states explicit tail
+probabilities — a 25% chance global growth falls below 2% and a 38%
+chance global headline inflation exceeds 5%, on the horizon the figure
+covers. So “no intervals” is simply wrong for the IMF. What is missing
+is the other half: no standing published ex-post scoring of those bands
+— no recurring coverage series, no Brier, log, or CRPS scorecard — was
+located.</p>
+<p><strong>Evaluation is layered and episodic.</strong> The formal
+independent evaluation remains the IEO’s 2014 <em>IMF Forecasts:
+Process, Quality, and Country Perspectives</em>, with an implemented
+action calling for commissioned studies every five to eight years; an
+internal country-level point-error review tool has operated since the
+October 2017 WEO cycle. The best-known accuracy finding in this
+literature concerns turning points rather than bands: across 153
+recessions in 63 countries (1992-2014), “[i]n April of the year before
+the recession, forecasters expected output to fall in only 5 of these
+153 cases” (An, Jalles &amp; Loungani, “How Well Do Economists Forecast
+Recessions?”, IMF Working Paper WP/18/39, 2018, p. 6). The IMF-specific
+table shows 147 of 153 missed at that horizon, with private forecasters
+showing a very similar pattern — a stringent diagnostic of recognition,
+not a probability score, and it should be quoted as such.</p>
+<h2 id="program-actuaries">3. Program actuaries</h2>
+<h3 id="social-security-ocact-and-the-trustees-report">Social Security:
+OCACT and the Trustees Report</h3>
+<p>The Trustees Report projects OASDI finances over 75 years under three
+scenarios (low-cost, intermediate, high-cost) with sensitivity analyses
+and stochastic simulations. Two distinct retrospective mechanisms sit
+inside it, and conflating them is the standard error:</p>
+<p><strong>A real point-error table.</strong> Table III.A4 of the 2026
+report compares actual calendar-2025 income and cost with the
+intermediate estimates from each of the 2021-2025 reports, reporting
+signed percentage differences. Combined OASDI income was underestimated
+by 8.4% in the 2021 vintage, 4.4% in 2022, 2.1% in 2023, 2.0% in 2024,
+and 1.5% in 2025 — a formal, annually repeated scorecard covering
+roughly four-year-ahead through same-year estimates. It resolves one
+target year against two aggregates: no averaging across target years, no
+benchmark comparison, no MAE or RMSE, no probabilistic score.</p>
+<p><strong>Drift tracking, which is not scoring.</strong> Appendix B’s
+“History of Actuarial Status Estimates” tracks what each vintage since
+1982 reported for the 75-year actuarial balance and the hypothetical
+depletion date — the 2022-2026 reports show 2035 → 2034 → 2035 → 2034 →
+2034 — and explains movements through legislation, new data, assumption
+changes, and the rolling valuation window. This is genuine transparency
+about how the estimate <em>moved</em>. It is not resolution against a
+realized outcome, because the outcome has not occurred and will not for
+a decade. No recurring agency-run score of the 75-year Social Security
+or Medicare solvency projections was found — but “never scored anywhere
+in government” would be wrong, and the counterexample is worth knowing
+(see PBGC below).</p>
+<p><strong>Episodic self-evaluation.</strong> OCACT has published
+retrospectives — Actuarial Note 156, “Accuracy of Mortality Projections
+in Trustees Reports” (May 2015), comparing life-expectancy projections
+across vintages from 1982, and Note 157, comparing Trustees, CBO, and
+presidential GDP projections (noting none anticipated the Great
+Recession). Both are largely graphical and narrative. No OCACT-authored
+recurring proper score or statistically defined coverage series was
+found; the coverage test that exists is the external one below, against
+an envelope that was never a confidence interval.</p>
+<p><strong>The external audit, stated precisely.</strong> Kashin, King
+&amp; Soneji, “Systematic Bias and Nontransparency in US Social Security
+Administration Forecasts,” <em>Journal of Economic Perspectives</em>
+29(2):239-258 (2015), with a companion in <em>Political Analysis</em>
+23(3):336-362, found errors roughly centered through 1999 but
+persistently signed after 2000 in the direction that made Social
+Security look healthier than it turned out to be: mean cost-rate
+residuals of +0.10 percentage points for 1978-1999 versus <strong>−1.38
+after 2000 at the five-year horizon</strong>. Two qualifications bound
+this finding: their finding covers one- to ten-year point errors, not
+75-year solvency; and the “intervals too narrow” result tests the span
+between Alternatives I and III, an envelope that (as the authors
+themselves note, and the Trustees disclaim) “does not have a formal
+statistical basis” — it was never a confidence interval to begin with.
+Peter Diamond further objected that common baseline errors cancel in
+policy scores, which limits their policy-score inference without
+touching the signed-error findings.</p>
+<p><strong>And the response.</strong> No OCACT document located names or
+cites either 2015 paper. Actuarial Note 150 (January 2013) rebuts an
+earlier King-Soneji <em>New York Times</em> op-ed; Notes 156 and 157
+(May 2015) offer substantively related mortality and financial defenses
+— turning points, a roughly four-year data lag, a recession nobody
+forecast — without citing the journal articles or reproducing their
+residual analysis. OCACT directly answered the 2013 precursor op-ed; its
+2015 notes offer related arguments, but no matched response to the
+journal papers was located. The dispute remains live and unmatched: the
+critique published replicable vintage residuals, and no reanalysis of
+those residuals was published in reply.</p>
+<h3 id="cms-office-of-the-actuary">CMS Office of the Actuary</h3>
+<p>OACT produces the Medicare Trustees projections (75 years) and the
+National Health Expenditure projections (about ten years; the 2025-34
+vintage appeared in <em>Health Affairs</em> 45(7):722-733, July 2026,
+projecting nearly $9.0 trillion, 20.6% of GDP, by 2034). Three things
+distinguish it:</p>
+<p><strong>The actuaries publish their own doubts about the
+baseline.</strong> Each year OACT issues an illustrative-alternative
+memo modeling what happens if current-law payment updates prove
+unsustainable. The June 9, 2026 edition (Shatto &amp; Clemens) states
+the point directly: “an evaluation of the financial status of Medicare
+that is based on the provisions of current law is likely to portray an
+overly optimistic outcome.” Under the alternative, the 75-year HI
+actuarial deficit is 1.38% of taxable payroll rather than 0.56%. This is
+a government actuary publicly labeling the conditionality of its own
+headline number — the closest thing in the fiscal landscape to a
+self-issued reliability warning.</p>
+<p><strong>A standing annual comparison inside the Medicare
+report.</strong> The 2026 Medicare Trustees Report compares actual 2025
+HI, Part B, and Part D amounts against the estimates in both the 2024
+and 2025 reports — a prompt point comparison, about five months after
+year-end, and not a proper score.</p>
+<p><strong>A separate agency-authored accuracy analysis.</strong>
+“Analysis of National Health Expenditure Projections Accuracy” (November
+2020) evaluates nine annual vintages against later historical estimates,
+reporting average signed growth-rate differentials by horizon: NHE
+projections ran +0.1 percentage points at year 1, +0.5 at year 2, and
++1.0 at years 3-5, with Medicaid the worst at +2.3 over years 3-5.
+Because the statistic is <em>signed</em>, positive and negative errors
+cancel — it measures bias, not accuracy — and the table stops at year 5
+despite the projections running ten.</p>
+<p><strong>And a versioning problem worth noting precisely.</strong>
+That accuracy analysis still sits beside the current projections as of
+July 27, 2026, resolving vintages only through historical year 2018. Its
+own footnote cites a February 2018 predecessor <strong>at the identical
+<code>ProjectionAccuracy.pdf</code> URL</strong> that now serves the
+November 2020 file. This review documents a version-retrieval and
+reproducibility problem — the predecessor is hard to obtain — and does
+<em>not</em> document alteration of any forecast vintage or score.
+Ordinary publication carries real practical safeguards: releases are
+downloaded by Congress, press, researchers, and libraries, and CBO
+maintains versioned evaluation data in public git. The narrow,
+defensible point is that publication chronology rests on those informal
+safeguards rather than on any cryptographic record.</p>
+<h3
+id="pbgc-the-one-federal-actuary-whose-distributions-have-been-checked">PBGC:
+the one federal actuary whose distributions have been checked</h3>
+<p>The Pension Benefit Guaranty Corporation’s PIMS model produces
+stochastic projections — actual probability distributions, not scenario
+bands — and is the closest federal actuarial example of a long-horizon
+distribution receiving an episodic external backtest. Locating an
+outcome inside a percentile distribution is a backtest, not a Brier,
+log, or CRPS score.</p>
+<p>An SSA-funded external review (Brown, Elliott, Gordon &amp; Hammond,
+hosted by PBGC) compared the only five then-mature ten-year vintages
+(1998-2002) against realized deficits and found that <strong>actual
+deficits fell in the worst 10% of simulations for 1998-2001</strong>,
+with 2002 within one standard deviation but nearly $20 billion worse
+than the mean — the reviewers cautioning about the tiny sample, the
+recession, and intervening law changes. An earlier 2012 Buck review
+found 2009 multiemployer contributions projected from 2007 data averaged
+23% above actual.</p>
+<p>The institutional part is the more telling half. MAP-21 requires
+annual independent peer review of PIMS, and McKinsey’s July 2024 reviews
+still found <strong>“no formal process defined for back
+testing”</strong>; the May 2025 Athena review again recommended annual
+backtesting and holdout validation. So: a federal agency publishing
+genuine predictive distributions, with external reviewers repeatedly
+asking for a backtesting process, and none established. That is a
+sharper illustration of the gap than any absence claim — the capability
+is present, the distributions exist, and the loop still isn’t
+closed.</p>
+<h3 id="the-technical-panel-review-model">The technical-panel review
+model</h3>
+<p>The review mechanism is real but has lapsed, and the correction
+matters because “reviewed by technical panels” is doing load-bearing
+work in the scan’s framing. The Social Security Advisory Board’s
+Technical Panel on Assumptions and Methods convened in 1999, 2003, 2007,
+2011, 2015, and 2019 (plus a differently scoped 2017 panel on
+labor-force participation). <strong>There was no 2023 panel.</strong>
+SSAB’s own index, updated September 24, 2025, still describes a
+four-year cadence while its download list stops at 2019; the Board held
+a “Technical Roundtable” in August 2023 that was not constituted as a
+panel and produced no report or recommendations. No primary source
+explains the gap, and the Board’s loss of quorum began in March 2024 —
+after the missed cycle, so it cannot be the cause.</p>
+<p>The panels were advisory in a specific and limited sense: they
+reviewed the assumptions and methods OCACT uses and recommended
+improvements. They did not approve the annual assumptions, issue an
+independent forecast, or score realized outcomes. So the most senior
+external review layer in the actuarial system evaluates
+<em>methodology</em>, never accuracy — and as of mid-2026 it has not met
+in seven years.</p>
+<h2 id="the-scored-forecasting-lineage">4. The scored-forecasting
+lineage</h2>
+<h3 id="iarpa-ace-and-the-good-judgment-project">IARPA ACE and the Good
+Judgment Project</h3>
+<p>ACE (2011-2015) ran a multi-team geopolitical forecasting tournament
+with Brier scoring against resolved outcomes; the Good Judgment Project
+won it. The peer-reviewed result is Mellers et al., “Psychological
+Strategies for Winning a Geopolitical Forecasting Tournament,”
+<em>Psychological Science</em> 25(5):1106-1115 (2014): probability
+training and teaming measurably improved calibration, and the top 2% of
+Year 1 forecasters, reassembled into elite teams, beat every other
+condition. Concretely, on questions open at least a month in Year 2,
+untrained solo forecasters scored Brier .46/.39/.26 across early,
+middle, and late windows; trained teams .40/.28/.16; superforecasters
+.25/.19/.07.</p>
+<p><strong>Two attribution traps.</strong> First, the often-quoted 60%
+figure — reported as 60% <em>lower error</em> — comes from a companion
+paper (Tetlock, Mellers, Rohrbaugh &amp; Chen, <em>Current Directions in
+Psychological Science</em> 23(4):290-295, 2014), and the control was
+GJP’s <em>own</em> untrained, solo, randomly assigned forecasters — not
+intelligence analysts. Second, and more important: the famous claim that
+top forecasters did “about 30 percent better than the average for
+intelligence community analysts” — who, the same column separately
+noted, had access to intercepts and secret data — traces to David
+Ignatius, <em>Washington Post</em>, November 1, 2013, citing “a
+participant in the project,” with no question set, score definition,
+sample size, or test. <strong>It was never peer-reviewed and must not be
+attributed to Mellers et al.</strong> The closest published comparison
+(Goldstein et al., MITRE, 2015, public release 15-3175) looked at 139
+<em>unclassified</em> questions posted concurrently in 2013-14: mean
+daily Brier .23 for the IC’s classified-network prediction market versus
+.21 for GJP’s market (not significantly different), .32 for GJP’s
+unweighted opinion pool, and .15 for its best research-enhanced
+aggregation.</p>
+<p><strong>And the institutionalization claim needs softening.</strong>
+The scan’s “never institutionalized” is too strong: ODNI’s Office of
+Analytic Integrity and Standards ran the IC Prediction Market on the
+classified network from 2010, reaching more than 4,300 cleared users and
+190,000 trades under a logarithmic market scoring rule. Real deployment
+happened. What is absent from the public record is evidence it became
+routine input to finished intelligence, or that it survives today.</p>
+<h3 id="the-hybrid-forecasting-competition">The Hybrid Forecasting
+Competition</h3>
+<p>HFC (2017-2020) tested human-machine hybrid forecasting, with SAGE
+(USC-ISI) as a fielded system. The public record contains a tension
+worth reporting rather than resolving: IARPA’s own retrospective records
+completion in May 2020 and lists a 10% improvement over human-only
+systems as an accomplishment, while then-IARPA Director Catherine Marsh
+said publicly in September 2020 that HFC was not meeting its metrics and
+the agency closed it. Both can be true — a performer can beat one
+comparator while the program misses more demanding targets. No public
+source names a transition customer or standing deployment.</p>
+<h3 id="darpa-score">DARPA SCORE</h3>
+<p>SCORE (2019-2022) built prediction markets, surveys, and algorithms
+to forecast whether social and behavioral science claims would
+replicate, at a scale of thousands of claims, with the Center for Open
+Science running the evidence infrastructure. DARPA records the program
+as complete; COS puts the funding end at 2022. The registry, datasets,
+software, and methods survived, and COS continued the line of work under
+philanthropic funding (Robert Wood Johnson Foundation) and a public
+replication-prediction challenge. No operational DoD owner, recurring
+appropriation, or production interface after SCORE is publicly
+evidenced.</p>
+<p>The pattern across all three, at the strength the sources actually
+support: federal R&amp;D repeatedly tested scored forecasting and got
+heterogeneous results. ACE is the clearest success. HFC’s published gain
+over a recruited-crowd comparator was modest and did not isolate the
+machine contribution, and IARPA’s director said it missed program
+metrics. SCORE’s human methods showed signal on a limited matched set
+while its automated objective fell short. Deployment did happen in
+places (the IC Prediction Market). What none of them produced was
+standing, funded, publicly accountable infrastructure outliving its
+program office.</p>
+<h3 id="infer-and-its-successors">INFER and its successors</h3>
+<p>The scan’s “then it stalled” framing is wrong for this one program —
+the correction matters. The lineage runs unbroken: CSET’s
+<strong>Foretell</strong> launched June 2020 at Georgetown as “a
+variation on a proposal by Philip E. Tetlock”; in January 2022 it became
+<strong>INFER</strong> (“INtegrated Forecasting and Estimates of Risk”),
+run by ARLIS — a DoD University Affiliated Research Center at the
+University of Maryland — with Cultivate Labs as the platform vendor and
+seed funding from an Open Philanthropy grant (listed at $7,993,780 over
+two years); in February 2024 it transferred to RAND and relaunched that
+September as the <strong>RAND Forecasting Initiative</strong>, which is
+live today with active questions (<a
+href="https://www.infer-pub.com">infer-pub.com</a> now 301-redirects to
+<a
+href="https://www.randforecastinginitiative.org/">randforecastinginitiative.org</a>).</p>
+<p>The mechanics are the ACE inheritance at modest scale: crowd
+forecasts on admin-resolved questions (“The RFI Team has sole
+discretion” on resolution), scored with “the Brier Score” and a relative
+“Accuracy Score” on public leaderboards. Published scale: 33,000+
+forecasts across 150+ questions and ~2,500 users in 2022; 124 questions
+and 32,565 forecasts in 2024. Its About page says it supports
+policymakers in “the Intelligence Community, the Department of Defense,
+and the Department of State” — but no primary source names an agency
+acting on a specific forecast, and no RFI-specific federal award was
+identified. (A name-only USAspending query understates the vendor’s
+federal footprint: Cultivate Labs is a DBA of FlyoverWorks, Inc., which
+holds federal forecasting-software awards including a DTRA contract.)
+The accountability rails the US government uses here were
+philanthropically seeded and have no continuing federal owner or
+appropriation, sustained by a think tank rather than a statute. Its UK
+counterpart, Cosmic Bazaar, is run inside government by the Professional
+Head of Intelligence Assessment — the two are described by the program
+itself as the largest running forecasting efforts supporting their
+respective governments.</p>
+<h3 id="cdc-forecast-hubs-and-the-weighted-interval-score">CDC forecast
+hubs and the weighted interval score</h3>
+<p>This is the closest structural kin to Thesis anywhere in or near
+government, and the comparison rewards precision.</p>
+<p><strong>The COVID-19 Forecast Hub.</strong> Built by the Reich Lab at
+UMass Amherst with CDC in spring 2020, the hub collected standardized
+probabilistic submissions on a weekly cycle — 23 quantiles for deaths
+and hospitalizations (seven for case forecasts, a detail worth keeping
+straight). The ensemble began as an arithmetic average, moved to an
+equally weighted median in July 2020, and adopted a weighted median for
+death forecasts in November 2021. Its definitive evaluation is Cramer et
+al., “<a href="https://doi.org/10.1073/pnas.2113561119">Evaluation of
+individual and ensemble probabilistic forecasts of COVID-19 mortality in
+the United States</a>,” <em>PNAS</em> 119(15) e2113561119 (2022),
+covering 28 entries over 79 forecast weeks: the ensemble scored a
+relative weighted interval score of <strong>0.61</strong> — 39% less
+probabilistic error than the baseline — and was the only model to beat
+the baseline in every location, while <strong>18 of 27 non-baseline
+entries</strong> beat that simple baseline overall and across models,
+average absolute WIS ran about 76% higher at four weeks than at one
+week. Operations wound down by target (case and death ensembles in early
+2023, the hospitalization hub in May 2024), and a CDC-led successor
+launched in November 2024 that remains active as of July 2026, with
+Wednesday-evening submission deadlines and WIS specified for quantile
+evaluation.</p>
+<p><strong>FluSight.</strong> CDC’s influenza exercise began as a
+$75,000 prize competition under 15 U.S.C. §3719 (78 Fed. Reg. 70,303,
+Nov. 25, 2013) with nine biweekly submissions, not the weekly quantile
+hub it is now. The scoring history is not one clean regime — and the
+correction matters for anyone citing it as a proper-scoring precedent:
+through 2019-20 FluSight used a <em>truncated</em> modified log score
+(floored at −10), which is <strong>not proper as implemented</strong>;
+the 23-quantile WIS era began in 2021-22. FluSight ran through the
+2025-26 season despite the year’s CDC disruptions, publishing its final
+forecast June 11, 2026 with 26 modeling groups participating. Season
+evaluations are public and retrospective, with lags from about three
+months to eleven; no 2025-26 evaluation had appeared as of July 27,
+2026.</p>
+<p><strong>Why WIS matters.</strong> The weighted interval score
+(Bracher, Ray, Gneiting &amp; Reich, “<a
+href="https://doi.org/10.1371/journal.pcbi.1008618">Evaluating epidemic
+forecasts in an interval format</a>,” <em>PLOS Computational
+Biology</em> 17(2) e1008618, 2021 — note the author order) is a
+quantile-based approximation to CRPS, and with the hubs’ 23 quantiles
+the approximation is close. Both belong to the family of <em>proper</em>
+scoring rules (Gneiting &amp; Raftery, <em>JASA</em> 102(477):359-378,
+2007): a forecaster maximizes expected score by reporting their actual
+belief, so honesty and overconfidence stop trading off. This is the
+property that separates the hubs — and Thesis — from every point-error
+retrospective in sections 1 through 3. It is worth being precise about
+what propriety does <em>not</em> buy: it does not make any single
+forecast right, does not fix revised surveillance data, and does not
+guarantee calibration in small samples.</p>
+<p><strong>Custody, honestly characterized.</strong> Hub submissions
+arrive as public pull requests against a hard deadline, validated
+automatically, preserved in commit history and public mirrors. That is
+genuine prospective chronology — far more than a private spreadsheet,
+and it makes silent retrospective editing detectable. But git author
+dates are client-supplied and repository administrators can rewrite
+history; no hub source claims an external timestamping authority or
+immutable escrow. The accurate formulation is <strong>deadline-bound
+public submission with versioned tamper-evidence, not independently
+witnessed custody</strong> — which is precisely the seam where Thesis’s
+RFC 3161 witnessing differs, and the difference should be argued at that
+resolution rather than as “no pre-registration.”</p>
+<h3 id="the-in-government-exemplar-weather">The in-government exemplar:
+weather</h3>
+<p>The Brier score is a Weather Bureau invention: Glenn W. Brier,
+“Verification of Forecasts Expressed in Terms of Probability,”
+<em>Monthly Weather Review</em> 78(1):1-3 (1950), which uses
+rain/no-rain as its running example. Probability verification originated
+there, current NWS directives mandate evaluation, and NHC has published
+annual verification for decades:</p>
+<ul>
+<li><strong>Policy requires it.</strong> NWS Policy Directive 10-16,
+“NWS Performance and Evaluation” (Feb. 2, 2021) and NWS Instruction
+10-1601, “Verification” (July 7, 2022) direct routine matching of
+forecasts against observations, say that verification statistics
+<em>alone</em> must not be used to rate an individual forecaster, and
+define the attributes evaluated — reliability, resolution, sharpness,
+bias, discrimination, accuracy. Notably, the instruction also bars using
+verification statistics to rate an individual forecaster.</li>
+<li><strong>Probabilities are scored properly.</strong>
+Precipitation-probability forecasts are verified with the binary
+(“half-”) Brier score and published as reliability statistics local
+offices explain in plain language: among forecasts labeled 30%, did rain
+fall about 30% of the time?</li>
+<li><strong>Hurricane forecasts get an annual public report
+card.</strong> The National Hurricane Center has published forecast
+verification reports since 1968; the 2025-season report (Cangialosi,
+Martinez, Reinhart &amp; Papin, March 30, 2026) came 120 days after the
+season ended. On NHC’s homogeneous Atlantic series excluding tropical
+depressions, mean 48-hour track error fell from <strong>252.5 nautical
+miles in the 1970s to 55.2 in 2020-2025 — a 78% reduction</strong>, with
+72-hour error down 77.5%. NHC also publishes reliability diagrams for
+its probabilistic genesis forecasts.</li>
+</ul>
+<p>Two honest qualifications for anyone quoting this contrast. First,
+the famous track-error improvement is a <em>deterministic</em> distance
+metric, not a proper probabilistic score — cite it as measured skill
+improvement, not as evidence that calibrated probabilities improved 78%.
+Second, “the one domain where government forecasts probabilistically”
+overstates it: CDC’s hubs do exactly that too, NWS’s public verification
+is federated across programs rather than consolidated in a single
+leaderboard, and part of the enterprise verification viewer requires
+federal credentials. The defensible version is about continuity and
+routine: probability verification began at the Weather Bureau in 1950,
+current directives mandate evaluation, and NHC has published a seasonal
+verification report for decades — while no comparable long-running
+regime was located among the fiscal institutions or the sampled workload
+and caseload products.</p>
+<h2 id="the-self-assessing-outliers-eia-and-usda">5. The self-assessing
+outliers: EIA and USDA</h2>
+<p>The scan named these two as the best-practice fringe inside
+government. One holds up better than the other, and the distinction is
+instructive.</p>
+<p><strong>USDA’s WASDE publishes its own error distribution.</strong>
+The July 10, 2026 edition (WASDE-673) carries, on report page 35, a
+table titled <em>Reliability of July Projections</em> that states its
+own historical accuracy in plain language: for world wheat production,
+“chances are 2 out of 3 that the current forecast will not be above or
+below the final estimate by more than 2.7 percent,” with a USDA-labeled
+“90 percent confidence interval” of 4.6 percent, an average absolute
+difference of 14.2 million metric tons, the smallest and largest
+historical misses, and the directional count — 27 years below the final
+estimate, 18 above, over 1981/82-2025/26. WASDE and NASS’s <em>Crop
+Production</em> report (whose July 2026 edition carries a parallel
+“Reliability of July 1 Crop Production Forecasts” table) are the notable
+USDA products printing historical error distributions inside the
+recurring forecast document itself.</p>
+<p>Two qualifications keep it honest. The interval is computed from
+prior point-forecast errors, not elicited as a predictive distribution
+and then scored for coverage — so it is a historical-error band wearing
+a confidence-interval label, not a proper score. And “final” generally
+means USDA’s own later estimate (the first November estimate after the
+marketing year), so the truth target is a subsequent agency number,
+revisable, rather than an independent observation.</p>
+<p><strong>EIA’s current STEO practice is narrower.</strong> STEO is
+monthly with a 13-24 month horizon, and EIA genuinely did publish
+comprehensive vintage-by-vintage error tables — in the <em>Short-Term
+Energy Outlook Annual Supplement 1995</em>, whose Appendix B compared 21
+quarterly forecasts across six vintages with average absolute percent
+errors by target quarter (13.8% overall on imported crude acquisition
+cost; 3.7% on retail gasoline). No current successor to that
+whole-product scorecard was located: today’s supplements page offers
+narrower one-off lookbacks and model-module backtests, and backtests
+that substitute realized explanatory variables do not test the forecast
+as issued. EIA’s NYMEX-options-implied price bands — which bracketed
+futures prices, not EIA’s own forecast — were published through
+September 2025, suspended in October 2025, and had not returned by July
+2026. On the AEO side the retrospective tradition continues: AEO 2025
+and AEO 2026 both appeared, and the latest retrospective review was
+released March 10, 2026.</p>
+<p>So the corrected claim is: <strong>USDA publishes a recurring
+accuracy self-assessment inside its recurring forecast; EIA has
+published excellent ones historically but no current recurring
+whole-product equivalent was found.</strong> Neither uses proper
+scoring; neither pre-registers or seals a vintage.</p>
+<h2 id="regulatory-analysis-and-the-retrospective-review-gap">6.
+Regulatory analysis and the retrospective-review gap</h2>
+<p>Significant federal rules ship with an assessment of costs and
+benefits, quantified where feasible. Almost none is ever checked against
+what happened.</p>
+<p>State the legal position precisely, because the loose version is easy
+to refute: <strong>EO 12866</strong> — not Circular A-4 — creates the
+duty, requiring an assessment for covered significant regulatory
+actions, subject to OIRA waiver, with more detailed benefit-cost
+analysis for §3(f)(1) actions and quantification required only “to the
+extent feasible.” Circular A-4 supplies the methodology, not the
+mandate.</p>
+<p><strong>What governs today.</strong> OMB Circular A-4 supplies the
+methodology for the prospective benefit-cost analysis EO 12866 requires.
+The November 9, 2023 revision modernized it — a 2.0% default social
+discount rate for the first 30 years, expanded treatment of uncertainty
+and distributional analysis — and was then revoked: Executive Order
+14192, “Unleashing Prosperity Through Deregulation” (January 31, 2025;
+90 Fed. Reg. 9065), §6(b) directed OMB to reinstate the 2003 circular,
+which OMB executed by memorandum M-25-15 on February 12, 2025.
+<strong>The operative guidance in mid-2026 is the September 2003
+version.</strong></p>
+<p><strong>Retrospective review is formally required.</strong> EO 12866
+§5 (1993), EO 13563 §6 (2011), and EO 13610 (2012) all direct agencies
+to review existing rules. The question is whether any of that review
+tests the original numbers.</p>
+<p><strong>The evidence that it doesn’t, stated carefully.</strong> The
+strongest quantitative finding is GAO-07-791, <em>Reexamining
+Regulations: Opportunities Exist to Improve Effectiveness and
+Transparency of Retrospective Reviews</em> (July 16, 2007): nine
+agencies reported more than 1,300 reviews performed in 2001-2006, and in
+GAO’s document review “we only identified two reviews that focused on
+this purpose” — the purpose being testing the validity of the original
+benefit and cost estimates. Quote it with its own caveat attached: GAO
+described its document review as limited, and the 1,300 figure is
+agency-reported, so “two out of 1,300” is not an exhaustively coded
+ratio. It remains the best available evidence that ex-post validation is
+rare.</p>
+<p>ACUS reached the institutional version of the same conclusion in
+Recommendation 2014-5, <em>Retrospective Review of Agency Rules</em>
+(adopted December 4, 2014; 79 Fed. Reg. 75114): “retrospective review of
+regulations has not been held to the same standard as prospective
+review.” ACUS did not say review never happens — it said the incentives
+are weak, review risks becoming pro forma without senior commitment, and
+a durable evaluation-and-improvement culture is not yet part of most
+regulatory programs.</p>
+<p>The later GAO-14-268 (April 11, 2014) is frequently miscited in this
+context, so: it found 22 executive agencies reporting 246 completed
+analyses with final actions, of which only 38 quantified expected
+savings using inconsistent methods — but it did <strong>not</strong>
+test whether projected savings materialized, and it should not be
+credited with the “two reviews” finding.</p>
+<p>The net picture: the government requires benefit-cost assessment for
+covered significant actions (subject to waiver, quantified where
+feasible), requires periodic review of rules, and has no systematic
+mechanism connecting the two. This review found no government-wide
+routine system linking original regulatory estimates to realized
+outcomes, though individual validations exist — which is the claim the
+evidence supports, and is weaker than “nobody checks.”</p>
+<h2
+id="an-adjacent-opening-the-fy27-ndaas-acquisition-policy-experimentation-laboratory">7.
+An adjacent opening: the FY27 NDAA’s acquisition policy experimentation
+laboratory</h2>
+<p>A House committee moved this year to expand an acquisition-specific
+policy-modeling capability. Read narrowly — which is the only way it
+should be read — it shows one committee’s interest in building
+simulation capacity it does not currently have. It does not establish
+the absence of related capabilities across government, does not endorse
+proper scoring or forecast registries, and is not a validation of any
+particular architecture.</p>
+<p><strong>The document.</strong> <em>National Defense Authorization Act
+for Fiscal Year 2027</em>, H.R. Rep. No. 119-698, 119th Cong., 2d sess.
+(June 15, 2026) — the House Armed Services Committee report accompanying
+H.R. 8800. The directive appears under Title XVIII, “Revitalization of
+the Defense Industrial Base,” as an Item of Special Interest headed “An
+Enduring Acquisition Policy Experimentation Laboratory to Model,
+Simulate, and Analyze the Impact of Acquisition and Industrial Base
+Policies,” at <strong>printed pages 449-450</strong> (PDF pages 491-492
+of the authenticated GPO file).</p>
+<p><strong>The operative language</strong>, quoted exactly:</p>
+<blockquote>
+<p>Therefore, the committee directs the Under Secretary of Defense for
+Acquisition and Sustainment, leveraging the Acquisition Innovation
+Research Center (AIRC) established under section 4142 of title 10,
+United States Code, to develop an initial but enduring Acquisition
+Policy Experimentation Laboratory (APEL) not later than January 15,
+2027.</p>
+</blockquote>
+<p>The three initial objectives are to model, simulate, and analyze
+policy options that “(1) create the right industrial structure; (2)
+incentivize contractors of the Department to maintain and invest in
+increasing the capability and capacity of the industrial base; and (3)
+remove barriers to entry, reduce burden on contractors, and increase
+defense industrial base capability and capacity.” A briefing to HASC is
+due <strong>December 1, 2026</strong>, covering designation of a
+research team, “initial policies or policy proposals to model,”
+development timelines, and estimated annual funding.</p>
+<p><strong>Four qualifications.</strong> The pagination discrepancy in
+earlier notes is resolved and both numbers were right about different
+documents: printed pp. 449-450 is the published committee report;
+“p. 493” is the PDF-viewer page of the pre-markup Chairman’s Mark (its
+printed p. 492). This is <strong>committee-report language, not bill
+text</strong> — a full-text check of the reported H.R. 8800 finds no
+occurrence of “Acquisition Policy Experimentation Laboratory” or “APEL”
+— so it carries oversight weight, not statutory force. It is not yet
+law: the House passed H.R. 8800 on July 22, 2026 by 216-212, while a
+Senate cloture motion on its own FY2027 NDAA (S. 4784) failed 50-46 on
+July 14, so the FY2027 NDAA has passed neither both chambers nor
+conference. And a policy-simulation laboratory is a different object
+from an ex-post forecast-evaluation layer: APEL is directed to model and
+analyze policy options, not to score anyone’s past forecasts. Treat it
+as a live opportunity in an adjacent domain, not as evidence for the
+report’s general thesis.</p>
+<h2 id="the-operational-layer-how-agencies-forecast-themselves">8. The
+operational layer: how agencies forecast themselves</h2>
+<p>The scorekeepers above are the visible tip. Beneath them, program
+agencies and sub-federal governments forecast their own workloads,
+caseloads, and finances constantly. This is the layer closest to where
+Thesis’s registry lives, and its accountability practices are uneven:
+IRS and FAA publish numerical retrospectives, while for other sampled
+products no evaluation was located. Tested claim by claim below rather
+than asserted.</p>
+<h3 id="federal-program-agencies">Federal program agencies</h3>
+<p>The blunt version of the wedge — “agencies never score themselves” —
+is <strong>false</strong>, and the report is stronger for saying so.
+Several operational agencies publish their own numerical accuracy
+tables:</p>
+<ul>
+<li><strong>IRS</strong> is the strongest counterexample. All three
+return-projection publications carry accuracy tables. Publication 6292
+(<em>Fiscal Year Return Projections for the United States:
+2025-2032</em>, Rev. 9-2025) prints Table 3, “Accuracy Measures for U.S.
+Forecasts of Major Return Categories — Mean Absolute Percent Error
+(MAPE) and Number of Overprojections for the Four Most Recent Projection
+Cycles,” grouping errors by one- through five-year horizons. Projections
+are produced semiannually and feed workload and staffing plans.</li>
+<li><strong>FAA</strong> publishes Appendix B, “FAA Forecast Accuracy,”
+in the <em>Aerospace Forecast Fiscal Years 2026-2046</em>, reporting
+MAPE at one- to five-year horizons across six measures: passenger
+enplanements degrade from 0.7% error at one year to 9.2% at five;
+available seat miles from 1.0% to 10.4%; real GDP from 1.2% to
+7.5%.</li>
+<li><strong>CMS/OACT</strong> has a systematic multi-vintage study of
+health-expenditure projection accuracy that includes Medicaid, and
+<strong>Census</strong> has published projection-error studies — though
+the most recent located date from 2002.</li>
+</ul>
+<p>Against these, <strong>SSA</strong>’s disability and hearings
+workloads have public numerical evaluations only from GAO, the OIG, or
+outside researchers. <strong>VA</strong> needs a finer distinction: GAO
+documented budget misses and process weaknesses but expressly did not
+isolate the Enrollee Health Care Projection Model’s output accuracy, VA
+reports internal actual-to-expected validation, and no public EHCPM
+error series was located; VBA claims workload is a separate product with
+external-only evaluation. <strong>FNS</strong> is the clearest
+available-but-unused case: SNAP participation is projected annually for
+the budget and <em>published monthly as actuals</em> — the resolution
+data already exists, and no evaluation of the projections against it was
+found. (One correction worth carrying: DOL/ETA’s “State Unemployment
+Insurance Trust Fund Solvency Report” is an as-of measurement of the
+Average High Cost Multiple, not a forecast product, so it does not
+belong on a list of unscored forecasts.)</p>
+<p>Three observations refine rather than rescue the original claim:</p>
+<ol type="1">
+<li><strong>None of it is proper scoring.</strong> Every self-assessment
+found is point-error — MAPE, signed percentage error, revision
+comparison, narrative attribution. These are Type B products evaluated
+with Type B metrics, which is internally consistent; what is absent is
+any elicited distribution that could be checked for calibration. Where
+agencies publish alternative scenarios (Census migration variants, FAA
+optimistic/pessimistic cases, VA sensitivities) they carry no
+probabilities by design.</li>
+<li><strong>Evaluation windows involve disclosed judgment.</strong>
+FAA’s accuracy appendix excludes forecasts made for FY2020-FY2022
+because COVID-19’s “unprecedented impacts” could make inferences about
+its current method inconclusive. That is a defensible and disclosed
+methodological choice — excluding the shock answers a question about the
+current method, including it answers a question about total historical
+performance. Stronger practice would publish both, or set exception
+rules prospectively. Discretion exercised in the open is not
+cherry-picking, and Thesis exercises its own discretion one level
+earlier, in choosing which targets enter the registry at all.</li>
+<li><strong>Vintages are archived, not sealed.</strong> Prior editions
+remain downloadable at stable URLs; none of these programs describes
+pre-registration, cryptographic hashing, or immutable custody. Public
+archive, not tamper-evident registry — a difference in the strength of
+the chronology guarantee, not an allegation about anyone’s conduct.</li>
+</ol>
+<h3 id="the-weather-exception">The weather exception</h3>
+<p>NOAA/NWS is the operational layer’s most mature accountability loop —
+mandated verification, properly scored precipitation probabilities, and
+an annual public hurricane report card. It is covered in full in section
+4 above, alongside the other properly scored systems, because
+methodologically it belongs with the CDC hubs rather than with the
+agency workload projections here.</p>
+<h3 id="state-governments">State governments</h3>
+<p>The states are more varied than any federal generalization, and
+several are ahead of Washington on transparency about their own
+errors.</p>
+<p><strong>Revenue forecasting.</strong> Washington State’s Economic and
+Revenue Forecast Council — an independent agency outside both branches,
+forecasting quarterly under RCW 82.33.020 with statutory optimistic and
+pessimistic alternatives — publishes monthly forecast-versus-collection
+variance and updates a “Track Record” section in <em>every</em>
+quarterly forecast (November 2025 edition, Vol. LIX No. 4). Florida,
+Utah (under Utah Code §36-12-13(2)(a)), and California’s Department of
+Finance and LAO all publish some form of signed forecast error or
+periodic backtest. Michigan, whose January and May consensus conferences
+are among the most cited, publishes dated conference documents but no
+accuracy evaluation that this review located.</p>
+<p>External evaluation supplies the cross-state comparisons the states
+don’t produce about each other: Pew’s revenue-volatility work provides
+context rather than a numerical error panel, and the Rockefeller
+Institute’s accuracy studies rest on error data supplied by state budget
+offices themselves.</p>
+<p><strong>Corrections populations</strong> produce another
+counterexample. Virginia’s appropriation act (Chapter 725, Item 377)
+requires annually revised six-year adult and juvenile
+offender-population forecasts by October 15, built by a consensus
+process with a Technical Advisory Committee, independent comparator
+forecasts from the Department of Planning and Budget, and a Policy
+Committee that selects the final number. The annual report both
+validates candidate models and prints prior forecast-versus-actual
+comparisons — a direct counterexample to the claim that
+corrections-forecast accuracy surfaces only in outside audits.</p>
+<p><strong>Medicaid caseloads</strong> are mixed across the sampled
+states, with no prevalence established: Washington’s forecasts drew an
+external legislative audit alongside unpublished internal monitoring,
+while Oregon’s health agency publishes its own multi-vintage monthly
+error files.</p>
+<p><strong>Public pension assumed returns</strong> are the clearest case
+of external-only evaluation at the plan level: the assumption is set by
+the board on the actuary’s advice, and the comparison of assumed against
+realized returns is made by outside analysts.</p>
+<h3 id="local-and-infrastructure">Local and infrastructure</h3>
+<p>This layer has the best-documented forecast bias in the report, and
+also the most developed accountability structure.</p>
+<p><strong>Transit’s before-and-after regime is the strongest
+institutional design in this report.</strong> Under 49 C.F.R. §611.211,
+sponsors of major capital projects under a full-funding grant agreement
+must preserve their forecasts made at defined decision milestones,
+collect outcomes two years after opening, compare predicted against
+actual scope, capital cost, service, operating cost, and ridership, and
+file a final report within three years of opening — with grant
+advancement and closeout as leverage. Forecasts are archived at the
+decision point and resolved later against measured outcomes: that is
+functionally pre-registration, imposed by a funding condition. FTA
+reviews and publishes the individual studies and periodic aggregates
+(<em>Predicted Versus Actual Impacts of Capital Investment Grants
+Projects — 2020</em>, covering 29 projects opened 2007-2015). No annual
+report to Congress after the eighth edition (March 2017) was located;
+the IIJA subsequently eliminated the annual duty in 2021 and established
+biennial GAO review, so the reporting weakened even as the underlying
+discipline continued.</p>
+<p><strong>The bias is large historically and smaller in the current
+cohort — report both.</strong> In FTA’s own 2020 study of 29 projects
+opened 2007-2015, 13 of 27 ridership forecasts landed within ±20%, with
+mean actual/forecast of 92% and median 90% — though 11 of the 14
+material misses were over-forecasts. The classic studies describe a much
+larger historical bias: Pickrell’s <em>Urban Rail Transit Projects:
+Forecast Versus Actual Ridership and Costs</em> (USDOT DOT-T-91-04,
+October 1990) found all nine comparable projects fell below forecast, by
+28% to 85%, with only Washington carrying more than half its forecast.
+Flyvbjerg, Skamris Holm &amp; Buhl, “How (In)accurate Are Demand
+Forecasts in Public Works Projects?” <em>JAPA</em> 71(2):131-146 (2005),
+covering 210 projects in 14 countries, found <strong>nine in ten rail
+forecasts overestimated demand</strong>, with forecast demand averaging
+105.6% above actual across 25 rail projects after excluding two
+outliers. State the denominator when quoting this: “forecast 105.6%
+above actual” is not “actual 105.6% below forecast.”</p>
+<p><strong>Toll roads</strong> repeat the pattern with an outside
+evaluator: the benchmark study is Bain &amp; Polakovic, <em>Traffic
+Forecasting Risk Study Update 2005</em> (Standard &amp; Poor’s, August
+25, 2005) — produced by a credit-rating agency pricing the risk, not by
+the forecasters or authorities that made the original estimates.</p>
+<h3 id="the-asymmetry-tested">The asymmetry, tested</h3>
+<p>The scan’s cross-cutting claim was that outside weather, operational
+forecasts are rarely resolved or scored, and that where bias was found
+it was found by outside auditors because internal scoring doesn’t exist.
+<strong>Tested against sources, the second half is false and the first
+half needs restating.</strong> The counterexamples are numerous and
+real:</p>
+<div class="tablewrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Self-publishes error statistics</th>
+<th>External evaluation only</th>
+<th>No evaluation found</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IRS (Pub. 6292 Table 3, MAPE by horizon)</td>
+<td>SSA workloads (GAO/OIG)</td>
+<td>FNS SNAP participation</td>
+</tr>
+<tr>
+<td>FAA (Aerospace Forecast App. B)</td>
+<td>VA enrollee model and VBA claims</td>
+<td>Michigan consensus revenue</td>
+</tr>
+<tr>
+<td>USDA WASDE (in-report reliability tables)</td>
+<td>State pension assumed returns</td>
+<td>Minnesota corrections (current)</td>
+</tr>
+<tr>
+<td>NCES (projection-accuracy appendix)</td>
+<td>Toll-road traffic forecasts</td>
+<td></td>
+</tr>
+<tr>
+<td>CMS/OACT (NHE accuracy analysis)</td>
+<td>Most state Medicaid caseloads</td>
+<td></td>
+</tr>
+<tr>
+<td>Washington ERFC, Utah, Florida, California</td>
+<td>Transit forecasts, at the aggregate level</td>
+<td></td>
+</tr>
+<tr>
+<td>Virginia corrections forecasts</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Transit sponsors (required by grant agreement)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>What survives is a statement about <em>kind</em> rather than
+existence. Across the self-assessments found in this operational layer —
+federal, state, and local, excluding the weather and outbreak systems in
+section 4 — none uses a proper scoring rule. They report mean absolute
+percentage error, signed differentials, RMSE-derived bands, revision
+comparisons, and narrative attribution. None publishes an elicited
+predictive distribution that could be tested for calibration, so
+overconfidence is not detectable from anything they publish. (PBGC is
+the near-miss: it produces genuine stochastic distributions, and
+external reviewers have compared mature vintages against outcomes, but
+its own peer reviews still report no formal backtesting process.) Three
+further structural features recur:</p>
+<ol type="1">
+<li><strong>Evaluation design carries disclosed judgment —
+sometimes.</strong> FAA excludes the COVID vintages; the OBR substitutes
+a scenario for the March 2020 EFO; WASDE’s “final” is USDA’s own later
+estimate. Each is reasonable and each is a choice made at analysis time.
+The counterexamples matter too: SSA’s Table III.A4 compares a fixed set
+of prior report vintages every year, and FTA’s grant conditions fix the
+comparison before the project opens. Ex-post window choice is common,
+not universal.</li>
+<li><strong>Vintages are archived, not sealed.</strong> Publication
+chronology rests on dated releases and wide dissemination rather than on
+cryptographic evidence. This review found no case of a fiscal forecast
+being retrospectively altered, and does not allege one.</li>
+<li><strong>Coverage is selective by necessity.</strong> Agencies
+evaluate a subset of what they publish, chosen by relevance and data
+availability.</li>
+</ol>
+<p>So the defensible statement is not that government fails to check
+itself. It is: <strong>where outcomes are observable, evaluation is
+uneven and relies on metrics that cannot detect overconfidence — which
+leaves the specific question of calibration unanswered across the fiscal
+and program landscape, outside the weather and outbreak systems that
+answer it routinely.</strong></p>
+<h2 id="thesis-today-from-its-public-surfaces">9. Thesis today, from its
+public surfaces</h2>
+<p>Everything in this section was read on 2026-07-30 from
+app.thesisinstitute.org or the public <a
+href="https://github.com/ThesisInstitute/thesis">ThesisInstitute/thesis</a>
+repository, including artifact-level inspection of the custody
+chain.</p>
+<p><strong>What it is.</strong> A registry of automatically resolvable
+public-data targets with agent-generated probabilistic forecasts, scored
+on resolution. The <a
+href="https://app.thesisinstitute.org/forecasts/targets">target
+architecture</a> lists <strong>750 targets over 750 source series with
+2,620 observations</strong>, spanning BLS (150 targets: OEWS
+occupational employment, Employment Projections, the Employment
+Situation), USDA FNS (165: SNAP payment error rates and application
+timeliness), CMS (107: Medicaid/CHIP eligibility processing and
+enrollment), BEA personal income (11), IRS filing-season statistics (5),
+and Eurostat unemployment (4). The <a
+href="https://app.thesisinstitute.org/log">Thesis Log</a> records
+<strong>1,188 recorded agent runs</strong>, each emitting a 201-point
+CDF against a prediction spec.</p>
+<p><strong>Pre-registration and resolution — with the coverage stated
+honestly.</strong> The spawned-cell contract (<a
+href="https://github.com/ThesisInstitute/thesis/blob/main/docs/cell-contract.md">docs/cell-contract.md</a>)
+requires each forecast it governs to ship with a resolution-grade
+question (“exact series, period, adjustment, first print”), a
+<code>resolutionRule</code> fixing the exact table, line, rounding, and
+condition policy, a <code>resolutionDate</code> verified from the
+official release calendar, and a <code>dataPointId</code> pinning the
+vintage (<code>…first_print</code>). Sources that revise continuously
+get a registered-query snapshot policy instead: the outcome is whatever
+the pinned query returns on the registered capture date, with response
+bytes archived.</p>
+<p>Two coverage facts belong next to that description, because the
+contract governs a subset of the catalog rather than all of it:</p>
+<ul>
+<li><strong>Prospective target registration covers a minority of the
+registry.</strong> The canonical registration snapshots in
+<code>records/targets/</code> cover <strong>95 unique
+<code>dataPointId</code>s</strong> across 100 files, while the generated
+ledger labels <strong>379 entries “Backfilled target
+registration”</strong> against a catalog of 750 targets. A backfilled
+registration is not evidence that the rule was fixed before the
+forecast. The defensible claim is that <em>current scheduled-docket
+runs</em> commit a canonical registration before the agent executes —
+not that all 750 targets carry pre-run registration evidence.</li>
+<li><strong>Full activity logs cover 351 of 1,188 runs.</strong> In the
+July 30 witnessed export, 379 of 1,188 recorded runs carry any
+<code>activityLog</code>, and 351 carry the full prompt / raw-response /
+parsed-cell / validation-report set. CI enforces trace depth (≥7
+reasoning steps, ≥3 tool calls carrying numbers fetched in-run, an
+explicit base rate, a math derivation, a disconfirming consideration) on
+spawned <code>thesis.analyst</code> runs; legacy, prototype, and
+comparison runs do not all satisfy it.</li>
+</ul>
+<p><strong>Custody.</strong> Records are append-only under
+<code>records/</code> in the public repository, and the record chain is
+externally witnessed by <strong>two independent RFC 3161 timestamp
+authorities</strong>, DigiCert and FreeTSA (<code>.tsr</code> token
+files, verified by artifact inspection; latest batch 2026-07-30). Dual
+witnessing is not a historical invariant: current v2 batches and all
+four headline-score roots carry two authorities, while 14 older batches
+carry one and one receipt is unavailable. The <a
+href="https://app.thesisinstitute.org/calibration">calibration page</a>
+defines the headline tier accordingly: a run’s score counts as
+<strong>witness-verified</strong> only when its sealed custody root
+carries an RFC 3161 timestamp in the public record chain <em>before the
+observation existed</em>. Runs with merely recorded timestamps are
+published as a separate <strong>claimed-time</strong> tier below the
+fold; runs whose chronology cannot be verified are excluded and counted.
+Ed25519 producer signing was activated by a trust-root ceremony on
+2026-07-21; snapshots after the activation boundary require a valid
+producer signature, and fourteen <code>.producer.sig</code> files are
+present through July 30 (<a
+href="https://github.com/ThesisInstitute/thesis/blob/main/scripts/producer_signing_pins.py">scripts/producer_signing_pins.py</a>).</p>
+<p><strong>Scoring.</strong> CRPS (normalized, and as a ratio against a
+persistence baseline), 80%-interval coverage, and PIT histograms,
+computed per forecaster and published on the calibration page with the
+raw score rows.</p>
+<p><strong>The scoreboard.</strong> These figures move as cells resolve;
+read them with the timestamp attached. As of the evening of 2026-07-30
+the witness-verified headline shows <strong>8 scored forecasts, 3 of
+them inside their stated 80% intervals — 38% coverage against an 80%
+target</strong> — with unpaired mean normalized CRPS of 2.350 (a figure
+summarizing the 2 of 8 rows that carry a registered normalization scale)
+and a CRPS ratio of <strong>1.18</strong> against persistence across the
+two matched targets: the agent is currently <em>behind</em> the
+persistence baseline, winning one comparison of two. Behind it, the
+published-chronology tier holds 206 scores at 75% coverage (155 of 206;
+198 of them claimed-time-only), with zero chronology violations, and 920
+runs await resolution. Over the four days this report was being
+verified, the witnessed tier moved from 2 scores at 0% coverage to 4 at
+50% to 8 at 38%, and the persistence ratio flipped from 0.95 to 1.18.
+Every one of those readings was accurate at its timestamp, which is the
+point of a scoreboard that updates itself rather than being written
+up.</p>
+<p>What those numbers do and do not support. They establish that the
+system fixes chronology and publishes outcomes — favorable and adverse —
+without an intervening editorial decision. They establish nothing about
+calibration or skill. Eight observations support no inference in either
+direction; 38% observed coverage against an 80% target would indicate
+intervals that are far too narrow if it held up, and at n=8 it is weak
+evidence at best. The persistence comparison rests on two matched
+targets and currently runs against the agent. The 198 claimed-time-only
+scores sit in a separate, weaker tier and are likely correlated across
+series, horizons, and a common macro episode, so the run count
+overstates effective sample size. No comparative claim in this report
+rests on any of it.</p>
+<p><strong>Conditional cells.</strong> The cell contract types every
+forecast <code>data</code>, <code>policy</code>, or
+<code>conditional</code>, with <code>conditionalOn</code> binding a
+checkable condition to a provision reference; the homepage describes the
+three-type design (data points, policy states, conditionals). The
+conditional layer is young — few cells, none yet in the witnessed scored
+set.</p>
+<h2 id="the-gap-grid">10. The gap grid</h2>
+<p>The grid is restricted to <strong>Type A and Type B products</strong>
+— probability distributions and point forecasts of later-observed
+quantities. Type C conditional estimates (cost estimates, regulatory
+benefit-cost analysis) are excluded on purpose: they cannot be resolved
+against outcomes, so putting them in a comparison grid would manufacture
+a gap no method can close.</p>
+<p>The middle column is deliberately split, because the honest
+comparison is not Thesis against government-in-general. Where government
+already does probabilistic scoring — CDC’s hubs, NWS — it matches or
+exceeds Thesis on several rows, and the gap that actually exists is that
+those practices were never built for fiscal and program data.</p>
+<div class="tablewrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Fiscal / macro / program institutions</th>
+<th>Where government already scores (CDC hubs, NWS/NHC)</th>
+<th>Thesis (2026-07-30)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Routine self-evaluation</td>
+<td>Widespread: CBO (~3.5-month lag), OBR (428 days), OMB AP ch. 14,
+IRS, FAA, NCES, WASDE, CMS, WA ERFC, Virginia</td>
+<td>Yes: seasonal FluSight evaluations, annual NHC verification
+report</td>
+<td>Continuous; each cell resolves at its release date</td>
+</tr>
+<tr>
+<td>Distribution elicited?</td>
+<td>Partly: IMF, Fed, OBR, SSA (stochastic appendix) and PBGC publish
+distributions or bands, and Washington ERFC weights its scenarios
+50/20/30; most fiscal aggregates and workload products publish points or
+unweighted alternatives</td>
+<td>Yes — 23 quantiles per hub submission; NWS probability of
+precipitation</td>
+<td>Yes — 201-point CDF per cell</td>
+</tr>
+<tr>
+<td>Metric</td>
+<td>MAE, RMSE, MAPE, signed differential, narrative</td>
+<td>Proper: WIS (≈CRPS), Brier; plus deterministic track error at
+NHC</td>
+<td>CRPS, normalized and vs persistence</td>
+</tr>
+<tr>
+<td>Interval evaluation</td>
+<td>No standing public series; OBR made isolated outturn-versus-band
+observations in two located editions, and delayed Tealbooks show
+recurring internal interval review</td>
+<td>Yes — coverage reported alongside WIS</td>
+<td>80% coverage and PIT, per forecaster</td>
+</tr>
+<tr>
+<td>Resolution granularity</td>
+<td>Aggregate series and selected variables</td>
+<td>Eligible submissions by location and horizon; inclusion thresholds
+and product coverage vary</td>
+<td>Every cell has a named resolution rule: 730 of 750 first print, 6
+fixed vintage, 14 rule-specific</td>
+</tr>
+<tr>
+<td>Rules fixed in advance</td>
+<td>Rare. The exception is FTA: 49 C.F.R. §611.211 requires sponsors to
+preserve milestone forecasts and resolve them after opening</td>
+<td>Yes — hard submission deadlines, fixed target definitions</td>
+<td>Current scheduled-docket runs register rule, source, date, and
+vintage before execution; 94 targets carry prospective snapshots and 379
+ledger entries are backfilled</td>
+</tr>
+<tr>
+<td>Chronology guarantee</td>
+<td>Dated publication and wide dissemination; version discipline
+varies</td>
+<td>Public deadline-bound git submissions; administrator-controlled
+history</td>
+<td>Two independent RFC 3161 authorities</td>
+</tr>
+<tr>
+<td>Coverage of the fiscal/operational domain</td>
+<td>The forecasts exist; the scoring does not</td>
+<td>Not applicable — different domain</td>
+<td>750 catalog targets, mostly operational program data</td>
+</tr>
+<tr>
+<td>Unscored despite available truth</td>
+<td>FNS publishes monthly participation and annual projections; no
+public comparison between them was found</td>
+<td>—</td>
+<td>SNAP participation is a registered target</td>
+</tr>
+<tr>
+<td>Track record</td>
+<td>Decades (CBO deficit errors 1985-2024; NHC track errors since
+1970)</td>
+<td>Decades (weather); ~6 years (COVID/flu hubs)</td>
+<td>8 witnessed scores; 206 published-chronology; 920 pending</td>
+</tr>
+<tr>
+<td>Reasoning transparency</td>
+<td>Methodology documents; individual forecasts rarely traceable</td>
+<td>Public model code and submitted files</td>
+<td>Full artifact set on 351 of 1,187 runs; CI-enforced depth on spawned
+analyst runs</td>
+</tr>
+<tr>
+<td>Independence of evaluator</td>
+<td>Self-evaluation, with GAO/OIG/academic review external</td>
+<td>Hub operators score submitting teams — genuinely third-party</td>
+<td>Self-scoring; not independent</td>
+</tr>
+</tbody>
+</table></div>
+<p>Read the last four rows together. Thesis’s distinctive contributions
+are registered-in-advance resolution rules (on current runs), witnessed
+chronology, and coverage of the fiscal and operational layer. Its
+deficits are track record, incomplete registration and trace coverage
+across the legacy catalog, and independence — and the CDC hubs beat it
+outright on the last.</p>
+<h2 id="five-defensible-claims">11. Five defensible claims</h2>
+<p>Each is stated at the strength the evidence supports, with its
+citation and its limiting qualifier.</p>
+<p><strong>1. Neither CBO nor JCT publishes a standing program of
+provision-level retrospectives, and JCT says so in its own methodology
+document.</strong> CBO’s accuracy report states that it adjusts
+baselines using original cost estimates so “any errors in the initial
+cost estimates are reflected in the projection errors discussed in this
+report” — carried into aggregates rather than attributed per bill
+(<em>The Accuracy of CBO’s Budget Projections for Fiscal Year 2025</em>,
+January 16, 2026). JCT’s methodology publication says “there is no
+formal process for the revisiting of estimates over time” (JCX-46-11,
+pp. 6-7). <em>Qualifier — and it is a large one:</em> cost estimates are
+Type C conditional estimates whose counterfactual is never observed, so
+most whole-bill effects cannot be resolved even in principle. CBO’s
+aggregate self-evaluation is genuinely strong. The claim is about the
+absence of a public record of component-level checks, not about
+competence or candor.</p>
+<p><strong>2. In fiscal, macroeconomic, and sampled operational
+forecasting, no standing published evaluation uses a proper scoring rule
+— while two other corners of the same government do.</strong> Across
+CBO, JCT, OMB, OTA, the Fed, the IMF, OBR, SSA, CMS, IRS, FAA, NCES,
+WASDE, EIA, and the states, every published accuracy metric is
+point-error or narrative. Meanwhile NWS verifies precipitation
+probabilities with the Brier score (Brier 1950) and CDC’s hubs score
+quantile submissions with the weighted interval score (Bracher, Ray,
+Gneiting &amp; Reich 2021). The finding is a contrast <em>within</em>
+government, not a charge against it. <em>Qualifiers:</em> it is an
+absence claim resting on documented searches, so speak it as “no
+standing published program found”; and for Type C conditional estimates
+the absence is appropriate rather than a deficiency.</p>
+<p><strong>3. No standing ex-post scoring of the IMF WEO, Fed SEP, or
+OBR probability bands was located.</strong> The IMF’s April 2026 WEO
+carries explicit tail probabilities (a 25% chance global growth falls
+below 2%); the Fed and the OBR publish fan charts. These are Type A
+products, fully scoreable, and no standing ex-post scoring of any of
+them was located. The OBR — the most self-critical institution in this
+review — made isolated outturn-versus-band observations in two located
+editions (2016 FER; 2024 FER Box 2.1), with no recurring coverage series
+found. <em>Qualifier:</em> SSA’s low- and high-cost alternatives are
+Type D scenarios that were never probability intervals, and this claim
+excludes them; the point stands on the IMF, Fed, and OBR bands
+alone.</p>
+<p><strong>4. Publication chronology across the landscape rests on
+informal safeguards, not on evidence.</strong> Agency vintages are
+archived and widely mirrored, which makes undisclosed alteration risky
+and usually detectable — but nothing is cryptographically bound to a
+publication time, and version discipline varies (CMS’s November 2020
+accuracy analysis occupies the same <code>ProjectionAccuracy.pdf</code>
+URL that its own footnote assigns to a February 2018 predecessor).
+Thesis’s record chain is timestamped by two independent RFC 3161
+authorities, and its headline tier admits only scores whose custody root
+was witnessed before the observation existed. <em>Qualifiers, both
+material:</em> this review documents no case of a fiscal forecast being
+retrospectively altered, so the claim is about the strength of the
+guarantee, not about misconduct; and an RFC 3161 token attests only that
+certain bytes existed by a certain time — it says nothing about whether
+the target mattered, the resolution rule was fair, the scoring code was
+right, or the submitted universe was complete. The CDC hubs’
+deadline-bound public git submissions are already meaningfully
+prospective, so the real comparison is external witnessing versus
+administrator-controlled version history.</p>
+<p><strong>5. The operational layer resolves against observable outcomes
+and still goes unscored — including where the agency already publishes
+the resolution data.</strong> This is the cleanest case in the report
+because it involves no counterfactuals: program agencies forecast Type B
+quantities that are later published as actuals. Several print MAPE
+tables (IRS Pub. 6292 Table 3; FAA Appendix B; NCES; WASDE). None
+elicits or evaluates a distribution. And FNS projects SNAP participation
+annually for the budget while publishing actual participation
+<em>monthly</em>, with no evaluation of the projections against it
+located in this review. <em>Qualifier:</em> practice across this layer
+is uneven rather than uniformly absent, and no comparative measure
+supports calling it the “least” accountable layer — the defensible claim
+is that scoring is available here at low cost and is not being done.</p>
+<h2 id="what-thesis-does-not-do-better">12. What Thesis does not do
+better</h2>
+<p>These bound every claim above.</p>
+<p><strong>Authority.</strong> CBO, JCT, OBR, and the Trustees produce
+numbers with legal and procedural standing: CBO and JCT estimates feed
+the Budget Committee determinations that govern Budget Act points of
+order; an OBR forecast determines whether a fiscal rule is met. Thesis
+produces evidence about forecast quality. Nothing in the architecture
+confers scorekeeping authority, and no amount of calibration would.</p>
+<p><strong>Legal conditionality.</strong> A cost estimate is a
+conditional statement about a specific legislative text under baseline
+conventions that are themselves statutory — the &gt;$50 million
+expiring-programs rule, full funding of entitlement authority, the 50%
+weighting of pending rules. Encoding that correctly is most of the work,
+and CBO and JCT have decades of institutional practice in it. Thesis’s
+conditional cells are young: few in number, none yet in the witnessed
+scored set.</p>
+<p><strong>Long-horizon actuarial depth.</strong> OCACT and CMS OACT
+project 75 years with mortality, fertility, immigration, disability
+incidence, and health cost growth models refined over decades and
+reviewed by external technical panels. Most Thesis targets are
+short-horizon, though the registry includes multi-year targets resolving
+as late as 2035; nothing in it approaches a 75-year actuarial model. The
+long-horizon critique here is narrow — no recurring agency-run score of
+75-year solvency projections was found, and PBGC’s externally reviewed
+distributions show even that gap is not absolute — and it is
+emphatically not a claim that Thesis could produce such projections.</p>
+<p><strong>Track record length.</strong> The witnessed headline stands
+at 8 scored forecasts, 5 of them outside their 80% intervals, with the
+agent currently behind the persistence baseline on the two matched
+targets. CBO publishes error statistics spanning 1985-2024. The
+architecture claim is supported by a track record eight data points
+long, and “come back when you have a hundred” is a fair response.</p>
+<p><strong>The architecture does not yet cover its own catalog.</strong>
+The claim that resolution rules are fixed before the run holds for
+current scheduled-docket runs, not for the whole registry: 94 targets
+carry canonical prospective registration snapshots while 379 ledger
+entries are labeled “Backfilled target registration,” against 750
+catalog targets. Full artifact traces exist for 351 of 1,188 runs. Any
+comparison that contrasts an idealized Thesis contract with agency
+practice is comparing a policy to a record, and the record is
+partial.</p>
+<p><strong>Independence — the objection that matters most.</strong>
+Thesis currently scores <em>its own</em> agent-generated forecasts. It
+is a self-scoring forecaster, not yet an evaluator of anyone else’s
+work: nothing here constitutes a scoreboard of issued CBO, JCT, Fed,
+OBR, SSA, or CMS forecasts. Calling it an “external evaluation layer”
+describes an aspiration. And automation is not independence — Thesis
+selects the target universe, horizons, forecasters, resolution rules,
+the first-print convention, baselines, normalization, scoring code, and
+publication framing. That is the same self-evaluation conflict the
+report identifies in agencies, with less statutory oversight
+attached.</p>
+<p><strong>What would have to exist before the scoreboard deserves
+weight.</strong> A pre-registered target universe with an inclusion rule
+that keeps every failed, dropped, and non-resolving run in view; a
+witnessed cohort large enough to report effective sample size with
+dependence clustered by series and horizon; matched head-to-head
+comparison against official forecasts on identical estimands,
+information cutoffs, and outcome vintages; strong baselines fixed in
+advance (seasonal naïve, autoregressive, professional consensus, and the
+agency forecast where one exists) rather than a single persistence
+comparison; independent governance for resolution disputes and scoring
+changes; an external audit of code, data leakage, and timestamps; and
+sensitivity analysis across first print, a fixed revised vintage, and
+latest data. None of that exists today.</p>
+<p><strong>Breadth of what the institutions actually do.</strong> CBO’s
+cost estimates carry narrative analysis of mechanism, distribution, and
+implementation risk that no scored point-forecast captures. Scoring is
+not a substitute for analysis; it is a missing complement.</p>
+<p><strong>Proper scoring is not a cure-all.</strong> Propriety controls
+one reporting incentive under standard assumptions — it makes truthful
+reporting optimal in expectation for an individual forecaster. It does
+not prevent organizational gaming, guarantee calibration in small or
+correlated samples, survive nonstationarity, or settle scale and
+normalization choices. It creates its own Goodhart risks: a
+coverage-only league table rewards interval widening, and any scored
+registry rewards choosing targets that resolve cleanly over questions
+that matter. Thesis’s registry is built from automatically resolvable
+series, which is exactly the selection pressure to watch.</p>
+<p><strong>Evaluation competes for the same scarce hours.</strong>
+Per-provision retrospectives would compete directly with live estimates
+produced under statutory deadlines, using confidential taxpayer data and
+confidential Member requests in JCT’s case. The marginal benefit of an
+evaluation layer has to be weighed against that opportunity cost rather
+than treated as free.</p>
+<p><strong>On the comparison set.</strong> The CDC forecast hubs already
+do much of this — proper scoring, deadline-bound prospective submission,
+public evaluation, an ensemble that beats its baseline. The accurate
+framing is not that Thesis invented these rails, but that the hubs
+demonstrated them for repeated public-health targets and no equivalent
+was found for fiscal forecasts or the sampled non-weather, non-outbreak
+workload and caseload products.</p>
+<h2 id="sources">Sources</h2>
+<p>Every item below was retrieved and read during the research for this
+report (2026-07-27 through 2026-07-30). Per-claim fetch logs, including
+failed retrievals and documented negative searches, are in
+<code>gov-forecasting-sources/</code>.</p>
+<h3 id="fiscal-scorekeepers-1">Fiscal scorekeepers</h3>
+<ul>
+<li>Congressional Budget Office, <em>The Accuracy of CBO’s Budget
+Projections for Fiscal Year 2025</em>, January 16, 2026.
+https://www.cbo.gov/publication/61916 (interactive edition:
+/publication/62022)</li>
+<li>CBO, <em>CBO’s Economic Forecasting Record: 2025 Update</em>, July
+14, 2025. https://www.cbo.gov/publication/61334</li>
+<li>CBO, <em>An Evaluation of CBO’s Projections of Deficits and Debt
+From 1984 to 2023</em>, December 5, 2024.
+https://www.cbo.gov/publication/60664</li>
+<li>CBO, <em>Frequently Asked Questions About CBO’s Cost Estimates</em>.
+https://www.cbo.gov/cost-estimates/faqs</li>
+<li>CBO, evaluation data repository.
+https://github.com/US-CBO/eval-projections</li>
+<li>Joint Committee on Taxation, JCX-46-11, <em>Summary of Economic
+Models and Estimating Practices of the Staff of the Joint Committee on
+Taxation</em>, 2011.</li>
+<li>JCT, JCS-14-92, <em>Discussion of Revenue Estimation Methodology and
+Process</em>, 1992; JCX-19-06 (2006); <em>Revenue Estimating
+Process</em> presentation, January
+<ol start="2025" type="1">
+<li></li>
+</ol></li>
+<li>Office of Management and Budget, <em>Analytical Perspectives, Budget
+of the U.S. Government, Fiscal Year 2027</em>, ch. 1 “Economic
+Assumptions” and ch. 14 “Comparison of Actual to Estimated Totals,”
+2026.</li>
+<li>31 U.S.C. §1105(a) (prior-year comparison requirement); 31 U.S.C.
+§1106 (mid-session review).</li>
+<li>OMB, <em>Mid-Session Review, Fiscal Year 2026 — Technical
+Supplement</em>.</li>
+<li>U.S. Treasury, Office of Tax Analysis, <em>Revenue Proposals</em>
+index (Greenbook editions). George A. Plesko, <em>Government Forecasts
+and Budget Projections: An Analysis of Recent History</em>, OTA Paper
+58, October 1987.</li>
+</ul>
+<h3 id="macro-forecasters">Macro forecasters</h3>
+<ul>
+<li>Budget Responsibility and National Audit Act 2011, s.4(4)(a),
+s.4(5), s.6(2). https://www.legislation.gov.uk/ukpga/2011/4</li>
+<li>HM Treasury, <em>Charter for Budget Responsibility: Autumn
+2025</em>, paras. 3.13, 4.18-4.25. Finance Act 2026, s.254.</li>
+<li>Office for Budget Responsibility, <em>Forecast evaluation report —
+June 2026</em>, 2 June 2026.
+https://obr.uk/fer/forecast-evaluation-report-june-2026/</li>
+<li>OBR, <em>Forecast Evaluation Report</em> (2024, Box 2.1; October
+2016).</li>
+<li>OBR, <em>Annual Report and Accounts 2025-26</em>, 25 June 2026.</li>
+<li>Federal Reserve, <em>Summary of Economic Projections</em> (June
+2026) and <em>Guide to the Summary of Economic Projections</em>; FOMC
+historical materials policy.
+https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm</li>
+<li>Reifschneider &amp; Tulip, FEDS 2017-020; Engstrom, “Anchored to the
+Dot Plot,” FEDS 2026-026.</li>
+<li>FOMC press conference transcript, March 18, 2026 (SEP review
+outcome).</li>
+<li>International Monetary Fund, <em>World Economic Outlook</em>, April
+2026, ch. 1, Figure 1.3.1 and Box 1.3.</li>
+<li>Independent Evaluation Office, <em>IMF Forecasts: Process, Quality,
+and Country Perspectives</em>, 2014. https://ieo.imf.org</li>
+<li>An, Jalles &amp; Loungani, “How Well Do Economists Forecast
+Recessions?”, IMF Working Paper WP/18/39, 2018.</li>
+</ul>
+<h3 id="actuaries">Actuaries</h3>
+<ul>
+<li><em>2026 Annual Report of the Board of Trustees of the OASI and DI
+Trust Funds</em>, Table III.A4 and Appendix B.
+https://www.ssa.gov/oact/tr/2026/tr2026.pdf</li>
+<li>SSA/OCACT Actuarial Notes 150 (2013), 156 and 157 (2015).</li>
+<li>Social Security Advisory Board, <em>2019 Technical Panel on
+Assumptions and Methods</em>; SSAB technical-panel index (updated
+September 24, 2025); SSAB Annual Reports FY2023-FY2025.</li>
+<li>Kashin, King &amp; Soneji, “Systematic Bias and Nontransparency in
+US Social Security Administration Forecasts,” <em>Journal of Economic
+Perspectives</em> 29(2):239-258 (2015); companion in <em>Political
+Analysis</em> 23(3):336-362.</li>
+<li>Shatto &amp; Clemens, <em>Projected Medicare Expenditures under an
+Illustrative Scenario with Alternative Payment Updates to Medicare
+Providers</em>, CMS Office of the Actuary, June 9, 2026.</li>
+<li>CMS/OACT, <em>Analysis of National Health Expenditure Projections
+Accuracy</em>, November 2020. <em>2026 Medicare Trustees Report</em>
+(annual actual-versus-estimate comparison).
+https://www.cms.gov/oact/tr/2026</li>
+<li>Brown, Elliott, Gordon &amp; Hammond, SSA-funded external review of
+PBGC’s PIMS model (hosted by PBGC);
+https://www.pbgc.gov/sites/default/files/legacy/docs/PBGC-Review-Brown-Elliott-Gordon-Hammond.pdf</li>
+<li>McKinsey, <em>PIMS Single-Employer Peer Review</em> and
+<em>Multiemployer Peer Review</em> (July 2024); Athena, <em>PIMS
+Independent Peer Review</em> (May 2025); PBGC <em>FY2024 Projections
+Report</em>. Fiore et al., “National Health Expenditure Projections,
+2025-34,” <em>Health Affairs</em> 45(7):722-733 (2026).</li>
+</ul>
+<h3 id="scored-forecasting">Scored forecasting</h3>
+<ul>
+<li>Mellers et al., “Psychological Strategies for Winning a Geopolitical
+Forecasting Tournament,” <em>Psychological Science</em> 25(5):1106-1115
+(2014).</li>
+<li>Tetlock, Mellers, Rohrbaugh &amp; Chen, “Forecasting Tournaments,”
+<em>Current Directions in Psychological Science</em> 23(4):290-295
+(2014).</li>
+<li>David Ignatius, “More Chatter Than Needed,” <em>Washington
+Post</em>, November 1, 2013 (source of the unverified “~30%”
+claim).</li>
+<li>Goldstein et al., <em>Assessing the Accuracy of Geopolitical
+Forecasts from the US Intelligence Community’s Prediction Market</em>,
+MITRE, 2015 (release 15-3175).</li>
+<li>RAND Forecasting Initiative (successor to INFER and CSET Foretell):
+https://www.randforecastinginitiative.org/ ; program-transition notice
+(February 2024); annual reviews 2022-2024; ARLIS 2022 Annual
+Report.</li>
+<li>Cramer et al., “Evaluation of individual and ensemble probabilistic
+forecasts of COVID-19 mortality in the United States,” <em>PNAS</em>
+119(15) e2113561119 (2022).</li>
+<li>Bracher, Ray, Gneiting &amp; Reich, “Evaluating epidemic forecasts
+in an interval format,” <em>PLOS Computational Biology</em> 17(2)
+e1008618 (2021).</li>
+<li>Gneiting &amp; Raftery, “Strictly Proper Scoring Rules, Prediction,
+and Estimation,” <em>JASA</em> 102(477):359-378 (2007).</li>
+<li>Mathis et al., “Evaluation of FluSight influenza forecasting in the
+2021-22 and 2022-23 seasons,” <em>Nature Communications</em> 15:6289
+(2024).</li>
+<li>CDC, FluSight evaluations 2023-24 and 2024-25; CDC COVID-19 Forecast
+Hub (https://github.com/CDCgov/covid19-forecast-hub); hubverse.io.</li>
+<li>42 U.S.C. §300hh-35 (CDC outbreak-forecasting duty); CDC, <em>FY
+2027 Congressional Justification</em>.</li>
+<li>Glenn W. Brier, “Verification of Forecasts Expressed in Terms of
+Probability,” <em>Monthly Weather Review</em> 78(1):1-3 (1950).</li>
+<li>NWS Policy Directive 10-16 (2021); NWS Instruction 10-1601
+(2022).</li>
+<li>Cangialosi, Martinez, Reinhart &amp; Papin, <em>National Hurricane
+Center Forecast Verification Report: 2025 Hurricane Season</em>, March
+30, 2026; NHC Atlantic annual average official track errors,
+1970-present.</li>
+</ul>
+<h3 id="energy-agriculture-and-regulation">Energy, agriculture, and
+regulation</h3>
+<ul>
+<li>USDA, <em>World Agricultural Supply and Demand Estimates</em>,
+WASDE-673, July 10, 2026, “Reliability of July Projections,” p. 35.</li>
+<li>EIA, <em>Short-Term Energy Outlook Annual Supplement 1995</em>,
+DOE/EIA-0202(95), Appendix B; EIA STEO archive and supplements pages;
+AEO retrospective review (March 10, 2026).</li>
+<li>OMB Circular A-4 (September 2003; November 9, 2023 revision);
+Executive Order 14192, “Unleashing Prosperity Through Deregulation,” 90
+Fed. Reg. 9065 (January 31, 2025); OMB M-25-15 (February 12, 2025).</li>
+<li>Executive Orders 12866 §5 (1993), 13563 §6 (2011), 13610
+(2012).</li>
+<li>GAO-07-791, <em>Reexamining Regulations: Opportunities Exist to
+Improve Effectiveness and Transparency of Retrospective Reviews</em>,
+July 16, 2007.</li>
+<li>GAO-14-268, <em>Reexamining Regulations: Agencies Often Made
+Regulatory Changes, but Could Strengthen Linkages to Performance
+Goals</em>, April 11, 2014.</li>
+<li>ACUS Recommendation 2014-5, <em>Retrospective Review of Agency
+Rules</em>, 79 Fed. Reg. 75114 (December 17, 2014).</li>
+</ul>
+<h3 id="operational-forecasting">Operational forecasting</h3>
+<ul>
+<li>H.R. Rep. No. 119-698, <em>National Defense Authorization Act for
+Fiscal Year 2027</em>, June 15, 2026, pp. 449-450 (APEL directive); 10
+U.S.C. §4142 (AIRC); House roll call 278 (July 22, 2026); Senate roll
+call 195 (July 14, 2026).</li>
+<li>IRS Publication 6292, <em>Fiscal Year Return Projections for the
+United States: 2025-2032</em> (Rev. 9-2025), Table 3; Publications 6186
+and 6187.</li>
+<li>FAA, <em>Aerospace Forecast Fiscal Years 2026-2046</em>, Appendix
+B.</li>
+<li>NCES, <em>Projections of Education Statistics to 2030</em>, NCES
+2024-034 (February 2024), accuracy appendix.</li>
+<li>Washington State Economic and Revenue Forecast Council,
+<em>Washington State Economic and Revenue Forecast</em>, November 2025
+(Vol. LIX, No. 4); RCW 82.33.020.</li>
+<li>Virginia Appropriation Act (2025), Chapter 725, Item 377; <em>Report
+on the Offender Population Forecasts (FY2026 to FY2031)</em>, October
+15, 2025.</li>
+<li>49 C.F.R. §611.211 (transit before-and-after studies); FTA,
+<em>Before-and-After Studies of New Starts Projects: Report to
+Congress</em> (8th report, March 2017); FTA, <em>Predicted Versus Actual
+Impacts of Capital Investment Grants Projects — 2020</em>.</li>
+<li>Don H. Pickrell, <em>Urban Rail Transit Projects: Forecast Versus
+Actual Ridership and Costs</em>, USDOT DOT-T-91-04, October 1990.</li>
+<li>Flyvbjerg, Skamris Holm &amp; Buhl, “How (In)accurate Are Demand
+Forecasts in Public Works Projects? The Case of Transportation,”
+<em>Journal of the American Planning Association</em> 71(2):131-146
+(2005).</li>
+<li>Bain &amp; Polakovic, <em>Traffic Forecasting Risk Study Update
+2005: Through Ramp-Up and Beyond</em>, Standard &amp; Poor’s, August 25,
+2005.</li>
+<li>NASBO, <em>Budget Processes in the States</em>; Rockefeller
+Institute state revenue forecast accuracy studies; Pew Charitable Trusts
+state revenue volatility work.</li>
+</ul>
+<h3 id="thesis">Thesis</h3>
+<ul>
+<li>Thesis Institute application: https://app.thesisinstitute.org —
+/calibration, /log, /forecasts/targets (read 2026-07-27 and re-read
+2026-07-30).</li>
+<li>ThesisInstitute/thesis public repository:
+<code>docs/cell-contract.md</code>,
+<code>docs/producer-signing-ceremony.md</code>, <code>records/</code>
+(RFC 3161 timestamp tokens from DigiCert and FreeTSA, batch of
+2026-07-26).</li>
+</ul>
+
+  </article>
+  <footer class="site">
+    <div class="wrap">
+      <div>The Thesis Institute · a public-benefit institute in formation</div>
+      <div class="row">
+        <a href="mailto:max@policyengine.org?subject=Thesis%20Institute">Get in touch</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
