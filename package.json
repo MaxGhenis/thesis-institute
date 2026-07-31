@@ -2,6 +2,6 @@
   "name": "thesis-institute-apex",
   "private": true,
   "scripts": {
-    "build": "rm -rf _site && mkdir -p _site/research && cp index.html agents.html _site/ && cp research/gov-forecasting.html _site/research/"
+    "build": "rm -rf _site && mkdir -p _site/research && cp index.html agents.html _site/ && cp research/gov-forecasting.html _site/research/ && cp -r slides _site/"
   }
 }
