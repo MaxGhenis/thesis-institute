@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thesis — bills in, scored forecasts out · Hacking the Think Tank II</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='6' fill='%230F1A24'/%3E%3Ccircle cx='21.5' cy='14' r='5.5' fill='%23A94E80' opacity='0.12'/%3E%3Cline x1='2' y1='4.5' x2='17' y2='12' stroke='%239FB6C6' stroke-width='1.2' stroke-linecap='round' opacity='0.55'/%3E%3Cline x1='2' y1='23.5' x2='17' y2='16' stroke='%239FB6C6' stroke-width='1.5' stroke-linecap='round' opacity='0.65'/%3E%3Ccircle cx='21.5' cy='14' r='3.2' fill='%23A94E80'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ThesisInstitute/thesis-design@v1.3.1/tokens.css">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--canvas);color:var(--text-primary);font-family:var(--font-body);font-size:clamp(15px,1.35vw,21px);line-height:1.5;overflow:hidden}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw;background:var(--canvas)}
+.slide.on{display:flex}
+.eyebrow{font-family:var(--font-mono);font-size:.62em;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1em}
+h1{font-family:var(--font-display);font-weight:400;font-size:2.6em;line-height:1.12;letter-spacing:-.02em;max-width:22ch}
+h1 em{font-family:var(--font-editorial);font-style:italic}
+h2{font-family:var(--font-display);font-weight:500;font-size:1.9em;line-height:1.15;letter-spacing:-.015em;margin-bottom:.7em;max-width:26ch}
+.lede{font-size:1.06em;color:var(--text-secondary);max-width:58ch;margin-top:1em}
+.rows{display:grid;gap:.55em;margin-top:1.1em;max-width:70ch}
+.row{display:grid;grid-template-columns:auto 1fr;gap:.8em;align-items:baseline;font-size:.93em}
+.row b{font-family:var(--font-mono);font-size:.72em;letter-spacing:.08em;text-transform:uppercase;color:var(--horizon-700);white-space:nowrap}
+.stat{font-family:var(--font-mono);color:var(--text-secondary);font-size:.78em;margin-top:1.6em;letter-spacing:.04em}
+.cell{border:1px solid var(--border-soft);background:var(--paper);border-radius:10px;padding:1em 1.2em;margin-top:1.4em;max-width:58ch;font-size:.85em}
+.cell .k{font-family:var(--font-mono);font-size:.68em;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:.5em}
+.cell .fc{display:flex;gap:2.2em;flex-wrap:wrap}
+.cell .fc div{line-height:1.35}
+.cell .fc span{font-family:var(--font-mono);font-size:.72em;color:var(--text-tertiary);display:block}
+.cell .fc strong{font-weight:500;color:var(--horizon-700)}
+code,.cmd{font-family:var(--font-mono)}
+.cmds{background:var(--paper);border:1px solid var(--border-soft);border-radius:10px;padding:1.1em 1.3em;margin-top:1.2em;font-size:.72em;line-height:1.9;max-width:75ch;overflow-x:auto}
+.cmds .c{color:var(--text-tertiary)}
+.big{font-family:var(--font-display);font-size:1.5em;margin-top:.9em}
+.big strong{color:var(--accent);font-weight:500}
+.url{font-family:var(--font-mono);color:var(--horizon-700);font-size:1.15em;margin-top:1.2em}
+.foot{position:absolute;bottom:3.5vh;left:8vw;right:8vw;display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:.6em;letter-spacing:.08em;color:var(--text-tertiary)}
+.opp{color:var(--accent);font-family:var(--font-mono);font-size:.85em}
+ul.pl{list-style:none;margin-top:1em;display:grid;gap:.6em;max-width:62ch}
+ul.pl li{padding-left:1.1em;position:relative;font-size:.95em}
+ul.pl li::before{content:"";position:absolute;left:0;top:.55em;width:.45em;height:.45em;border-radius:50%;background:var(--horizon-300)}
+.team{display:flex;gap:2.5em;flex-wrap:wrap;margin-top:1.2em;font-size:.95em}
+.quiet{color:var(--text-tertiary);font-size:.8em;margin-top:1.4em;font-style:italic;font-family:var(--font-editorial)}
+</style>
+</head>
+<body>
+
+<section class="slide on">
+  <div class="eyebrow">Hacking the Think Tank II · July 31, 2026</div>
+  <h1>Thesis: a bill goes in; <em>accountable, scored forecasts</em> come out.</h1>
+  <p class="lede">Implementation analysis that can be wrong in public — countersignable goals,
+  effects shown regardless, and every claim ending in a forecast scored against the
+  government's own first prints.</p>
+  <div class="stat">Max Ghenis · Pavel Makarchuk · David Trimmer · David Gringras · Keller Scholl · + Claude &amp; sol agent lanes</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">What we built from</div>
+  <h2>Two platforms that already existed this morning</h2>
+  <div class="rows">
+    <div class="row"><b>Thesis</b><span>74-series forecast registry · witnessed custody chain (66 snapshots, dual-TSA) · public scoreboard with the misses kept on the page</span></div>
+    <div class="row"><b>Axiom</b><span>the bill corpus with semantic representation — today's fetcher reads it as a first-class source. Axiom knows what the law says; Thesis says what will happen, and keeps score.</span></div>
+  </div>
+  <div class="cell">
+    <div class="k">A live cell — bls.jolts.hires_rate · June 2026 · resolves Aug 4 vs the ALFRED first print</div>
+    <div class="fc">
+      <div><span>model wave · Jul 26</span><strong>3.3</strong> [3.12, 3.48]</div>
+      <div><span>challenge · github:PavelMakarchuk · Jul 31</span><strong>3.3</strong> [3.1, 3.45]</div>
+      <div><span>scored</span><strong>next week</strong>, either way</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Built today</div>
+  <h2>The bills lane, end to end</h2>
+  <div class="rows">
+    <div class="row"><b>Pavel</b><span>bill fetcher (congress.gov · govinfo · Axiom) + the /bills surface</span></div>
+    <div class="row"><b>Max</b><span>countersignable goals + stance matrices — serves / opposes / mixed per goal; 117 judgments, two honest OPPOSES</span></div>
+    <div class="row"><b>lanes</b><span>live registry mapper (reachable · not-yet · no-series) + challenge adapter: outside forecasts publish attested</span></div>
+    <div class="row"><b>Trimmer</b><span>PolicyEngine tool + call contract — mechanical costing inside the analysis</span></div>
+    <div class="row"><b>Gringras</b><span>preregistered elicitation-measurement experiment (next slide)</span></div>
+    <div class="row"><b>Keller</b><span>onboarding fixes on three platforms, expiry semantics, the words you're reading</span></div>
+  </div>
+  <div class="stat">30 PRs opened · 11+ merged · every one adversarially reviewed before landing</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">End to end · example</div>
+  <h2>The 902-page farm bill, countersigned</h2>
+  <ul class="pl">
+    <li>12 provisions, 40 candidate outcome metrics across operational / intended / unintended</li>
+    <li>Goals render as cards you confirm, edit, or strike; effects appear whether or not they serve them</li>
+    <li>Registry badges say honestly which outcomes Thesis can already resolve</li>
+    <li>Same machine, other inputs: S.3596, a 2-page CTC bill — priced by PolicyEngine inside the analysis</li>
+  </ul>
+  <p class="quiet">Its favorite find: a literal $2,600,000,000 FY2028 funding cliff, rendered as a goal card marked "confirm urgently."</p>
+  <div class="url">app.thesisinstitute.org/bills</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The machine, not a mockup</div>
+  <h2>Every step below ran today</h2>
+  <div class="cmds">
+    <div><span class="c"># fetch the official text (congress.gov · govinfo · Axiom corpus)</span></div>
+    <div>uv run --extra bills scripts/bills/fetch_bill.py 119/s/3596</div>
+    <div><span class="c"># agent extraction pass against the frozen bill.json contract</span></div>
+    <div><span class="c"># goals · effects · metrics with category, layer, stance matrix</span></div>
+    <div>python scripts/map_bill_metrics.py bills/s3596-119.json</div>
+    <div><span class="c"># privileged registration for chosen cells → the public scoreboard</span></div>
+  </div>
+  <p class="lede" style="font-size:.85em">The one-command wrapper is next week's work. The steps are today's.</p>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Eval · davidgringras.github.io/elicitation-measurement</div>
+  <h2>We measured the elicitation itself</h2>
+  <ul class="pl">
+    <li>Best measured arm — <code>fable-5 · bill text · max effort</code>: nCRPS 0.208, beats persistence −0.118 [−0.211, −0.035], 22/28 units, N=28</li>
+    <li>The bill-text paradox: at default effort, statute text made forecasts <em>worse</em> and more confident (intervals narrowed 12/12 as coverage fell); at max effort the same text became the best arm</li>
+    <li><span class="opp">Naming the law switches the model to recall</span>: dose-response flat 0/4 with the statute named — redacting the name alone restored it 4/4</li>
+  </ul>
+  <p class="quiet">Adversarial review caught the confound at 2pm; the preregistered rerun flipped the result by 3.</p>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The closer</div>
+  <h2>The first bill-conditional forecast cell</h2>
+  <ul class="pl">
+    <li>CRP enrolled acres — April's official first print: <strong>26,182,019</strong> vs the bill's <strong>27,000,000</strong> ceiling</li>
+    <li>P(enrollment path | this provision becomes law vs not) — condition anchored to the provision surviving into enacted text, checkable against govinfo</li>
+    <li>Resolver anchored to three FSA first prints we verified this afternoon — including the one-acre rounding quirk in FSA's own totals</li>
+    <li>Registered through the privileged custody path; scored against FSA's publications either way</li>
+  </ul>
+  <div class="big">The analysis didn't just critique the bill. <strong>It went on the record.</strong></div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Path forward</div>
+  <h2>Built to scale to millions of forecasts</h2>
+  <ul class="pl">
+    <li>One registration path for every forecast type — model, challenge, conditional</li>
+    <li>Case study = scoreboard: bill pages join live cells by series id</li>
+    <li>Identity is computed, not stored: template slugs + UUID permalinks; batched custody keeps verification O(days)</li>
+    <li>Eval-driven routing: cheap arms broadly, escalated effort where measurement says it pays</li>
+  </ul>
+  <div class="url">app.thesisinstitute.org · github.com/ThesisInstitute/thesis</div>
+  <div class="stat">Thanks: FAI + IFP · Hacking the Think Tank II</div>
+</section>
+
+<div class="foot"><span>Thesis Institute</span><span id="pg"></span></div>
+<script>
+const S=[...document.querySelectorAll('.slide')];let i=0;
+const show=n=>{S[i].classList.remove('on');i=(n+S.length)%S.length;S[i].classList.add('on');document.getElementById('pg').textContent=(i+1)+' / '+S.length};
+addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key))show(i+1);if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key))show(i-1)});
+addEventListener('click',e=>show(i+(e.clientX>innerWidth/3?1:-1)));
+show(0);
+</script>
+</body>
+</html>
