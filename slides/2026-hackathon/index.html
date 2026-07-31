@@ -43,12 +43,26 @@ ul.pl li{padding-left:1.1em;position:relative;font-size:.95em}
 ul.pl li::before{content:"";position:absolute;left:0;top:.55em;width:.45em;height:.45em;border-radius:50%;background:var(--horizon-300)}
 .team{display:flex;gap:2.5em;flex-wrap:wrap;margin-top:1.2em;font-size:.95em}
 .quiet{color:var(--text-tertiary);font-size:.8em;margin-top:1.4em;font-style:italic;font-family:var(--font-editorial)}
+.pipe{display:flex;gap:.6em;align-items:stretch;margin-top:1.4em;flex-wrap:wrap}
+.step{flex:1;min-width:11em;border:1px solid var(--border-soft);background:var(--paper);border-radius:10px;padding:1em;display:flex;flex-direction:column;gap:.45em;font-size:.78em}
+.step .n{font-family:var(--font-mono);color:var(--accent);font-size:.85em}
+.step b{font-family:var(--font-display);font-weight:500;font-size:1.15em}
+.step span{color:var(--text-secondary);line-height:1.4}
+.step code{font-size:.82em;color:var(--horizon-700);margin-top:auto}
+.arrow{align-self:center;color:var(--border-strong);font-family:var(--font-mono)}
 </style>
 </head>
 <body>
 
 <section class="slide on">
   <div class="eyebrow">Hacking the Think Tank II · July 31, 2026</div>
+  <h1>A 900-page bill gets a cost estimate and an op-ed. <em>Whether it will actually work, nobody scores.</em></h1>
+  <p class="lede">Implementation claims — enrollment, take-up, delivery — are argued before passage and
+  forgotten after. A claim that can never be wrong is worth nothing to the people deciding.</p>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">What we built</div>
   <h1>Thesis: a bill goes in; <em>accountable, scored forecasts</em> come out.</h1>
   <p class="lede">Implementation analysis that can be wrong in public — countersignable goals,
   effects shown regardless, and every claim ending in a forecast scored against the
@@ -87,6 +101,20 @@ ul.pl li::before{content:"";position:absolute;left:0;top:.55em;width:.45em;heigh
     <div class="row"><b>Keller</b><span>onboarding fixes on three platforms, expiry semantics, the words you're reading</span></div>
   </div>
   <div class="stat">30 PRs opened · 11+ merged · every one adversarially reviewed before landing</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The pipeline</div>
+  <h2>Four steps, each with a named artifact</h2>
+  <div class="pipe">
+    <div class="step"><div class="n">1</div><b>Retrieve</b><span>official bill text via Axiom's semantic corpus (congress.gov · govinfo fallbacks)</span><code>bills/raw/*.txt + meta</code></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">2</div><b>Extract &amp; explain</b><span>goals to countersign · effects shown regardless · outcome metrics with category, layer, stance</span><code>bills/&lt;slug&gt;.json</code></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">3</div><b>Ledger</b><span>each metric references a registered series or becomes a registration proposal</span><code>ledger targets + drafts/</code></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">4</div><b>Forecast</b><span>unconditional and policy-conditional arms, reasoning traces recorded, scored on first prints</span><code>cells + custody chain</code></div>
+  </div>
 </section>
 
 <section class="slide">
