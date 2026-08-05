@@ -27,15 +27,15 @@ export default function AboutPage() {
 
   return (
     <div className="max-w-3xl">
-      <PageHeader title="About the Ledger" />
+      <PageHeader title="About Chronicle" />
 
       <div className="prose-block text-[0.9375rem] leading-7">
         <p>
-          The Ledger is the Thesis Institute’s fact store: a record of
+          Chronicle is the Thesis Institute’s fact store: a record of
           values that official sources actually published, kept the way a
           registrar keeps records. Each fact is a source-backed claim — who
           published it, where, for what period and geography, retrieved when,
-          hashed as retrieved. The Ledger re-expresses published values into a
+          hashed as retrieved. Chronicle re-expresses published values into a
           queryable structure but never reconciles, imputes, forecasts, or
           otherwise changes what a source said. If two sources disagree, both
           claims are on the record.
@@ -44,7 +44,7 @@ export default function AboutPage() {
           <strong>First-print discipline.</strong> Statistical agencies revise.
           Most databases quietly overwrite the old number with the new one,
           which destroys the information you need to evaluate any forecast,
-          model, or decision made before the revision. The Ledger records the
+          model, or decision made before the revision. Chronicle records the
           first print — the number as first published — and keeps it,
           permanently, even after revisions arrive as new observations. The
           journal is append-only: corrections append a superseding row and
@@ -139,11 +139,10 @@ export default function AboutPage() {
           Thesis Institute
         </h2>
         <p className="mt-2 text-sm text-text-secondary">
-          The Ledger is a Thesis Institute property, alongside{" "}
+          Chronicle is a Thesis Institute property, alongside{" "}
           <a href="https://app.thesisinstitute.org">open forecasts</a> that
           register predictions before outcomes and grade themselves against
-          journal first prints. Estimation lives at Thesis; the deterministic
-          rules engines it works with live at the Axiom Foundation.{" "}
+          journal first prints.{" "}
           <a href="https://thesisinstitute.org">thesisinstitute.org</a>
         </p>
       </section>

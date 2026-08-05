@@ -68,12 +68,12 @@ export function SearchClient({ corpusSize }: { corpusSize: number }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={`Search ${corpusSize.toLocaleString()} records`}
-          aria-label="Search the Ledger"
+          aria-label="Search Chronicle"
           className="w-full bg-transparent text-base outline-none placeholder:text-text-disabled"
         />
       </label>
       {error ? (
-        <p className="mt-4 text-sm text-rose-700" role="alert">
+        <p className="alert-text mt-4 text-sm" role="alert">
           Search failed: {error}
         </p>
       ) : null}

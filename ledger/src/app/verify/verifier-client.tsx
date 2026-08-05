@@ -22,7 +22,7 @@ function CheckRow({ check }: { check: Check }) {
     check.status === "pass" ? (
       <IconCircleCheck size={16} className="mt-0.5 shrink-0 text-horizon-700" aria-hidden />
     ) : check.status === "fail" ? (
-      <IconAlertTriangle size={16} className="mt-0.5 shrink-0 text-rose-700" aria-hidden />
+      <IconAlertTriangle size={16} className="mt-0.5 shrink-0 text-text-primary" aria-hidden />
     ) : (
       <IconCircleDashed size={16} className="mt-0.5 shrink-0 text-text-tertiary" aria-hidden />
     );
@@ -40,7 +40,7 @@ function CheckRow({ check }: { check: Check }) {
         <span
           className={
             check.status === "fail"
-              ? "font-mono text-xs font-semibold text-rose-700"
+              ? "alert-text font-mono text-xs"
               : "font-mono text-xs text-text-tertiary"
           }
         >
@@ -115,7 +115,7 @@ export function VerifierClient() {
         </p>
       ) : null}
       {state.phase === "error" ? (
-        <p className="border border-rose-300 bg-rose-100 p-3 text-sm text-rose-700" role="alert">
+        <p className="alert-slot p-3 text-sm" role="alert">
           Verification could not run: {state.message}
         </p>
       ) : null}
@@ -135,7 +135,7 @@ function Results({ result }: { result: ChainVerification }) {
         className={
           result.failures === 0
             ? "border border-horizon-300 bg-paper p-3 text-sm"
-            : "border border-rose-300 bg-rose-100 p-3 text-sm font-medium text-rose-700"
+            : "alert-slot p-3 text-sm font-medium"
         }
         role="status"
       >

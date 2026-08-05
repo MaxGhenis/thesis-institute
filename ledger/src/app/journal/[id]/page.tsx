@@ -229,7 +229,7 @@ export default async function JournalFactPage({
             </Field>
           ) : null}
           {row.ledgerRepoSha ? (
-            <Field label="Ledger repo at capture">
+            <Field label="Capture repo commit">
               <code>{row.ledgerRepoSha}</code>
             </Field>
           ) : null}

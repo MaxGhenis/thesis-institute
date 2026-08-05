@@ -79,7 +79,7 @@ export default async function SourcePackagePage({
           <p className="mt-2 max-w-3xl text-sm text-text-secondary">
             The exact publisher bytes this package parses, as retrieved and
             checksummed. If the publisher later changes the file, the recorded
-            hash still names what the Ledger read.
+            hash still names what Chronicle read.
           </p>
           <div className="mt-3 space-y-4">
             {pkg.manifest.files.map((f, i) => (

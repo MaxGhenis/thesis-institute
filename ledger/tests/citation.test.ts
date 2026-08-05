@@ -58,8 +58,8 @@ describe("citeJournalEntry", () => {
     expect(citeJournalEntry(entry, pins, 143, 0)).toBe(
       "bls.ces.total_nonfarm_payroll_change.may_2026.first_print = 172 thousands (2026-05). " +
         "First print 2026-06-05, bls, Employment Situation, May 2026. " +
-        "Thesis Institute Ledger, journal line 1 of 143 (state 590b71be, release 0). " +
-        "https://ledger.thesisinstitute.org/journal/bls.ces.total_nonfarm_payroll_change.may_2026.first_print",
+        "Chronicle, journal line 1 of 143 (state 590b71be, release 0). " +
+        "https://chronicle.institute/journal/bls.ces.total_nonfarm_payroll_change.may_2026.first_print",
     );
   });
 
@@ -94,8 +94,8 @@ describe("citeStoreFact", () => {
     expect(citeStoreFact(fact, "bea-nipa-pension-contributions", pins)).toBe(
       "ledger.aggregate_fact.v2:3bbbc74992a77a159dcf018d = 1,000 USD (CY 2023, United States). " +
         "bea, NIPA, package bea-nipa-pension-contributions. " +
-        "Thesis Institute Ledger store snapshot PolicyEngine/ledger@57f11986 (bundle year 2023). " +
-        "https://ledger.thesisinstitute.org/store/3bbbc74992a77a159dcf018d",
+        "Chronicle store snapshot PolicyEngine/ledger@57f11986 (bundle year 2023). " +
+        "https://chronicle.institute/store/3bbbc74992a77a159dcf018d",
     );
   });
 });
