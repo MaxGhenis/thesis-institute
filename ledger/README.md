@@ -1,8 +1,13 @@
-# Ledger reference app
+# Chronicle reference app
 
-Read-only web app over the Thesis Institute's fact store, targeting
-`ledger.thesisinstitute.org`. Next.js App Router + bun + Tailwind v4 +
-[thesis-design](https://github.com/MaxGhenis/thesis-design) tokens.
+Read-only web app over the Thesis Institute's fact store — **Chronicle**
+(working name; formerly Ledger) — targeting `chronicle.institute`, with
+`ledger.thesisinstitute.org` redirecting there. Next.js App Router + bun +
+Tailwind v4; Chronicle tokens inlined in
+[src/app/globals.css](src/app/globals.css) (master set:
+`constellation-design/tokens/chronicle.css`). The data layer keeps its
+names: the upstream repo is still `PolicyEngine/ledger`, the CLI is still
+`ledger` — repos are plumbing, not brand.
 
 **Unlisted until the public launch decision**: every response carries
 `X-Robots-Tag: noindex, nofollow`, `metadata.robots` is noindex, and
@@ -25,7 +30,7 @@ Two fact populations, kept distinct because their guarantees differ:
   PolicyEngine/ledger main with `ledger build-bundle`, one gzipped file per
   source package under `data/store/packages/`.
 
-Every fact page carries a one-line citation (format `draft-1`, versioned in
+Every fact page carries a one-line citation (format `draft-2`, versioned in
 [src/lib/citation.ts](src/lib/citation.ts)) with the fact ID, recorded value,
 first-print date, source, and position (journal line + release, or store
 snapshot pin). The same data is served as JSON under `/api/*` — see

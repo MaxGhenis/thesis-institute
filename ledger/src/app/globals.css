@@ -1,8 +1,85 @@
 @import "tailwindcss";
-@import "thesis-design/theme.css";
 
-/* The Ledger reads as a register, not a dashboard: paper surfaces, hairline
-   rules, mono record identifiers, and one rose accent used sparingly. */
+/* Chronicle reads as a register, not a dashboard: paper surfaces, hairline
+   rules, mono record identifiers, and one iron-gall blue used sparingly.
+   Light-native with a dark register via prefers-color-scheme; the palette is
+   the Chronicle token set (constellation-design/tokens/chronicle.css), carried
+   here under the variable names the components were built on. */
+
+@theme {
+  /* Core light palette — Chronicle surfaces */
+  --color-canvas: #FAFBFD;
+  --color-paper: #FDFEFF;
+  --color-section: #EEF2F8;
+  --color-card: #FFFFFF;
+
+  --color-border-soft: #D3DCE8;
+  --color-border-strong: #AFBFD4;
+
+  --color-text-primary: #131B26;
+  --color-text-secondary: #3F4F63;
+  --color-text-tertiary: #6B7A8D;
+  --color-text-disabled: #94A2B4;
+
+  /* Cool neutral tints (hover washes, quiet chips) */
+  --color-mist-100: #EDF1F7;
+  --color-mist-200: #DEE5EF;
+  --color-mist-400: #A9B8CC;
+  --color-mist-600: #5C6F87;
+
+  /* Iron-gall blues — the one hue */
+  --color-horizon-50: #F2F6FB;
+  --color-horizon-100: #E7EDF5;
+  --color-horizon-300: #A9C0DE;
+  --color-horizon-500: #587FAF;
+  --color-horizon-600: #3E618F;
+  --color-horizon-700: #33547D;
+
+  /* Semantic */
+  --color-accent: #33547D;
+  --color-accent-hover: #24405F;
+  --color-accent-subtle: #E7EDF5;
+
+  /* Fonts */
+  --font-display: "Jost", "Century Gothic", "Avenir Next", Futura, sans-serif;
+  --font-body: "STIX Two Text", Georgia, serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+/* Dark register: same variables, re-inked. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-canvas: #0C1220;
+    --color-paper: #101828;
+    --color-section: #172134;
+    --color-card: #101828;
+
+    --color-border-soft: #243044;
+    --color-border-strong: #36455E;
+
+    --color-text-primary: #E7EDF5;
+    --color-text-secondary: #A2B1C6;
+    --color-text-tertiary: #71809A;
+    --color-text-disabled: #566880;
+
+    --color-mist-100: #1A2436;
+    --color-mist-200: #223049;
+    --color-mist-400: #3D5270;
+    --color-mist-600: #93A7C0;
+
+    --color-horizon-50: #101A2C;
+    --color-horizon-100: #162033;
+    --color-horizon-300: #3E5E8C;
+    --color-horizon-500: #587FAF;
+    --color-horizon-600: #6E96CC;
+    --color-horizon-700: #7CA1D6;
+
+    --color-accent: #7CA1D6;
+    --color-accent-hover: #9BB8E2;
+    --color-accent-subtle: #162033;
+  }
+}
 
 @layer base {
   html {
@@ -15,6 +92,8 @@
     color: var(--color-text-primary);
     line-height: 1.6;
     min-height: 100vh;
+    /* House rule: any numeral that could be compared vertically is tabular. */
+    font-variant-numeric: tabular-nums;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -101,10 +180,13 @@
     background: color-mix(in srgb, var(--color-horizon-300) 14%, transparent);
   }
 
+  /* Flag stamp: hard-inked, hue-less — the enum text carries the meaning.
+     The register never decorates validity (no green checks, no red crosses). */
   .stamp-flag {
-    color: var(--color-rose-700);
-    border-color: var(--color-rose-300);
-    background: var(--color-rose-100);
+    color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+    background: transparent;
+    font-weight: 500;
   }
 
   .stamp-open {
@@ -194,5 +276,18 @@
 
   .prose-block p + p {
     margin-top: 0.75rem;
+  }
+
+  /* Error/alert slots (verifier failures, search errors): hard ink on quiet
+     ground — same no-alarm-color rule as the flag stamp. */
+  .alert-slot {
+    border: 1px solid var(--color-border-strong);
+    background: var(--color-section);
+    color: var(--color-text-primary);
+  }
+
+  .alert-text {
+    color: var(--color-text-primary);
+    font-weight: 600;
   }
 }

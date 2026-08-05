@@ -7,8 +7,11 @@
 import type { JournalEntry, Pins, StoreFactFull } from "./types";
 import { formatPeriod, formatValueWithUnit } from "./format";
 
-export const SITE_ORIGIN = "https://ledger.thesisinstitute.org";
-export const CITATION_FORMAT_VERSION = "draft-1";
+export const SITE_ORIGIN = "https://chronicle.institute";
+// draft-2 (2026-08-05): the record renamed Ledger → Chronicle and moved to
+// chronicle.institute; the cited-work name and permalink origin changed.
+// Field structure is unchanged from draft-1.
+export const CITATION_FORMAT_VERSION = "draft-2";
 
 export function journalFactUrl(sourceRecordId: string): string {
   return `${SITE_ORIGIN}/journal/${encodeURIComponent(sourceRecordId)}`;
@@ -24,8 +27,8 @@ export function storeFactUrl(keyHash: string): string {
  * Example:
  *   bls.ces.total_nonfarm_payroll_change.may_2026.first_print = 172 thousands
  *   (2026-05). First print 2026-06-05, BLS Employment Situation, May 2026.
- *   Thesis Institute Ledger, journal line 1 of 143 (state 590b71be, release 0).
- *   https://ledger.thesisinstitute.org/journal/bls.ces...first_print
+ *   Chronicle, journal line 1 of 143 (state 590b71be, release 0).
+ *   https://chronicle.institute/journal/bls.ces...first_print
  */
 export function citeJournalEntry(
   entry: JournalEntry,
@@ -43,7 +46,7 @@ export function citeJournalEntry(
   return (
     `${row.source_record_id} = ${value} (${period}). ` +
     `First print ${row.observed_at}, ${source}. ` +
-    `Thesis Institute Ledger, journal line ${line} of ${totalLines} ` +
+    `Chronicle, journal line ${line} of ${totalLines} ` +
     `(state ${state}, release ${releaseIndex}). ` +
     journalFactUrl(row.source_record_id)
   );
@@ -68,7 +71,7 @@ export function citeStoreFact(
   return (
     `${fact.aggregate_fact_key} = ${value} (${period}, ${geo}). ` +
     `${source}, package ${packageId}. ` +
-    `Thesis Institute Ledger store snapshot ` +
+    `Chronicle store snapshot ` +
     `${pins.bundle.repo}@${pins.bundle.commit.slice(0, 8)} ` +
     `(bundle year ${pins.bundle.year}). ` +
     storeFactUrl(keyHash)

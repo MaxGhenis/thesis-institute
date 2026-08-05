@@ -24,7 +24,7 @@ export default function HomePage() {
           A record of what official sources printed, and when.
         </h1>
         <p className="mt-4 text-lg text-text-secondary">
-          The Ledger stores source-backed facts — the numbers government
+          Chronicle stores source-backed facts — the numbers government
           statistical agencies actually published, kept at first print, with
           provenance, revision history, and a stable address for every fact.
           Values are recorded as published, never reconciled, imputed, or

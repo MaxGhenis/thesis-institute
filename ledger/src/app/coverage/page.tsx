@@ -73,7 +73,7 @@ export default function CoveragePage() {
         title="Coverage and staleness"
         lede={
           <>
-            What the Ledger tracks and when it last saw each series. Every
+            What Chronicle tracks and when it last saw each series. Every
             number on this page is computed from the pinned snapshot — nothing
             is estimated.
           </>

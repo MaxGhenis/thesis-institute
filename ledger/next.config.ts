@@ -15,6 +15,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // The record moved to chronicle.institute (2026-08-05). The old host
+  // forwards every path so existing citations keep resolving. Temporary
+  // (307) while Chronicle is a working name; flip to permanent: true after
+  // the name clears its gates.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "ledger.thesisinstitute.org" }],
+        destination: "https://chronicle.institute/:path*",
+        permanent: false,
+      },
+    ];
+  },
   outputFileTracingIncludes: {
     "/**": ["./data/**"],
   },

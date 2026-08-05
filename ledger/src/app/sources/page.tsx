@@ -41,7 +41,7 @@ export default function SourcesPage() {
         title="Sources"
         lede={
           <>
-            What feeds the Ledger. Store facts come from archived source
+            What feeds Chronicle. Store facts come from archived source
             packages — exact publisher files, checksummed at retrieval. Journal
             rows come from first-print capture against official release
             calendars.

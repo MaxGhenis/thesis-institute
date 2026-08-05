@@ -10,7 +10,6 @@
         "next": "^16.2.6",
         "react": "^19.2.6",
         "react-dom": "^19.2.6",
-        "thesis-design": "github:MaxGhenis/thesis-design#v1.3.1",
       },
       "devDependencies": {
         "@tailwindcss/postcss": "^4.3.0",
@@ -315,8 +314,6 @@
     "tailwindcss": ["tailwindcss@4.3.2", "", {}, "sha512-WtctNNSH8A9jlMIqxzuYumOHU5uGZyRv0Q5svQl+oEPy5w84YpBxdb7MdqyiSPQge5jTJ6zFQLq0PFygdccSBA=="],
 
     "tapable": ["tapable@2.3.3", "", {}, "sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A=="],
-
-    "thesis-design": ["thesis-design@github:MaxGhenis/thesis-design#03faf9c", {}, "MaxGhenis-thesis-design-03faf9c", "sha512-2x0CKkrDjVLGfIi8HhoYbZ5aA4U9QFB/WwagIzIcmL9nt+ZMOu04AEiDGaNkdG8HomjCUzFlIB44oNkoD5B7zQ=="],
 
     "tinybench": ["tinybench@2.9.0", "", {}, "sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg=="],
 
