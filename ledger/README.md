@@ -1,13 +1,16 @@
 # Chronicle reference app
 
 Read-only web app over the Thesis Institute's fact store — **Chronicle**
-(working name; formerly Ledger) — targeting `chronicle.institute`, with
-`ledger.thesisinstitute.org` redirecting there. Next.js App Router + bun +
+(formerly Ledger; renamed 2026-08-07) — live at `chronicle.institute`, with
+`ledger.thesisinstitute.org` 308-redirecting there. Next.js App Router + bun +
 Tailwind v4; Chronicle tokens inlined in
 [src/app/globals.css](src/app/globals.css) (master set:
-`constellation-design/tokens/chronicle.css`). The data layer keeps its
-names: the upstream repo is still `PolicyEngine/ledger`, the CLI is still
-`ledger` — repos are plumbing, not brand.
+`constellation-design/tokens/chronicle.css`). The upstream repo is now
+`PolicyEngine/chronicle` (GitHub redirects the old URL) with CLI `chronicle`
+(`ledger` kept as an alias); the v1 machine surface keeps its names — schema
+ids `ledger.*`, fact-identity hash domains, R2 buckets `ledger-raw`/`-derived`,
+and this app's `ledger/` directory + journal data paths stay put until the
+gated canonical-URL migration PR.
 
 **Unlisted until the public launch decision**: every response carries
 `X-Robots-Tag: noindex, nofollow`, `metadata.robots` is noindex, and
