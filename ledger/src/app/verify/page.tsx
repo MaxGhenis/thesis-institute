@@ -112,6 +112,41 @@ python3 scripts/verify_release_chain.py --full`}
           deployment pins {pins.journal.repo}@{pins.journal.commit.slice(0, 12)}.
         </p>
       </section>
+
+      <section aria-labelledby="bitcoin-heading" className="mt-10">
+        <h2 id="bitcoin-heading" className="text-xl">
+          Bitcoin-anchored checkpoints
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm text-text-secondary">
+          The journal’s root hash is anchored daily outside our control, so
+          integrity and anteriority do not require trusting us. Every release
+          manifest’s exact bytes — the same bytes both RFC 3161 authorities
+          witness — are timestamped through OpenTimestamps, and each proof
+          completes into a Bitcoin block attestation: the manifest, and with
+          it the journal state and chain it commits to, existed no later than
+          that block. Proofs live under <code>ots/</code> on the journal
+          branch; a scheduled job stamps each new release and upgrades
+          pending proofs. From the clone above:
+        </p>
+        <pre className="mt-3 overflow-x-auto border border-border-soft bg-paper p-4 text-sm">
+          {`python3 scripts/verify_release_chain.py --full
+ots verify -f releases/manifests/<stem>.json ots/<stem>.json.ots`}
+        </pre>
+        <p className="mt-3 max-w-3xl text-sm text-text-secondary">
+          The first command recomputes the journal digest that each manifest
+          commits to; the second checks a manifest’s proof (the{" "}
+          <code>ots</code> client is{" "}
+          <code>pip install opentimestamps-client</code>). Full verification
+          checks the attested block against a local Bitcoin node; without
+          one, <code>ots --no-bitcoin verify</code> validates the byte
+          binding and prints the block height and merkle root to compare
+          against any block source you trust. Anchoring began 2026-08-19, so
+          Bitcoin bounds start there; the RFC 3161 receipt times remain the
+          earlier per-release witnesses. This adds anteriority nobody can
+          backdate — not uniqueness: a parallel fork would carry its own,
+          later, Bitcoin times.
+        </p>
+      </section>
     </div>
   );
 }
