@@ -4,6 +4,12 @@ Static landing for **thesisinstitute.org** (the org). The forecasting app is a
 separate Next.js project served at **app.thesisinstitute.org** (Vercel project
 `thesis-forecasts`, built from `site/` in [MaxGhenis/brier](https://github.com/MaxGhenis/brier)).
 
+The Chronicle record app used to live here as `ledger/`; on 2026-08-30 it moved
+to its own repo,
+[ThesisInstitute/chronicle.institute](https://github.com/ThesisInstitute/chronicle.institute),
+with its history. Nothing about `chronicle.institute` is built from this repo
+any more.
+
 ## Domains
 
 | URL | Serves | Project |
@@ -14,6 +20,8 @@ separate Next.js project served at **app.thesisinstitute.org** (Vercel project
 | `app.thesisinstitute.org` | the forecasting app | `thesis-forecasts` (brier repo `site/`) |
 | `api.thesisinstitute.org` | API | `thesis-api` (brier repo `forecast-api/`) |
 | `farness.ai`, `brieralmanac.org` | legacy → app | redirects |
+| `chronicle.institute` | the record app — **[ThesisInstitute/chronicle.institute](https://github.com/ThesisInstitute/chronicle.institute)**, not this repo | `chronicle` |
+| `ledger.thesisinstitute.org` | → `chronicle.institute` | `chronicle` |
 
 Vercel team: `policy-engine`.
 
